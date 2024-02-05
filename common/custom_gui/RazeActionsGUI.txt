@@ -62,5 +62,6 @@ custom_button = {
 			}
 		}
 		clr_province_flag = original_province
+		clr_province_flag = original_province
 	}
 }
