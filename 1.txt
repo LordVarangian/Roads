@@ -1,0 +1,11 @@
+# Enable all the buildings in the picture thing
+set_country_flag = building_menu_temple_flag 
+set_country_flag = building_menu_workshop_flag 
+set_country_flag = building_menu_regimental_camp_flag 
+set_country_flag = building_menu_constable_flag 
+set_country_flag = building_menu_courthouse_flag 
+set_country_flag = building_menu_market_place_flag 
+set_country_flag = building_menu_tax_assessor_flag 
+set_country_flag = building_menu_war_office_flag 
+set_country_flag = building_menu_admiralty_flag 
+set_country_flag = building_menu_customs_house_flag 

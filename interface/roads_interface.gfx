@@ -1,0 +1,126 @@
+spriteTypes = {
+	######################
+	### BUILDINGS MENU ###
+	spriteType = {
+		name = "GFX_building_menu_button"
+		texturefile = "gfx/interface/buildings_menu/building_menu_button.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_button_back"
+		texturefile = "gfx/interface/buildings_menu/building_menu_button_back.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background1"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background1.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background2"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background2.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background3"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background3.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background4"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background4.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall1.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall2.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall3.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall4.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall5.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	# Buildings:
+	spriteType = {
+		name = "GFX_building_menu_workshop"
+		texturefile = "gfx/interface/buildings_menu/building_menu_workshop.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_war_office"
+		texturefile = "gfx/interface/buildings_menu/building_menu_war_office.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_constable"
+		texturefile = "gfx/interface/buildings_menu/building_menu_constable.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/building_menu_regimental_camp.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_customs_house"
+		texturefile = "gfx/interface/buildings_menu/building_menu_customs_house.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/building_menu_tax_assessor.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_courthouse"
+		texturefile = "gfx/interface/buildings_menu/building_menu_courthouse.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_temple"
+		texturefile = "gfx/interface/buildings_menu/building_menu_temple.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_admiralty"
+		texturefile = "gfx/interface/buildings_menu/building_menu_admiralty.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_market_place"
+		texturefile = "gfx/interface/buildings_menu/building_menu_market_place.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard"
+		texturefile = "gfx/interface/buildings_menu/building_menu_shipyard.dds"
+		transparencecheck = yes
+	}
+	######################
+	######################
+}
