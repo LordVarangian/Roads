@@ -1,0 +1,11 @@
+custom_icon = {
+	name = debug_gui_bg
+}
+custom_button = {
+	name = debug_gui_btn1
+	effect = {
+		owner = { add_treasury = 1 }
+		log = "[This.GetName]"
+	}
+	tooltip = debug_gui_btn1_tt
+}

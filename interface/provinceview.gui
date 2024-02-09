@@ -297,6 +297,25 @@ guiTypes = {
 		fullScreen = no
 		Orientation = "LOWER_LEFT"
 
+		##DEBUG GUI
+		iconType = {
+			name = debug_gui_bg
+			spriteType = debug_gui_bg
+			position = { x = 5 y = -315 }
+			scripted = yes
+		}
+		guiButtonType = {
+			name = debug_gui_btn1
+			spriteType = debug_gui_button_s
+			position = { x = 25 y = -300 }
+			scripted = yes
+			buttonFont = "vic_18"
+			buttonText = "debug_gui_btn1_t"
+		}
+
+		##END DEBUG GUI
+
+
 		iconType =
 		{
 			name ="provinceview_bg"

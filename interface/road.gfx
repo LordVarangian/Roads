@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_empty"
+		texturefile = "images/empty.dds"
+	}
+	spriteType = {
+		name = "debug_gui_bg"
+		texturefile = "images/debug_gui_bg.dds"
+	}
+	spriteType = {
+		name = "debug_gui_button_s"
+		texturefile = "images/debug_gui_button_s.dds"
+	}
+	spriteType = {
+		name = "debug_gui_button_l"
+		texturefile = "images/debug_gui_button_l.dds"
+	}
+	
+}
