@@ -590,7 +590,6 @@ guiTypes = {
 			instantTextBoxType = { scripted = yes
 				name = debug_gui_RoadDistance
 				position = { x = 25 y = -275 }
-				spriteType = debug_gui_button_s
 				font = "vic_18"
 				text = "debug_gui_RoadDistance"
 			}
@@ -600,7 +599,7 @@ guiTypes = {
 				position = { x = 145 y = -275}
 				buttonFont = "vic_18"
 				buttonText = "debug_gui_BuildRoad_y"
-				hotkey = "b"
+				shortcut = "b"
 			}
 			guiButtonType = { scripted = yes
 				name = debug_gui_BuildRoad_n
@@ -608,7 +607,7 @@ guiTypes = {
 				position = { x = 145 y = -275}
 				buttonFont = "vic_18"
 				buttonText = "debug_gui_BuildRoad_n"
-				hotkey = "b"
+				shortcut = "b"
 			}
 
 			#recalc all
@@ -631,7 +630,6 @@ guiTypes = {
 			instantTextBoxType = { scripted = yes
 				name = debug_gui_RecalcStepInfo
 				position = { x = 145 y = -225 }
-				spriteType = debug_gui_button_s
 				font = "vic_18"
 				text = "debug_gui_RecalcStepInfo"
 			}
@@ -2654,14 +2652,6 @@ guiTypes = {
 				spriteType ="GFX_development_button_raze"
 				buttonFont = "vic_18"
 				Orientation = "UPPER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_button"
-				scripted = yes
-				spriteType = "GFX_building_menu_button"
-				position = { x= 192 y = 37 }
-				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
