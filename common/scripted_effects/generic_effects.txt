@@ -1,0 +1,6 @@
+init = { #v
+	if = {
+		limit = { is_variable_equal = { which = $v$ value = 0 } }
+		set_variable = { which = $v$ value = 0 }
+	}
+}

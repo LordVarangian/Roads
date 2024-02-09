@@ -1,0 +1,98 @@
+road_build = {
+	set_province_flag = r_road
+	add_base_tax = 50
+}
+road_destroy = {
+	clr_province_flag = r_road
+	add_base_tax = -50
+	#road_recalculate_province = yes
+}
+road_recalculate_province = {
+	#wip
+}
+road_recalculate = {
+	log = log_4
+	save_event_target_as = country
+	set_variable = { which = r_step value = 0 }
+	every_owned_province = {
+		set_variable = { which = r_dist value = -1 }
+	}
+	capital_scope = {
+		set_variable = { which = r_dist value = 0 }
+		set_province_flag = r_calc
+	}
+	set_country_flag = r_calc
+	while = {
+		limit = { has_country_flag = r_calc }
+		clr_country_flag = r_calc
+		every_owned_province = {
+			limit = { has_province_flag = r_calc }
+			PREV = { set_country_flag = r_calc }
+			clr_province_flag = r_calc
+			every_neighbor_province = {
+				limit = {
+					owned_by = event_target:country
+					has_road = yes
+					OR = {
+						is_variable_equal = { which = r_dist value = -1 }
+						PREV = { NOT = { check_variable = { which = r_dist which = PREV } } }
+					}
+				}
+				set_variable = { which = r_dist which = PREV }
+				road_distance_prev = yes
+				set_province_flag = r_calc
+			}
+		}
+	}
+	log = "  Done"
+}
+
+road_recalculate_step = {
+	save_event_target_as = country
+	log = "====="
+	if = {
+		limit = {
+			has_country_flag = r_calc
+		}
+		change_variable = { which = r_step value = 1 }
+		log = log_1
+		clr_country_flag = r_calc
+		every_owned_province = {
+			limit = { has_province_flag = r_calc }
+			log = log_2
+			PREV = { set_country_flag = r_calc }
+			clr_province_flag = r_calc
+			every_neighbor_province = {
+				limit = {
+					owned_by = event_target:country
+					has_road = yes
+					OR = {
+						is_variable_equal = { which = r_dist value = -1 }
+						PREV = { NOT = { check_variable = { which = r_dist which = PREV } } }
+					}
+				}
+				log = log_3
+				set_variable = { which = r_dist which = PREV }
+				road_distance_prev = yes
+				set_province_flag = r_calc
+			}
+		}
+	}
+	else = {
+		set_variable = { which = r_step value = 0 }
+		log = "  New Calculation"
+		every_owned_province = {
+			set_variable = { which = r_dist value = -1 }
+		}
+		capital_scope = {
+			set_variable = { which = r_dist value = 0 }
+			set_province_flag = r_calc
+		}
+		set_country_flag = r_calc
+	}
+}
+
+road_distance_prev = {
+	#PREV
+	change_variable = { which = r_dist value = 1 }
+}

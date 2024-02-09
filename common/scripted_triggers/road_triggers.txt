@@ -1,0 +1,7 @@
+has_road = {
+	has_province_flag = r_road
+}
+has_connection = {
+	has_road = yes
+	check_variable = { which = r_dist value = 0 }
+}

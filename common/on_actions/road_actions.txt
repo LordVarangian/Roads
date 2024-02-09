@@ -1,0 +1,13 @@
+on_startup = {
+	if = {
+		limit = { NOT = { has_global_flag = r_setup } }
+		set_global_flag = r_setup
+
+		every_country = {
+			init = { v = r_step }
+		}
+		every_province = {
+			init = { v = r_dist }
+		}
+	}
+}
