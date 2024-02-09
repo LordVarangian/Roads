@@ -1,3 +1,25 @@
 ﻿l_english:
- debug_gui_btn1_t: "Add Money"
- debug_gui_btn1_tt: "gives money"
+ debug_gui_Test: "Add Money"
+ debug_gui_Test_tt: "gives money"
+ debug_gui_RoadDistance: "[This.road_Distance]"
+ road_Distance_y: "Distance: [This.r_dist.GetValue]"
+ road_Distance_n: "No road"
+ debug_gui_RoadDistance_tt: "Distance to the capital province, along roads: [This.r_dist.GetValue]"
+ debug_gui_BuildRoad: "This province [This.road_HasRoad]"
+ debug_gui_BuildRoad_tt: "Consumes 1 of the builder's build charges"
+ debug_gui_BuildRoad_n: "Build a road here"
+ debug_gui_BuildRoad_y: "Destroy the road"
+ road_HasRoad_y: "has a road"
+ road_HasRoad_n: "does not have a road"
+ debug_gui_RecalcAll: "Recalculate Connectivity"
+ debug_gui_RecalcAll_tt: "Recalculates road connectivity values for the entire country"
+ debug_gui_RecalcStep: "Recalc Step"
+ debug_gui_RecalcStep_tt: "Goes through a recalculation step by step as you click, check game.log for info"
+ debug_gui_RecalcStepInfo: "Step [This.Owner.r_step.GetValue]"
+ 
+
+
+ log_1: "  Step [This.r_step.GetValue]"
+ log_2: "    From [This.GetName] ([This.r_dist.GetValue])"
+ log_3: "      To [This.GetName] ([This.r_dist.GetValue])"
+ log_4: "Recalculating road distance for [This.GetName]..."

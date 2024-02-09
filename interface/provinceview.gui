@@ -572,6 +572,73 @@ guiTypes = {
 			moveable = 0
 			Orientation = "UPPER_LEFT"
 
+
+			##DEBUG GUI
+			iconType = { scripted = yes
+				name = debug_gui_bg
+				spriteType = debug_gui_bg
+				position = { x = 5 y = -315 }
+			}
+			guiButtonType = { scripted = yes
+				name = debug_gui_Test
+				spriteType = debug_gui_button_s
+				position = { x = 25 y = -300 }
+				buttonFont = "vic_18"
+				buttonText = "debug_gui_Test"
+			}
+
+			instantTextBoxType = { scripted = yes
+				name = debug_gui_RoadDistance
+				position = { x = 25 y = -275 }
+				spriteType = debug_gui_button_s
+				font = "vic_18"
+				text = "debug_gui_RoadDistance"
+			}
+			guiButtonType = { scripted = yes
+				name = debug_gui_BuildRoad_y
+				spriteType = debug_gui_button_s
+				position = { x = 145 y = -275}
+				buttonFont = "vic_18"
+				buttonText = "debug_gui_BuildRoad_y"
+				hotkey = "b"
+			}
+			guiButtonType = { scripted = yes
+				name = debug_gui_BuildRoad_n
+				spriteType = debug_gui_button_s
+				position = { x = 145 y = -275}
+				buttonFont = "vic_18"
+				buttonText = "debug_gui_BuildRoad_n"
+				hotkey = "b"
+			}
+
+			#recalc all
+			guiButtonType = { scripted = yes
+				name = debug_gui_RecalcAll
+				spriteType = debug_gui_button_l
+				position = { x = 25 y = -250 }
+				buttonFont = "vic_18"
+				buttonText = "debug_gui_RecalcAll"
+			}
+			#recalc step
+			guiButtonType = { scripted = yes
+				name = debug_gui_RecalcStep
+				spriteType = debug_gui_button_s
+				position = { x = 25 y = -225 }
+				buttonFont = "vic_18"
+				buttonText = "debug_gui_RecalcStep"
+			}
+			#recalc step info
+			instantTextBoxType = { scripted = yes
+				name = debug_gui_RecalcStepInfo
+				position = { x = 145 y = -225 }
+				spriteType = debug_gui_button_s
+				font = "vic_18"
+				text = "debug_gui_RecalcStepInfo"
+			}
+
+			##END DEBUG GUI
+
+
 			### Core
 
 			##DEBUG GUI

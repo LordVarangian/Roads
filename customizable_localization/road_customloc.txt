@@ -1,0 +1,22 @@
+defined_text = {
+	name = road_HasRoad
+	random = no
+	text = {
+		localisation_key = road_HasRoad_y
+		trigger = { has_road = yes }
+	}
+	text = {
+		localisation_key = road_HasRoad_n
+	}
+}
+defined_text = {
+	name = road_Distance
+	random = no
+	text = {
+		localisation_key = road_Distance_y
+		trigger = { check_variable = { which = r_dist value = 0 } }
+	}
+	text = {
+		localisation_key = road_Distance_n
+	}
+}

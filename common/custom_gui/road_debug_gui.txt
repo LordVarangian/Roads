@@ -2,10 +2,44 @@ custom_icon = {
 	name = debug_gui_bg
 }
 custom_button = {
-	name = debug_gui_btn1
+	name = debug_gui_Test
 	effect = {
 		owner = { add_treasury = 1 }
-		log = "[This.GetName]"
 	}
-	tooltip = debug_gui_btn1_tt
+	tooltip = debug_gui_Test_tt
+}
+custom_button = {
+	name = debug_gui_BuildRoad_n
+	potential = { has_road = no }
+	effect = {
+		hidden_effect = { road_build = yes }
+		custom_tooltip = "debug_gui_BuildRoad_n"
+	}
+	tooltip = debug_gui_BuildRoad_tt
+}
+custom_button = {
+	name = debug_gui_BuildRoad_y
+	potential = { has_road = yes }
+	effect = {
+		hidden_effect = { road_destroy = yes }
+		custom_tooltip = "debug_gui_BuildRoad_y"
+	}
+	tooltip = debug_gui_BuildRoad_tt
+}
+custom_text_box = {
+	name = debug_gui_RoadDistance
+	tooltip = debug_gui_RoadDistance_tt
+}
+custom_button = {
+	name = debug_gui_RecalcAll
+	tooltip = debug_gui_RecalcAll_tt
+	effect = { hidden_effect = { owner = { road_recalculate = yes } } }
+}
+custom_button = {
+	name = debug_gui_RecalcStep
+	tooltip = debug_gui_RecalcStep_tt
+	effect = { hidden_effect = { owner = { road_recalculate_step = yes } } }
+}
+custom_text_box = {
+	name = debug_gui_RecalcStepInfo
 }
