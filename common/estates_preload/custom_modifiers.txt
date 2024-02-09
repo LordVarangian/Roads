@@ -1,0 +1,8 @@
+estate_special = {
+	modifier_definition = {
+		key = building_output
+		trigger = {
+			always = yes
+		}
+	}
+}

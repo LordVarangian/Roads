@@ -6443,6 +6443,7 @@ guiTypes = {
 
 		iconType = {
 			name = "taxation_banner"
+			scripted = yes
 			position = { x = 240 y = 194 }
 			spriteType = "GFX_banner_right_2"
 		}
@@ -6459,9 +6460,9 @@ guiTypes = {
 
 		iconType ={
 			name ="taxation_icon"
+			scripted = yes
 			spriteType = "GFX_macro_buildings_category_strip"
 			position = { x = 262 y = 197}
-			frame = 6
 		}
 
 		checkboxType = {

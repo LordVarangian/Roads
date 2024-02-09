@@ -1,0 +1,18 @@
+﻿l_english:
+ building_marketplace_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Trade Power: §G+25.0%§!\n\n"
+
+ building_trade_depot_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Trade Power: §G+25.0%§!\n\n"
+ 
+ building_stock_exchange_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Trade Power: §G+25.0%§!\n\n"
+ 
+ building_university_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Institution Spread: §G+35.0%§!\n\n"
+
+ building_temple_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Tax Modifier: §G+20.0%§!\n\n"
+ 
+ building_cathedral_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Tax Modifier: §G+20.0%§!\n\n"
+ 
+ building_workshop_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Production Efficiency: §G+15.0%§!\n\n"
+ 
+ building_counting_house_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Production Efficiency: §G+15.0%§!\n\n"
+ 
+ building_output: "Building Output Growth"
