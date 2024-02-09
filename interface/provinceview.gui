@@ -2362,6 +2362,16 @@ guiTypes = {
 				}
 			}
 
+			# Needs to be here, behind that small window below.
+			guiButtonType =
+			{
+				name ="building_menu_button"
+				scripted = yes
+				spriteType = "GFX_building_menu_button"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+
 			##### Trade good interface
 			windowType = {
 				name = "tradegoods_province_window"
