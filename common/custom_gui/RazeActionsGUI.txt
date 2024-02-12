@@ -1,11 +1,36 @@
-custom_icon = {
-	name = taxation_banner
-	tooltip = TEMPLE_BUILDING_COST_TT
+custom_button = {
+	name = change_regional_capital
+	tooltip = CHANGE_REGIONAL_CAPITAL_TT
 	potential = { always = yes }
 	frame = { 
-       number = 6
+       number = 1
        trigger = { always = yes }
-   }
+   	}
+	trigger = {
+		owner = {
+			adm_power = 100
+		}
+		NOT = {
+			has_province_modifier = regional_capital_modifier
+		}
+	}
+	effect = {
+		owner = {
+			add_adm_power = -100
+		}
+		region = {
+			if = {
+				limit = {
+					has_province_modifier = regional_capital_modifier
+				}
+				remove_province_modifier = regional_capital_modifier
+			}
+		}
+		add_province_modifier = {
+			name = regional_capital_modifier
+			duration = -1
+		}
+	}
 }
 
 custom_button = {
@@ -22,55 +47,6 @@ custom_button = {
 
 	}
 	effect = {
-		set_province_flag = checked_province
-		set_province_flag = original_province
-		owner = {
-			while = {
-				limit = {
-					capital_scope = {
-						NOT = { has_province_flag = checked_province }
-					}
-					any_owned_province = {
-						has_province_flag = checked_province
-						any_neighbor_province = {
-							NOT = { has_province_flag = checked_province }
-						}
-					}
-				}
-				every_owned_province = {
-					limit = {
-						has_province_flag = checked_province
-					}
-					every_neighbor_province = {
-						limit = {
-							owned_by = ROOT
-							NOT = { has_province_flag = checked_province }
-						}
-						set_province_flag = checked_province
-					}
-				}
-			}
 
-			if = {
-				limit = {
-					capital_scope = {
-						has_province_flag = checked_province
-					}
-				}
-				random_owned_province = {
-					limit = {
-						has_province_flag = original_province
-					}
-					add_base_production = 15
-				}
-			}
-			every_owned_province = {
-				limit = {
-					has_province_flag = checked_province
-				}
-				clr_province_flag = checked_province
-			}
-		}
-		clr_province_flag = original_province
 	}
 }

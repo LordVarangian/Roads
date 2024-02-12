@@ -853,6 +853,20 @@ guiTypes = {
 
 			guiButtonType =
 			{
+				name ="change_regional_capital"
+				position = { x= 450 y = 20 }
+				quadTextureSprite ="GFX_move_capital"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
+
+			guiButtonType =
+			{
 				name ="raze_button"
 				position = { x= 450 y = 60 }
 				quadTextureSprite ="GFX_development_button_raze"
@@ -2643,16 +2657,7 @@ guiTypes = {
 				position = { x=478 y=144}
 				quadTextureSprite ="GFX_build_interface_building_tab"
 			}
-			
-			guiButtonType =
-			{
-				name ="raid_button"
-				scripted = yes
-				position = { x= 450 y = 30 }
-				spriteType ="GFX_development_button_raze"
-				buttonFont = "vic_18"
-				Orientation = "UPPER_LEFT"
-			}
+
 			iconType =
 			{
 				name ="building_menu_background1"
