@@ -2687,6 +2687,39 @@ guiTypes = {
 				clicksound = back_click
 			}
 
+			guiButtonType =
+			{
+				name ="upgrade_province_production"
+				scripted = yes
+				spriteType = "GFX_building_menu_button_back"
+				position = { x= 50 y = -200 }
+				Orientation = "LOWER_LEFT"
+				shortcut = "ESCAPE"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="increase_trade_power"
+				scripted = yes
+				spriteType = "GFX_building_menu_button_back"
+				position = { x= 203 y = -200 }
+				Orientation = "LOWER_LEFT"
+				shortcut = "ESCAPE"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="fabricate_coastal_claim"
+				scripted = yes
+				spriteType = "GFX_building_menu_button_back"
+				position = { x= 350 y = -200 }
+				Orientation = "LOWER_LEFT"
+				shortcut = "ESCAPE"
+				clicksound = back_click
+			}
+
 			iconType =
 			{
 				name ="building_menu_background1"

@@ -21,5 +21,11 @@ spriteTypes = {
 		name = "GFX_trading_post_background"
 		texturefile = "gfx/interface/trading_post_menu/trade_post_background.dds"
 		transparencecheck = yes
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_button_add"
+		texturefile = "gfx/interface/trading_post_menu/button_add.dds"
+		transparencecheck = yes
 	}
 }

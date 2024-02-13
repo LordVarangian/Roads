@@ -1,3 +1,7 @@
 regional_capital_modifier = {
     local_tax_modifier = 0.15
 }
+
+production_upgraded = {
+    trade_goods_size = 1
+}

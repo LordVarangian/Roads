@@ -37,22 +37,48 @@ custom_button = {
 	name = open_trading_city_button
 	tooltip = open_trading_city_buttontt
 	potential = {
-		province_has_center_of_trade_of_level = 1
-		NOT = { owned_by = FROM }
+		FROM = { has_government_attribute = can_use_trade_post }
 	}
    frame = { 
        number = 1
-       trigger = { always = yes }
+       trigger = { 
+			always = yes
+		}
    }
 	trigger = {
-
+		if = {
+			limit = {
+				NOT = { has_province_flag = trade_outpost_built }
+			}
+			province_has_center_of_trade_of_level = 1
+			NOT = { owned_by = FROM }
+			owner = {
+				has_opinion = {
+					who = FROM
+					value = 150
+				}
+			}
+		}
 	}
-	effect = { FROM = { set_country_flag = trade_outpost_menu_opened_flag } }
+	effect = { 
+		if = {
+			limit = {
+				NOT = { has_province_flag = trade_outpost_built }
+			}
+			set_province_flag = trade_outpost_built
+		}
+		else = {
+			FROM = { set_country_flag = trade_outpost_menu_opened_flag } 
+		}
+	}
 }
 
 custom_button = {
 	name = close_trading_city_button
-	potential = { FROM = { has_country_flag = trade_outpost_menu_opened_flag } }
+	potential = { 
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag } 
+		FROM = { has_government_attribute = can_use_trade_post }
+	}
 	effect = { FROM = { clr_country_flag = trade_outpost_menu_opened_flag } }
 	tooltip = building_menu_button_back_tt
 }
@@ -60,7 +86,126 @@ custom_button = {
 custom_icon = {
 	name = trade_post_menu
 	potential = {
+		FROM = { has_government_attribute = can_use_trade_post }
 		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
 	}
-	frame = { number = 1 trigger = { always = yes } }
+	frame = { number = 1 trigger = { has_province_flag = trade_outpost_built } }
+	frame = { number = 2 trigger = { NOT = { has_province_flag = trade_outpost_built } } }
+}
+
+custom_button = {
+	name = upgrade_province_production
+	tooltip = open_trading_city_buttontt
+	potential = {
+		FROM = { has_government_attribute = can_use_trade_post }
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
+		has_province_flag = trade_outpost_built
+		NOT = {
+			tag = owner
+		}
+	}
+   frame = { 
+       number = 1
+       trigger = { always = yes }
+   }
+	trigger = {
+		owner = {
+			has_opinion = {
+				who = FROM
+				value = 150
+			}
+		}
+		FROM = { years_of_income = 0.3 }
+		NOT = {
+			has_province_modifier = production_upgraded
+		}
+	}
+	effect = { 
+		FROM = {
+			add_years_of_income = -0.3
+		}
+		add_base_production = 1
+		add_province_modifier = {
+			name = production_upgraded
+			duration = 7300
+		}
+	}
+}
+
+custom_button = {
+	name = increase_trade_power
+	tooltip = open_trading_city_buttontt
+	potential = {
+		FROM = { has_government_attribute = can_use_trade_post }
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
+		has_province_flag = trade_outpost_built
+		NOT = {
+			tag = owner
+		}
+	}
+   frame = { 
+       number = 1
+       trigger = { always = yes }
+   }
+	trigger = {
+		owner = {
+			has_opinion = {
+				who = FROM
+				value = 150
+			}
+		}
+	}
+	effect = { 
+		owner = {
+			add_opinion = {
+				who = FROM
+				modifier = renounced_as_heretics
+			}
+		}
+		add_trade_modifier = {
+			who = FROM
+			duration = -1
+			power = 45
+			key = STRONG_MERCHANTS
+		}
+	}
+}
+
+
+custom_button = {
+	name = fabricate_coastal_claim
+	tooltip = open_trading_city_buttontt
+	potential = {
+		FROM = { has_government_attribute = can_use_trade_post }
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
+		has_province_flag = trade_outpost_built
+		NOT = {
+			tag = owner
+		}
+	}
+   frame = { 
+       number = 1
+       trigger = { always = yes }
+   }
+	trigger = {
+		owner = {
+			has_opinion = {
+				who = FROM
+				value = 150
+			}
+		}
+		NOT = {
+			is_core = FROM
+			is_permanent_claim = FROM
+		}
+	}
+	effect = { 
+		add_permanent_claim = FROM
+		owner = {
+			add_opinion = {
+				who = FROM
+				modifier = renounced_as_heretics
+			}
+		}
+	}
 }
