@@ -10,12 +10,16 @@ custom_button = {
 	effect = { FROM = { clr_country_flag = building_menu_opened_flag } }
 	tooltip = building_menu_button_back_tt
 }
-#### #### #### ####
+######################
+#####  AFRICAN  ######
 custom_icon = { # Does not allow to have too big GFX, so had to make it into smaller ones...
-	name = building_menu_background1
+	name = building_menu_african_background1
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
 		NOT = { development = 13 }
 	}
 	frame = { number = 1 trigger = { NOT = { development = 4 } } }
@@ -30,10 +34,13 @@ custom_icon = { # Does not allow to have too big GFX, so had to make it into sma
 	frame = { number = 10 trigger = { development = 12 NOT = { development = 13 } } }
 }
 custom_icon = {
-	name = building_menu_background2
+	name = building_menu_african_background2
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
 		development = 13
 		NOT = { development = 23 }
 	}
@@ -49,10 +56,13 @@ custom_icon = {
 	frame = { number = 10 trigger = { development = 22 NOT = { development = 23 } } }
 }
 custom_icon = {
-	name = building_menu_background3
+	name = building_menu_african_background3
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
 		development = 23
 		NOT = { development = 33 }
 	}
@@ -68,10 +78,13 @@ custom_icon = {
 	frame = { number = 10 trigger = { development = 32 NOT = { development = 33 } } }
 }
 custom_icon = {
-	name = building_menu_background4
+	name = building_menu_african_background4
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
 		development = 33
 	}
 	frame = { number = 1 trigger = { development = 33 NOT = { development = 34 } } }
@@ -87,10 +100,1190 @@ custom_icon = {
 }
 #### #### #### ####
 custom_icon = {
-	name = building_menu_background_wall1
+	name = building_menu_african_background_wall1
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		is_capital = yes
+		has_fort_building_trigger = no
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 4 trigger = { development = 11 NOT = { development = 18 } } }
+	frame = { number = 5 trigger = { development = 18 NOT = { development = 22 } } }
+	frame = { number = 6 trigger = { development = 22 NOT = { development = 24 } } }
+	frame = { number = 7 trigger = { development = 24 NOT = { development = 32 } } }
+	frame = { number = 8 trigger = { development = 32 NOT = { development = 38 } } }
+	frame = { number = 9 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 10 trigger = { development = 39 } }
+}
+custom_icon = {
+	name = building_menu_african_background_wall2
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_15th
+		NOT = { has_building = fort_16th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 4 trigger = { development = 11 NOT = { development = 18 } } }
+	frame = { number = 5 trigger = { development = 18 NOT = { development = 22 } } }
+	frame = { number = 6 trigger = { development = 22 NOT = { development = 24 } } }
+	frame = { number = 7 trigger = { development = 24 NOT = { development = 32 } } }
+	frame = { number = 8 trigger = { development = 32 NOT = { development = 38 } } }
+	frame = { number = 9 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 10 trigger = { development = 39 } }
+}
+custom_icon = {
+	name = building_menu_african_background_wall3
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_16th
+		NOT = { has_building = fort_17th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 4 trigger = { development = 11 NOT = { development = 18 } } }
+	frame = { number = 5 trigger = { development = 18 NOT = { development = 22 } } }
+	frame = { number = 6 trigger = { development = 22 NOT = { development = 24 } } }
+	frame = { number = 7 trigger = { development = 24 NOT = { development = 32 } } }
+	frame = { number = 8 trigger = { development = 32 NOT = { development = 38 } } }
+	frame = { number = 9 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 10 trigger = { development = 39 } }
+}
+custom_icon = {
+	name = building_menu_african_background_wall4
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_17th
+		NOT = { has_building = fort_18th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 4 trigger = { development = 11 NOT = { development = 18 } } }
+	frame = { number = 5 trigger = { development = 18 NOT = { development = 22 } } }
+	frame = { number = 6 trigger = { development = 22 NOT = { development = 24 } } }
+	frame = { number = 7 trigger = { development = 24 NOT = { development = 32 } } }
+	frame = { number = 8 trigger = { development = 32 NOT = { development = 38 } } }
+	frame = { number = 9 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 10 trigger = { development = 39 } }
+}
+custom_icon = {
+	name = building_menu_african_background_wall5
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_18th
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 4 trigger = { development = 11 NOT = { development = 18 } } }
+	frame = { number = 5 trigger = { development = 18 NOT = { development = 22 } } }
+	frame = { number = 6 trigger = { development = 22 NOT = { development = 24 } } }
+	frame = { number = 7 trigger = { development = 24 NOT = { development = 32 } } }
+	frame = { number = 8 trigger = { development = 32 NOT = { development = 38 } } }
+	frame = { number = 9 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 10 trigger = { development = 39 } }
+}
+#### #### #### ####
+# Buildings:
+custom_button = {
+	name = building_menu_african_courthouse
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_courthouse_flag } # change from flag to building on that province
+	}
+	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
+	tooltip = building_menu_african_courthouse_tt
+}
+custom_button = {
+	name = building_menu_african_war_office
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_war_office_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_war_office_opened_flag } }
+	tooltip = building_menu_african_war_office_tt
+}
+custom_button = {
+	name = building_menu_african_tax_assessor
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_tax_assessor_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_tax_assessor_opened_flag } }
+	tooltip = building_menu_african_tax_assessor_tt
+}
+custom_button = {
+	name = building_menu_african_constable
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_constable_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_constable_opened_flag } }
+	tooltip = building_menu_african_constable_tt
+}
+custom_button = {
+	name = building_menu_african_customs_house
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_customs_house_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_customs_house_opened_flag } }
+	tooltip = building_menu_african_customs_house_tt
+}
+custom_button = {
+	name = building_menu_african_temple
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_temple_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	tooltip = building_menu_african_temple_tt
+}
+custom_button = {
+	name = building_menu_african_admiralty
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_admiralty_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_admiralty_opened_flag } }
+	tooltip = building_menu_african_admiralty_tt
+}
+custom_button = {
+	name = building_menu_african_workshop
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_workshop_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
+	tooltip = building_menu_african_workshop_tt
+}
+custom_button = {
+	name = building_menu_african_regimental_camp
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_regimental_camp_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_regimental_camp_opened_flag } }
+	tooltip = building_menu_african_regimental_camp_tt
+}
+custom_button = {
+	name = building_menu_african_market_place
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_market_place_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
+	tooltip = building_menu_african_market_place_tt
+}
+custom_button = {
+	name = building_menu_african_shipyard
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_shipyard_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_shipyard_opened_flag } }
+	tooltip = building_menu_african_shipyard_tt
+}
+######################
+#####  CHINESE  ######
+custom_icon = {
+	name = building_menu_chinese_background1
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		NOT = { development = 13 }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 6 } } }
+	frame = { number = 4 trigger = { development = 6 NOT = { development = 7 } } }
+	frame = { number = 5 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 6 trigger = { development = 8 NOT = { development = 9 } } }
+	frame = { number = 7 trigger = { development = 9 NOT = { development = 10 } } }
+	frame = { number = 8 trigger = { development = 10 NOT = { development = 11 } } }
+	frame = { number = 9 trigger = { development = 11 NOT = { development = 12 } } }
+	frame = { number = 10 trigger = { development = 12 NOT = { development = 13 } } }
+}
+custom_icon = {
+	name = building_menu_chinese_background2
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 13
+		NOT = { development = 23 }
+	}
+	frame = { number = 1 trigger = { development = 13 NOT = { development = 14 } } }
+	frame = { number = 2 trigger = { development = 14 NOT = { development = 15 } } }
+	frame = { number = 3 trigger = { development = 15 NOT = { development = 16 } } }
+	frame = { number = 4 trigger = { development = 16 NOT = { development = 17 } } }
+	frame = { number = 5 trigger = { development = 17 NOT = { development = 18 } } }
+	frame = { number = 6 trigger = { development = 18 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 20 } } }
+	frame = { number = 8 trigger = { development = 20 NOT = { development = 21 } } }
+	frame = { number = 9 trigger = { development = 21 NOT = { development = 22 } } }
+	frame = { number = 10 trigger = { development = 22 NOT = { development = 23 } } }
+}
+custom_icon = {
+	name = building_menu_chinese_background3
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 23
+		NOT = { development = 33 }
+	}
+	frame = { number = 1 trigger = { development = 23 NOT = { development = 24 } } }
+	frame = { number = 2 trigger = { development = 24 NOT = { development = 25 } } }
+	frame = { number = 3 trigger = { development = 25 NOT = { development = 26 } } }
+	frame = { number = 4 trigger = { development = 26 NOT = { development = 27 } } }
+	frame = { number = 5 trigger = { development = 27 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 29 } } }
+	frame = { number = 7 trigger = { development = 29 NOT = { development = 30 } } }
+	frame = { number = 8 trigger = { development = 30 NOT = { development = 31 } } }
+	frame = { number = 9 trigger = { development = 31 NOT = { development = 32 } } }
+	frame = { number = 10 trigger = { development = 32 NOT = { development = 33 } } }
+}
+custom_icon = {
+	name = building_menu_chinese_background4
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 33
+	}
+	frame = { number = 1 trigger = { development = 33 NOT = { development = 34 } } }
+	frame = { number = 2 trigger = { development = 34 NOT = { development = 35 } } }
+	frame = { number = 3 trigger = { development = 35 NOT = { development = 36 } } }
+	frame = { number = 4 trigger = { development = 36 NOT = { development = 37 } } }
+	frame = { number = 5 trigger = { development = 37 NOT = { development = 38 } } }
+	frame = { number = 6 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 7 trigger = { development = 39 NOT = { development = 40 } } }
+	frame = { number = 8 trigger = { development = 40 NOT = { development = 41 } } }
+	frame = { number = 9 trigger = { development = 41 NOT = { development = 42 } } }
+	frame = { number = 10 trigger = { development = 42 } }
+}
+#### #### #### ####
+custom_icon = {
+	name = building_menu_chinese_background_wall1
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		is_capital = yes
+		has_fort_building_trigger = no
+	}
+	frame = { number = 1 trigger = { NOT = { development = 5 } } }
+	frame = { number = 2 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 3 trigger = { development = 9 NOT = { development = 12 } } }
+	frame = { number = 4 trigger = { development = 12 NOT = { development = 20 } } }
+	frame = { number = 5 trigger = { development = 20 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 31 } } }
+	frame = { number = 7 trigger = { development = 31 NOT = { development = 34 } } }
+	frame = { number = 8 trigger = { development = 34 NOT = { development = 42 } } }
+	frame = { number = 9 trigger = { development = 42 } }
+}
+custom_icon = {
+	name = building_menu_chinese_background_wall2
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_15th
+		NOT = { has_building = fort_16th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 5 } } }
+	frame = { number = 2 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 3 trigger = { development = 9 NOT = { development = 12 } } }
+	frame = { number = 4 trigger = { development = 12 NOT = { development = 20 } } }
+	frame = { number = 5 trigger = { development = 20 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 31 } } }
+	frame = { number = 7 trigger = { development = 31 NOT = { development = 34 } } }
+	frame = { number = 8 trigger = { development = 34 NOT = { development = 42 } } }
+	frame = { number = 9 trigger = { development = 42 } }
+}
+custom_icon = {
+	name = building_menu_chinese_background_wall3
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_16th
+		NOT = { has_building = fort_17th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 5 } } }
+	frame = { number = 2 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 3 trigger = { development = 9 NOT = { development = 12 } } }
+	frame = { number = 4 trigger = { development = 12 NOT = { development = 20 } } }
+	frame = { number = 5 trigger = { development = 20 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 31 } } }
+	frame = { number = 7 trigger = { development = 31 NOT = { development = 34 } } }
+	frame = { number = 8 trigger = { development = 34 NOT = { development = 42 } } }
+	frame = { number = 9 trigger = { development = 42 } }
+}
+custom_icon = {
+	name = building_menu_chinese_background_wall4
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_17th
+		NOT = { has_building = fort_18th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 5 } } }
+	frame = { number = 2 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 3 trigger = { development = 9 NOT = { development = 12 } } }
+	frame = { number = 4 trigger = { development = 12 NOT = { development = 20 } } }
+	frame = { number = 5 trigger = { development = 20 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 31 } } }
+	frame = { number = 7 trigger = { development = 31 NOT = { development = 34 } } }
+	frame = { number = 8 trigger = { development = 34 NOT = { development = 42 } } }
+	frame = { number = 9 trigger = { development = 42 } }
+}
+custom_icon = {
+	name = building_menu_chinese_background_wall5
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_18th
+	}
+	frame = { number = 1 trigger = { NOT = { development = 5 } } }
+	frame = { number = 2 trigger = { development = 5 NOT = { development = 11 } } }
+	frame = { number = 3 trigger = { development = 9 NOT = { development = 12 } } }
+	frame = { number = 4 trigger = { development = 12 NOT = { development = 20 } } }
+	frame = { number = 5 trigger = { development = 20 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 31 } } }
+	frame = { number = 7 trigger = { development = 31 NOT = { development = 34 } } }
+	frame = { number = 8 trigger = { development = 34 NOT = { development = 42 } } }
+	frame = { number = 9 trigger = { development = 42 } }
+}
+#### #### #### ####
+# Buildings:
+custom_button = {
+	name = building_menu_chinese_war_office
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_war_office_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_war_office_opened_flag } }
+	tooltip = building_menu_chinese_war_office_tt
+}
+custom_button = {
+	name = building_menu_chinese_workshop
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_workshop_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
+	tooltip = building_menu_chinese_workshop_tt
+}
+custom_button = {
+	name = building_menu_chinese_customs_house
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_customs_house_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_customs_house_opened_flag } }
+	tooltip = building_menu_chinese_customs_house_tt
+}
+custom_button = {
+	name = building_menu_chinese_courthouse
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_courthouse_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
+	tooltip = building_menu_chinese_courthouse_tt
+}
+custom_button = {
+	name = building_menu_chinese_regimental_camp
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_regimental_camp_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_regimental_camp_opened_flag } }
+	tooltip = building_menu_chinese_regimental_camp_tt
+}
+custom_button = {
+	name = building_menu_chinese_temple
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_temple_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	tooltip = building_menu_chinese_temple_tt
+}
+custom_button = {
+	name = building_menu_chinese_tax_assessor
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_tax_assessor_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_tax_assessor_opened_flag } }
+	tooltip = building_menu_chinese_tax_assessor_tt
+}
+custom_button = {
+	name = building_menu_chinese_constable
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_constable_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_constable_opened_flag } }
+	tooltip = building_menu_chinese_constable_tt
+}
+custom_button = {
+	name = building_menu_chinese_market_place
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_market_place_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
+	tooltip = building_menu_chinese_market_place_tt
+}
+custom_button = {
+	name = building_menu_chinese_admiralty
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_admiralty_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_admiralty_opened_flag } }
+	tooltip = building_menu_chinese_admiralty_tt
+}
+custom_button = {
+	name = building_menu_chinese_shipyard
+	potential = {
+		owned_by = FROM
+		FROM = { 
+			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_shipyard_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_shipyard_opened_flag } }
+	tooltip = building_menu_chinese_shipyard_tt
+}
+######################
+#####  EASTERN  ######
+custom_icon = {
+	name = building_menu_eastern_background1
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		NOT = { development = 13 }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 6 } } }
+	frame = { number = 4 trigger = { development = 6 NOT = { development = 7 } } }
+	frame = { number = 5 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 6 trigger = { development = 8 NOT = { development = 9 } } }
+	frame = { number = 7 trigger = { development = 9 NOT = { development = 10 } } }
+	frame = { number = 8 trigger = { development = 10 NOT = { development = 11 } } }
+	frame = { number = 9 trigger = { development = 11 NOT = { development = 12 } } }
+	frame = { number = 10 trigger = { development = 12 NOT = { development = 13 } } }
+}
+custom_icon = {
+	name = building_menu_eastern_background2
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		development = 13
+		NOT = { development = 23 }
+	}
+	frame = { number = 1 trigger = { development = 13 NOT = { development = 14 } } }
+	frame = { number = 2 trigger = { development = 14 NOT = { development = 15 } } }
+	frame = { number = 3 trigger = { development = 15 NOT = { development = 16 } } }
+	frame = { number = 4 trigger = { development = 16 NOT = { development = 17 } } }
+	frame = { number = 5 trigger = { development = 17 NOT = { development = 18 } } }
+	frame = { number = 6 trigger = { development = 18 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 20 } } }
+	frame = { number = 8 trigger = { development = 20 NOT = { development = 21 } } }
+	frame = { number = 9 trigger = { development = 21 NOT = { development = 22 } } }
+	frame = { number = 10 trigger = { development = 22 NOT = { development = 23 } } }
+}
+custom_icon = {
+	name = building_menu_eastern_background3
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		development = 23
+		NOT = { development = 33 }
+	}
+	frame = { number = 1 trigger = { development = 23 NOT = { development = 24 } } }
+	frame = { number = 2 trigger = { development = 24 NOT = { development = 25 } } }
+	frame = { number = 3 trigger = { development = 25 NOT = { development = 26 } } }
+	frame = { number = 4 trigger = { development = 26 NOT = { development = 27 } } }
+	frame = { number = 5 trigger = { development = 27 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 29 } } }
+	frame = { number = 7 trigger = { development = 29 NOT = { development = 30 } } }
+	frame = { number = 8 trigger = { development = 30 NOT = { development = 31 } } }
+	frame = { number = 9 trigger = { development = 31 NOT = { development = 32 } } }
+	frame = { number = 10 trigger = { development = 32 NOT = { development = 33 } } }
+}
+custom_icon = {
+	name = building_menu_eastern_background4
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		development = 33
+	}
+	frame = { number = 1 trigger = { development = 33 NOT = { development = 34 } } }
+	frame = { number = 2 trigger = { development = 34 NOT = { development = 35 } } }
+	frame = { number = 3 trigger = { development = 35 NOT = { development = 36 } } }
+	frame = { number = 4 trigger = { development = 36 NOT = { development = 37 } } }
+	frame = { number = 5 trigger = { development = 37 NOT = { development = 38 } } }
+	frame = { number = 6 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 7 trigger = { development = 39 NOT = { development = 40 } } }
+	frame = { number = 8 trigger = { development = 40 NOT = { development = 41 } } }
+	frame = { number = 9 trigger = { development = 41 NOT = { development = 42 } } }
+	frame = { number = 10 trigger = { development = 42 } }
+}
+#### #### #### ####
+custom_icon = {
+	name = building_menu_eastern_background_wall1
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		is_capital = yes
+		has_fort_building_trigger = no
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 12 } } }
+	frame = { number = 3 trigger = { development = 12 NOT = { development = 14 } } }
+	frame = { number = 4 trigger = { development = 14 NOT = { development = 31 } } }
+	frame = { number = 5 trigger = { development = 31 } }
+}
+custom_icon = {
+	name = building_menu_eastern_background_wall2
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		has_building = fort_15th
+		NOT = { has_building = fort_16th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 12 } } }
+	frame = { number = 3 trigger = { development = 12 NOT = { development = 14 } } }
+	frame = { number = 4 trigger = { development = 14 NOT = { development = 31 } } }
+	frame = { number = 5 trigger = { development = 31 } }
+}
+custom_icon = {
+	name = building_menu_eastern_background_wall3
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		has_building = fort_16th
+		NOT = { has_building = fort_17th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 12 } } }
+	frame = { number = 3 trigger = { development = 12 NOT = { development = 14 } } }
+	frame = { number = 4 trigger = { development = 14 NOT = { development = 31 } } }
+	frame = { number = 5 trigger = { development = 31 } }
+}
+custom_icon = {
+	name = building_menu_eastern_background_wall4
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		has_building = fort_17th
+		NOT = { has_building = fort_18th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 12 } } }
+	frame = { number = 3 trigger = { development = 12 NOT = { development = 14 } } }
+	frame = { number = 4 trigger = { development = 14 NOT = { development = 31 } } }
+	frame = { number = 5 trigger = { development = 31 } }
+}
+custom_icon = {
+	name = building_menu_eastern_background_wall5
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		has_building = fort_18th
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 12 } } }
+	frame = { number = 3 trigger = { development = 12 NOT = { development = 14 } } }
+	frame = { number = 4 trigger = { development = 14 NOT = { development = 31 } } }
+	frame = { number = 5 trigger = { development = 31 } }
+}
+#### #### #### ####
+# Buildings:
+custom_button = {
+	name = building_menu_eastern_admiralty
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_admiralty_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_admiralty_opened_flag } }
+	tooltip = building_menu_eastern_admiralty_tt
+}
+custom_button = {
+	name = building_menu_eastern_workshop
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_workshop_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
+	tooltip = building_menu_eastern_workshop_tt
+}
+custom_button = {
+	name = building_menu_eastern_constable
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_constable_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_constable_opened_flag } }
+	tooltip = building_menu_eastern_constable_tt
+}
+custom_button = {
+	name = building_menu_eastern_war_office
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_war_office_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_war_office_opened_flag } }
+	tooltip = building_menu_eastern_war_office_tt
+}
+custom_button = {
+	name = building_menu_eastern_tax_assessor
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_tax_assessor_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_tax_assessor_opened_flag } }
+	tooltip = building_menu_eastern_tax_assessor_tt
+}
+custom_button = {
+	name = building_menu_eastern_courthouse
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_courthouse_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
+	tooltip = building_menu_eastern_courthouse_tt
+}
+custom_button = {
+	name = building_menu_eastern_temple
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_temple_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	tooltip = building_menu_eastern_temple_tt
+}
+custom_button = {
+	name = building_menu_eastern_customs_house
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_customs_house_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_customs_house_opened_flag } }
+	tooltip = building_menu_eastern_customs_house_tt
+}
+custom_button = {
+	name = building_menu_eastern_market_place
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_market_place_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
+	tooltip = building_menu_eastern_market_place_tt
+}
+custom_button = {
+	name = building_menu_eastern_regimental_camp
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_regimental_camp_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_regimental_camp_opened_flag } }
+	tooltip = building_menu_eastern_regimental_camp_tt
+}
+custom_button = {
+	name = building_menu_eastern_shipyard
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_shipyard_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_shipyard_opened_flag } }
+	tooltip = building_menu_eastern_shipyard_tt
+}
+######################
+######  INDIAN  ######
+custom_icon = {
+	name = building_menu_indian_background1
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		NOT = { development = 13 }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 6 } } }
+	frame = { number = 4 trigger = { development = 6 NOT = { development = 7 } } }
+	frame = { number = 5 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 6 trigger = { development = 8 NOT = { development = 9 } } }
+	frame = { number = 7 trigger = { development = 9 NOT = { development = 10 } } }
+	frame = { number = 8 trigger = { development = 10 NOT = { development = 11 } } }
+	frame = { number = 9 trigger = { development = 11 NOT = { development = 12 } } }
+	frame = { number = 10 trigger = { development = 12 NOT = { development = 13 } } }
+}
+custom_icon = {
+	name = building_menu_indian_background2
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		development = 13
+		NOT = { development = 23 }
+	}
+	frame = { number = 1 trigger = { development = 13 NOT = { development = 14 } } }
+	frame = { number = 2 trigger = { development = 14 NOT = { development = 15 } } }
+	frame = { number = 3 trigger = { development = 15 NOT = { development = 16 } } }
+	frame = { number = 4 trigger = { development = 16 NOT = { development = 17 } } }
+	frame = { number = 5 trigger = { development = 17 NOT = { development = 18 } } }
+	frame = { number = 6 trigger = { development = 18 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 20 } } }
+	frame = { number = 8 trigger = { development = 20 NOT = { development = 21 } } }
+	frame = { number = 9 trigger = { development = 21 NOT = { development = 22 } } }
+	frame = { number = 10 trigger = { development = 22 NOT = { development = 23 } } }
+}
+custom_icon = {
+	name = building_menu_indian_background3
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		development = 23
+		NOT = { development = 33 }
+	}
+	frame = { number = 1 trigger = { development = 23 NOT = { development = 24 } } }
+	frame = { number = 2 trigger = { development = 24 NOT = { development = 25 } } }
+	frame = { number = 3 trigger = { development = 25 NOT = { development = 26 } } }
+	frame = { number = 4 trigger = { development = 26 NOT = { development = 27 } } }
+	frame = { number = 5 trigger = { development = 27 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 29 } } }
+	frame = { number = 7 trigger = { development = 29 NOT = { development = 30 } } }
+	frame = { number = 8 trigger = { development = 30 NOT = { development = 31 } } }
+	frame = { number = 9 trigger = { development = 31 NOT = { development = 32 } } }
+	frame = { number = 10 trigger = { development = 32 NOT = { development = 33 } } }
+}
+custom_icon = {
+	name = building_menu_indian_background4
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		development = 33
+	}
+	frame = { number = 1 trigger = { development = 33 NOT = { development = 34 } } }
+	frame = { number = 2 trigger = { development = 34 NOT = { development = 35 } } }
+	frame = { number = 3 trigger = { development = 35 NOT = { development = 36 } } }
+	frame = { number = 4 trigger = { development = 36 NOT = { development = 37 } } }
+	frame = { number = 5 trigger = { development = 37 NOT = { development = 38 } } }
+	frame = { number = 6 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 7 trigger = { development = 39 NOT = { development = 40 } } }
+	frame = { number = 8 trigger = { development = 40 NOT = { development = 41 } } }
+	frame = { number = 9 trigger = { development = 41 NOT = { development = 42 } } }
+	frame = { number = 10 trigger = { development = 42 } }
+}
+#### #### #### ####
+custom_icon = {
+	name = building_menu_indian_background_wall1
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		is_capital = yes
+		has_fort_building_trigger = no
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 6 } } }
+	frame = { number = 3 trigger = { development = 6 NOT = { development = 42 } } }
+	frame = { number = 4 trigger = { development = 42 } }
+}
+custom_icon = {
+	name = building_menu_indian_background_wall2
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		has_building = fort_15th
+		NOT = { has_building = fort_16th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 6 } } }
+	frame = { number = 3 trigger = { development = 6 NOT = { development = 42 } } }
+	frame = { number = 4 trigger = { development = 42 } }
+}
+custom_icon = {
+	name = building_menu_indian_background_wall3
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		has_building = fort_16th
+		NOT = { has_building = fort_17th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 6 } } }
+	frame = { number = 3 trigger = { development = 6 NOT = { development = 42 } } }
+	frame = { number = 4 trigger = { development = 42 } }
+}
+custom_icon = {
+	name = building_menu_indian_background_wall4
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		has_building = fort_17th
+		NOT = { has_building = fort_18th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 6 } } }
+	frame = { number = 3 trigger = { development = 6 NOT = { development = 42 } } }
+	frame = { number = 4 trigger = { development = 42 } }
+}
+custom_icon = {
+	name = building_menu_indian_background_wall5
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		has_building = fort_18th
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 6 } } }
+	frame = { number = 3 trigger = { development = 6 NOT = { development = 42 } } }
+	frame = { number = 4 trigger = { development = 42 } }
+}
+#### #### #### ####
+# Buildings:
+custom_button = {
+	name = building_menu_indian_regimental_camp
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_regimental_camp_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_regimental_camp_opened_flag } }
+	tooltip = building_menu_indian_regimental_camp_tt
+}
+custom_button = {
+	name = building_menu_indian_workshop
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_workshop_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
+	tooltip = building_menu_indian_workshop_tt
+}
+custom_button = {
+	name = building_menu_indian_tax_assessor
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_tax_assessor_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_tax_assessor_opened_flag } }
+	tooltip = building_menu_indian_tax_assessor_tt
+}
+custom_button = {
+	name = building_menu_indian_war_office
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_war_office_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_war_office_opened_flag } }
+	tooltip = building_menu_indian_war_office_tt
+}
+custom_button = {
+	name = building_menu_indian_courthouse
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_courthouse_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
+	tooltip = building_menu_indian_courthouse_tt
+}
+custom_button = {
+	name = building_menu_indian_admiralty
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_admiralty_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_admiralty_opened_flag } }
+	tooltip = building_menu_indian_admiralty_tt
+}
+custom_button = {
+	name = building_menu_indian_temple
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_temple_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	tooltip = building_menu_indian_temple_tt
+}
+custom_button = {
+	name = building_menu_indian_constable
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_constable_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_constable_opened_flag } }
+	tooltip = building_menu_indian_constable_tt
+}
+custom_button = {
+	name = building_menu_indian_market_place
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_market_place_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
+	tooltip = building_menu_indian_market_place_tt
+}
+custom_button = {
+	name = building_menu_indian_customs_house
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_customs_house_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_customs_house_opened_flag } }
+	tooltip = building_menu_indian_customs_house_tt
+}
+custom_button = {
+	name = building_menu_indian_shipyard
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_shipyard_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_shipyard_opened_flag } }
+	tooltip = building_menu_indian_shipyard_tt
+}
+######################
+######  LATIN  #######
+custom_icon = {
+	name = building_menu_latin_background1
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
+		NOT = { development = 13 }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 6 } } }
+	frame = { number = 4 trigger = { development = 6 NOT = { development = 7 } } }
+	frame = { number = 5 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 6 trigger = { development = 8 NOT = { development = 9 } } }
+	frame = { number = 7 trigger = { development = 9 NOT = { development = 10 } } }
+	frame = { number = 8 trigger = { development = 10 NOT = { development = 11 } } }
+	frame = { number = 9 trigger = { development = 11 NOT = { development = 12 } } }
+	frame = { number = 10 trigger = { development = 12 NOT = { development = 13 } } }
+}
+custom_icon = {
+	name = building_menu_latin_background2
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
+		development = 13
+		NOT = { development = 23 }
+	}
+	frame = { number = 1 trigger = { development = 13 NOT = { development = 14 } } }
+	frame = { number = 2 trigger = { development = 14 NOT = { development = 15 } } }
+	frame = { number = 3 trigger = { development = 15 NOT = { development = 16 } } }
+	frame = { number = 4 trigger = { development = 16 NOT = { development = 17 } } }
+	frame = { number = 5 trigger = { development = 17 NOT = { development = 18 } } }
+	frame = { number = 6 trigger = { development = 18 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 20 } } }
+	frame = { number = 8 trigger = { development = 20 NOT = { development = 21 } } }
+	frame = { number = 9 trigger = { development = 21 NOT = { development = 22 } } }
+	frame = { number = 10 trigger = { development = 22 NOT = { development = 23 } } }
+}
+custom_icon = {
+	name = building_menu_latin_background3
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
+		development = 23
+		NOT = { development = 33 }
+	}
+	frame = { number = 1 trigger = { development = 23 NOT = { development = 24 } } }
+	frame = { number = 2 trigger = { development = 24 NOT = { development = 25 } } }
+	frame = { number = 3 trigger = { development = 25 NOT = { development = 26 } } }
+	frame = { number = 4 trigger = { development = 26 NOT = { development = 27 } } }
+	frame = { number = 5 trigger = { development = 27 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 29 } } }
+	frame = { number = 7 trigger = { development = 29 NOT = { development = 30 } } }
+	frame = { number = 8 trigger = { development = 30 NOT = { development = 31 } } }
+	frame = { number = 9 trigger = { development = 31 NOT = { development = 32 } } }
+	frame = { number = 10 trigger = { development = 32 NOT = { development = 33 } } }
+}
+custom_icon = {
+	name = building_menu_latin_background4
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
+		development = 33
+	}
+	frame = { number = 1 trigger = { development = 33 NOT = { development = 34 } } }
+	frame = { number = 2 trigger = { development = 34 NOT = { development = 35 } } }
+	frame = { number = 3 trigger = { development = 35 NOT = { development = 36 } } }
+	frame = { number = 4 trigger = { development = 36 NOT = { development = 37 } } }
+	frame = { number = 5 trigger = { development = 37 NOT = { development = 38 } } }
+	frame = { number = 6 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 7 trigger = { development = 39 NOT = { development = 40 } } }
+	frame = { number = 8 trigger = { development = 40 NOT = { development = 41 } } }
+	frame = { number = 9 trigger = { development = 41 NOT = { development = 42 } } }
+	frame = { number = 10 trigger = { development = 42 } }
+}
+#### #### #### ####
+custom_icon = {
+	name = building_menu_latin_background_wall1
+	potential = {
+		owned_by = FROM
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		is_capital = yes
 		has_fort_building_trigger = no
 	}
@@ -109,10 +1302,10 @@ custom_icon = {
 	frame = { number = 13 trigger = { development = 38 } }
 }
 custom_icon = {
-	name = building_menu_background_wall2
+	name = building_menu_latin_background_wall2
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		has_building = fort_15th
 		NOT = { has_building = fort_16th }
 	}
@@ -131,10 +1324,10 @@ custom_icon = {
 	frame = { number = 13 trigger = { development = 38 } }
 }
 custom_icon = {
-	name = building_menu_background_wall3
+	name = building_menu_latin_background_wall3
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		has_building = fort_16th
 		NOT = { has_building = fort_17th }
 	}
@@ -153,10 +1346,10 @@ custom_icon = {
 	frame = { number = 13 trigger = { development = 38 } }
 }
 custom_icon = {
-	name = building_menu_background_wall4
+	name = building_menu_latin_background_wall4
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		has_building = fort_17th
 		NOT = { has_building = fort_18th }
 	}
@@ -175,10 +1368,10 @@ custom_icon = {
 	frame = { number = 13 trigger = { development = 38 } }
 }
 custom_icon = {
-	name = building_menu_background_wall5
+	name = building_menu_latin_background_wall5
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		has_building = fort_18th
 	}
 	frame = { number = 1 trigger = { NOT = { development = 7 } } }
@@ -198,112 +1391,1143 @@ custom_icon = {
 #### #### #### ####
 # Buildings:
 custom_button = {
-	name = building_menu_workshop
+	name = building_menu_latin_workshop
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_workshop_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
-	tooltip = building_menu_workshop_tt
+	tooltip = building_menu_latin_workshop_tt
 }
 custom_button = {
-	name = building_menu_war_office
+	name = building_menu_latin_war_office
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_war_office_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_war_office_opened_flag } }
-	tooltip = building_menu_war_office_tt
+	tooltip = building_menu_latin_war_office_tt
 }
 custom_button = {
-	name = building_menu_constable
+	name = building_menu_latin_constable
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_constable_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_constable_opened_flag } }
-	tooltip = building_menu_constable_tt
+	tooltip = building_menu_latin_constable_tt
 }
 custom_button = {
-	name = building_menu_regimental_camp
+	name = building_menu_latin_regimental_camp
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_regimental_camp_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_regimental_camp_opened_flag } }
-	tooltip = building_menu_regimental_camp_tt
+	tooltip = building_menu_latin_regimental_camp_tt
 }
 custom_button = {
-	name = building_menu_customs_house
+	name = building_menu_latin_customs_house
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_customs_house_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_customs_house_opened_flag } }
-	tooltip = building_menu_customs_house_tt
+	tooltip = building_menu_latin_customs_house_tt
 }
 custom_button = {
-	name = building_menu_tax_assessor
+	name = building_menu_latin_tax_assessor
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_tax_assessor_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_tax_assessor_opened_flag } }
-	tooltip = building_menu_tax_assessor_tt
+	tooltip = building_menu_latin_tax_assessor_tt
 }
 custom_button = {
-	name = building_menu_courthouse
+	name = building_menu_latin_courthouse
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_courthouse_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
-	tooltip = building_menu_courthouse_tt
+	tooltip = building_menu_latin_courthouse_tt
 }
 custom_button = {
-	name = building_menu_temple
+	name = building_menu_latin_temple
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_temple_flag } # change from flag to building on that province
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
+		FROM = { has_country_flag = building_menu_temple_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
-	tooltip = building_menu_temple_tt
+	tooltip = building_menu_latin_temple_tt
 }
 custom_button = {
-	name = building_menu_admiralty
+	name = building_menu_latin_admiralty
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_admiralty_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_admiralty_opened_flag } }
-	tooltip = building_menu_admiralty_tt
+	tooltip = building_menu_latin_admiralty_tt
 }
 custom_button = {
-	name = building_menu_market_place
+	name = building_menu_latin_market_place
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_market_place_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
-	tooltip = building_menu_market_place_tt
+	tooltip = building_menu_latin_market_place_tt
 }
 custom_button = {
-	name = building_menu_shipyard
+	name = building_menu_latin_shipyard
 	potential = {
 		owned_by = FROM
-		FROM = { has_country_flag = building_menu_opened_flag }
+		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
 		FROM = { has_country_flag = building_menu_shipyard_flag }
 	}
 	effect = { FROM = { set_country_flag = building_menu_shipyard_opened_flag } }
-	tooltip = building_menu_shipyard_tt
+	tooltip = building_menu_latin_shipyard_tt
 }
+######################
+######  MUSLIM  ######
+custom_icon = {
+	name = building_menu_muslim_background1
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		NOT = { development = 13 }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 6 } } }
+	frame = { number = 4 trigger = { development = 6 NOT = { development = 7 } } }
+	frame = { number = 5 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 6 trigger = { development = 8 NOT = { development = 9 } } }
+	frame = { number = 7 trigger = { development = 9 NOT = { development = 10 } } }
+	frame = { number = 8 trigger = { development = 10 NOT = { development = 11 } } }
+	frame = { number = 9 trigger = { development = 11 NOT = { development = 12 } } }
+	frame = { number = 10 trigger = { development = 12 NOT = { development = 13 } } }
+}
+custom_icon = {
+	name = building_menu_muslim_background2
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 13
+		NOT = { development = 23 }
+	}
+	frame = { number = 1 trigger = { development = 13 NOT = { development = 14 } } }
+	frame = { number = 2 trigger = { development = 14 NOT = { development = 15 } } }
+	frame = { number = 3 trigger = { development = 15 NOT = { development = 16 } } }
+	frame = { number = 4 trigger = { development = 16 NOT = { development = 17 } } }
+	frame = { number = 5 trigger = { development = 17 NOT = { development = 18 } } }
+	frame = { number = 6 trigger = { development = 18 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 20 } } }
+	frame = { number = 8 trigger = { development = 20 NOT = { development = 21 } } }
+	frame = { number = 9 trigger = { development = 21 NOT = { development = 22 } } }
+	frame = { number = 10 trigger = { development = 22 NOT = { development = 23 } } }
+}
+custom_icon = {
+	name = building_menu_muslim_background3
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 23
+		NOT = { development = 33 }
+	}
+	frame = { number = 1 trigger = { development = 23 NOT = { development = 24 } } }
+	frame = { number = 2 trigger = { development = 24 NOT = { development = 25 } } }
+	frame = { number = 3 trigger = { development = 25 NOT = { development = 26 } } }
+	frame = { number = 4 trigger = { development = 26 NOT = { development = 27 } } }
+	frame = { number = 5 trigger = { development = 27 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 29 } } }
+	frame = { number = 7 trigger = { development = 29 NOT = { development = 30 } } }
+	frame = { number = 8 trigger = { development = 30 NOT = { development = 31 } } }
+	frame = { number = 9 trigger = { development = 31 NOT = { development = 32 } } }
+	frame = { number = 10 trigger = { development = 32 NOT = { development = 33 } } }
+}
+custom_icon = {
+	name = building_menu_muslim_background4
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 33
+	}
+	frame = { number = 1 trigger = { development = 33 NOT = { development = 34 } } }
+	frame = { number = 2 trigger = { development = 34 NOT = { development = 35 } } }
+	frame = { number = 3 trigger = { development = 35 NOT = { development = 36 } } }
+	frame = { number = 4 trigger = { development = 36 NOT = { development = 37 } } }
+	frame = { number = 5 trigger = { development = 37 NOT = { development = 38 } } }
+	frame = { number = 6 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 7 trigger = { development = 39 NOT = { development = 40 } } }
+	frame = { number = 8 trigger = { development = 40 NOT = { development = 41 } } }
+	frame = { number = 9 trigger = { development = 41 NOT = { development = 42 } } }
+	frame = { number = 10 trigger = { development = 42 } }
+}
+#### #### #### ####
+custom_icon = {
+	name = building_menu_muslim_background_wall1
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		is_capital = yes
+		has_fort_building_trigger = no
+	}
+	frame = { number = 1 trigger = { NOT = { development = 17 } } }
+	frame = { number = 2 trigger = { development = 17 NOT = { development = 20 } } }
+	frame = { number = 3 trigger = { development = 20 NOT = { development = 32 } } }
+	frame = { number = 4 trigger = { development = 32 } }
+}
+custom_icon = {
+	name = building_menu_muslim_background_wall2
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_15th
+		NOT = { has_building = fort_16th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 17 } } }
+	frame = { number = 2 trigger = { development = 17 NOT = { development = 20 } } }
+	frame = { number = 3 trigger = { development = 20 NOT = { development = 32 } } }
+	frame = { number = 4 trigger = { development = 32 } }
+}
+custom_icon = {
+	name = building_menu_muslim_background_wall3
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_16th
+		NOT = { has_building = fort_17th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 17 } } }
+	frame = { number = 2 trigger = { development = 17 NOT = { development = 20 } } }
+	frame = { number = 3 trigger = { development = 20 NOT = { development = 32 } } }
+	frame = { number = 4 trigger = { development = 32 } }
+}
+custom_icon = {
+	name = building_menu_muslim_background_wall4
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_17th
+		NOT = { has_building = fort_18th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 17 } } }
+	frame = { number = 2 trigger = { development = 17 NOT = { development = 20 } } }
+	frame = { number = 3 trigger = { development = 20 NOT = { development = 32 } } }
+	frame = { number = 4 trigger = { development = 32 } }
+}
+custom_icon = {
+	name = building_menu_muslim_background_wall5
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_18th
+	}
+	frame = { number = 1 trigger = { NOT = { development = 17 } } }
+	frame = { number = 2 trigger = { development = 17 NOT = { development = 20 } } }
+	frame = { number = 3 trigger = { development = 20 NOT = { development = 32 } } }
+	frame = { number = 4 trigger = { development = 32 } }
+}
+#### #### #### ####
+# Buildings:
+custom_button = {
+	name = building_menu_muslim_regimental_camp
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_regimental_camp_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_regimental_camp_opened_flag } }
+	tooltip = building_menu_muslim_regimental_camp_tt
+}
+custom_button = {
+	name = building_menu_muslim_constable
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_constable_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_constable_opened_flag } }
+	tooltip = building_menu_muslim_constable_tt
+}
+custom_button = {
+	name = building_menu_muslim_customs_house
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_customs_house_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_customs_house_opened_flag } }
+	tooltip = building_menu_muslim_customs_house_tt
+}
+custom_button = {
+	name = building_menu_muslim_workshop
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_workshop_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
+	tooltip = building_menu_muslim_workshop_tt
+}
+custom_button = {
+	name = building_menu_muslim_tax_assessor
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_tax_assessor_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_tax_assessor_opened_flag } }
+	tooltip = building_menu_muslim_tax_assessor_tt
+}
+custom_button = {
+	name = building_menu_muslim_temple
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_temple_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	tooltip = building_menu_muslim_temple_tt
+}
+custom_button = {
+	name = building_menu_muslim_war_office
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_war_office_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_war_office_opened_flag } }
+	tooltip = building_menu_muslim_war_office_tt
+}
+custom_button = {
+	name = building_menu_muslim_courthouse
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_courthouse_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
+	tooltip = building_menu_muslim_courthouse_tt
+}
+custom_button = {
+	name = building_menu_muslim_market_place
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_market_place_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
+	tooltip = building_menu_muslim_market_place_tt
+}
+custom_button = {
+	name = building_menu_muslim_admiralty
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_admiralty_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_admiralty_opened_flag } }
+	tooltip = building_menu_muslim_admiralty_tt
+}
+custom_button = {
+	name = building_menu_muslim_shipyard
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_shipyard_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_shipyard_opened_flag } }
+	tooltip = building_menu_muslim_shipyard_tt
+}
+######################
+##  NORTH AMERICAN  ##
+custom_icon = {
+	name = building_menu_namerican_background1
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		NOT = { development = 13 }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 6 } } }
+	frame = { number = 4 trigger = { development = 6 NOT = { development = 7 } } }
+	frame = { number = 5 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 6 trigger = { development = 8 NOT = { development = 9 } } }
+	frame = { number = 7 trigger = { development = 9 NOT = { development = 10 } } }
+	frame = { number = 8 trigger = { development = 10 NOT = { development = 11 } } }
+	frame = { number = 9 trigger = { development = 11 NOT = { development = 12 } } }
+	frame = { number = 10 trigger = { development = 12 NOT = { development = 13 } } }
+}
+custom_icon = {
+	name = building_menu_namerican_background2
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 13
+		NOT = { development = 23 }
+	}
+	frame = { number = 1 trigger = { development = 13 NOT = { development = 14 } } }
+	frame = { number = 2 trigger = { development = 14 NOT = { development = 15 } } }
+	frame = { number = 3 trigger = { development = 15 NOT = { development = 16 } } }
+	frame = { number = 4 trigger = { development = 16 NOT = { development = 17 } } }
+	frame = { number = 5 trigger = { development = 17 NOT = { development = 18 } } }
+	frame = { number = 6 trigger = { development = 18 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 20 } } }
+	frame = { number = 8 trigger = { development = 20 NOT = { development = 21 } } }
+	frame = { number = 9 trigger = { development = 21 NOT = { development = 22 } } }
+	frame = { number = 10 trigger = { development = 22 NOT = { development = 23 } } }
+}
+custom_icon = {
+	name = building_menu_namerican_background3
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 23
+		NOT = { development = 33 }
+	}
+	frame = { number = 1 trigger = { development = 23 NOT = { development = 24 } } }
+	frame = { number = 2 trigger = { development = 24 NOT = { development = 25 } } }
+	frame = { number = 3 trigger = { development = 25 NOT = { development = 26 } } }
+	frame = { number = 4 trigger = { development = 26 NOT = { development = 27 } } }
+	frame = { number = 5 trigger = { development = 27 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 29 } } }
+	frame = { number = 7 trigger = { development = 29 NOT = { development = 30 } } }
+	frame = { number = 8 trigger = { development = 30 NOT = { development = 31 } } }
+	frame = { number = 9 trigger = { development = 31 NOT = { development = 32 } } }
+	frame = { number = 10 trigger = { development = 32 NOT = { development = 33 } } }
+}
+custom_icon = {
+	name = building_menu_namerican_background4
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 33
+	}
+	frame = { number = 1 trigger = { development = 33 NOT = { development = 34 } } }
+	frame = { number = 2 trigger = { development = 34 NOT = { development = 35 } } }
+	frame = { number = 3 trigger = { development = 35 NOT = { development = 36 } } }
+	frame = { number = 4 trigger = { development = 36 NOT = { development = 37 } } }
+	frame = { number = 5 trigger = { development = 37 NOT = { development = 38 } } }
+	frame = { number = 6 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 7 trigger = { development = 39 NOT = { development = 40 } } }
+	frame = { number = 8 trigger = { development = 40 NOT = { development = 41 } } }
+	frame = { number = 9 trigger = { development = 41 NOT = { development = 42 } } }
+	frame = { number = 10 trigger = { development = 42 } }
+}
+#### #### #### ####
+custom_icon = {
+	name = building_menu_namerican_background_wall1
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		is_capital = yes
+		has_fort_building_trigger = no
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+custom_icon = {
+	name = building_menu_namerican_background_wall2
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_15th
+		NOT = { has_building = fort_16th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+custom_icon = {
+	name = building_menu_namerican_background_wall3
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_16th
+		NOT = { has_building = fort_17th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+custom_icon = {
+	name = building_menu_namerican_background_wall4
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_17th
+		NOT = { has_building = fort_18th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+custom_icon = {
+	name = building_menu_namerican_background_wall5
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_18th
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+#### #### #### ####
+# Buildings:
+custom_button = {
+	name = building_menu_namerican_workshop
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_workshop_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
+	tooltip = building_menu_namerican_workshop_tt
+}
+custom_button = {
+	name = building_menu_namerican_war_office
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_war_office_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_war_office_opened_flag } }
+	tooltip = building_menu_namerican_war_office_tt
+}
+custom_button = {
+	name = building_menu_namerican_constable
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_constable_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_constable_opened_flag } }
+	tooltip = building_menu_namerican_constable_tt
+}
+custom_button = {
+	name = building_menu_namerican_regimental_camp
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_regimental_camp_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_regimental_camp_opened_flag } }
+	tooltip = building_menu_namerican_regimental_camp_tt
+}
+custom_button = {
+	name = building_menu_namerican_customs_house
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_customs_house_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_customs_house_opened_flag } }
+	tooltip = building_menu_namerican_customs_house_tt
+}
+custom_button = {
+	name = building_menu_namerican_tax_assessor
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_tax_assessor_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_tax_assessor_opened_flag } }
+	tooltip = building_menu_namerican_tax_assessor_tt
+}
+custom_button = {
+	name = building_menu_namerican_courthouse
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_courthouse_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
+	tooltip = building_menu_namerican_courthouse_tt
+}
+custom_button = {
+	name = building_menu_namerican_temple
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_temple_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	tooltip = building_menu_namerican_temple_tt
+}
+custom_button = {
+	name = building_menu_namerican_admiralty
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_admiralty_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_admiralty_opened_flag } }
+	tooltip = building_menu_namerican_admiralty_tt
+}
+custom_button = {
+	name = building_menu_namerican_market_place
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_market_place_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
+	tooltip = building_menu_namerican_market_place_tt
+}
+custom_button = {
+	name = building_menu_namerican_shipyard
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = north_american technology_group = polynesian_tech }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_shipyard_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_shipyard_opened_flag } }
+	tooltip = building_menu_namerican_shipyard_tt
+}
+######################
+##  SOUTH AMERICAN  ##
+custom_icon = {
+	name = building_menu_samerican_background1
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		NOT = { development = 13 }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 4 } } }
+	frame = { number = 2 trigger = { development = 4 NOT = { development = 5 } } }
+	frame = { number = 3 trigger = { development = 5 NOT = { development = 6 } } }
+	frame = { number = 4 trigger = { development = 6 NOT = { development = 7 } } }
+	frame = { number = 5 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 6 trigger = { development = 8 NOT = { development = 9 } } }
+	frame = { number = 7 trigger = { development = 9 NOT = { development = 10 } } }
+	frame = { number = 8 trigger = { development = 10 NOT = { development = 11 } } }
+	frame = { number = 9 trigger = { development = 11 NOT = { development = 12 } } }
+	frame = { number = 10 trigger = { development = 12 NOT = { development = 13 } } }
+}
+custom_icon = {
+	name = building_menu_samerican_background2
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 13
+		NOT = { development = 23 }
+	}
+	frame = { number = 1 trigger = { development = 13 NOT = { development = 14 } } }
+	frame = { number = 2 trigger = { development = 14 NOT = { development = 15 } } }
+	frame = { number = 3 trigger = { development = 15 NOT = { development = 16 } } }
+	frame = { number = 4 trigger = { development = 16 NOT = { development = 17 } } }
+	frame = { number = 5 trigger = { development = 17 NOT = { development = 18 } } }
+	frame = { number = 6 trigger = { development = 18 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 20 } } }
+	frame = { number = 8 trigger = { development = 20 NOT = { development = 21 } } }
+	frame = { number = 9 trigger = { development = 21 NOT = { development = 22 } } }
+	frame = { number = 10 trigger = { development = 22 NOT = { development = 23 } } }
+}
+custom_icon = {
+	name = building_menu_samerican_background3
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 23
+		NOT = { development = 33 }
+	}
+	frame = { number = 1 trigger = { development = 23 NOT = { development = 24 } } }
+	frame = { number = 2 trigger = { development = 24 NOT = { development = 25 } } }
+	frame = { number = 3 trigger = { development = 25 NOT = { development = 26 } } }
+	frame = { number = 4 trigger = { development = 26 NOT = { development = 27 } } }
+	frame = { number = 5 trigger = { development = 27 NOT = { development = 28 } } }
+	frame = { number = 6 trigger = { development = 28 NOT = { development = 29 } } }
+	frame = { number = 7 trigger = { development = 29 NOT = { development = 30 } } }
+	frame = { number = 8 trigger = { development = 30 NOT = { development = 31 } } }
+	frame = { number = 9 trigger = { development = 31 NOT = { development = 32 } } }
+	frame = { number = 10 trigger = { development = 32 NOT = { development = 33 } } }
+}
+custom_icon = {
+	name = building_menu_samerican_background4
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		development = 33
+	}
+	frame = { number = 1 trigger = { development = 33 NOT = { development = 34 } } }
+	frame = { number = 2 trigger = { development = 34 NOT = { development = 35 } } }
+	frame = { number = 3 trigger = { development = 35 NOT = { development = 36 } } }
+	frame = { number = 4 trigger = { development = 36 NOT = { development = 37 } } }
+	frame = { number = 5 trigger = { development = 37 NOT = { development = 38 } } }
+	frame = { number = 6 trigger = { development = 38 NOT = { development = 39 } } }
+	frame = { number = 7 trigger = { development = 39 NOT = { development = 40 } } }
+	frame = { number = 8 trigger = { development = 40 NOT = { development = 41 } } }
+	frame = { number = 9 trigger = { development = 41 NOT = { development = 42 } } }
+	frame = { number = 10 trigger = { development = 42 } }
+}
+#### #### #### ####
+custom_icon = {
+	name = building_menu_samerican_background_wall1
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		is_capital = yes
+		has_fort_building_trigger = no
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+custom_icon = {
+	name = building_menu_samerican_background_wall2
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_15th
+		NOT = { has_building = fort_16th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+custom_icon = {
+	name = building_menu_samerican_background_wall3
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_16th
+		NOT = { has_building = fort_17th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+custom_icon = {
+	name = building_menu_samerican_background_wall4
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_17th
+		NOT = { has_building = fort_18th }
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+custom_icon = {
+	name = building_menu_samerican_background_wall5
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		has_building = fort_18th
+	}
+	frame = { number = 1 trigger = { NOT = { development = 7 } } }
+	frame = { number = 2 trigger = { development = 7 NOT = { development = 8 } } }
+	frame = { number = 3 trigger = { development = 8 NOT = { development = 10 } } }
+	frame = { number = 4 trigger = { development = 10 NOT = { development = 12 } } }
+	frame = { number = 5 trigger = { development = 12 NOT = { development = 17 } } }
+	frame = { number = 6 trigger = { development = 17 NOT = { development = 19 } } }
+	frame = { number = 7 trigger = { development = 19 NOT = { development = 23 } } }
+	frame = { number = 8 trigger = { development = 23 NOT = { development = 25 } } }
+	frame = { number = 9 trigger = { development = 25 NOT = { development = 27 } } }
+	frame = { number = 10 trigger = { development = 27 NOT = { development = 32 } } }
+	frame = { number = 11 trigger = { development = 32 NOT = { development = 35 } } }
+	frame = { number = 12 trigger = { development = 35 NOT = { development = 38 } } }
+	frame = { number = 13 trigger = { development = 38 } }
+}
+#### #### #### ####
+# Buildings:
+custom_button = {
+	name = building_menu_samerican_workshop
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_workshop_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
+	tooltip = building_menu_samerican_workshop_tt
+}
+custom_button = {
+	name = building_menu_samerican_war_office
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_war_office_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_war_office_opened_flag } }
+	tooltip = building_menu_samerican_war_office_tt
+}
+custom_button = {
+	name = building_menu_samerican_constable
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_constable_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_constable_opened_flag } }
+	tooltip = building_menu_samerican_constable_tt
+}
+custom_button = {
+	name = building_menu_samerican_regimental_camp
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_regimental_camp_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_regimental_camp_opened_flag } }
+	tooltip = building_menu_samerican_regimental_camp_tt
+}
+custom_button = {
+	name = building_menu_samerican_customs_house
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_customs_house_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_customs_house_opened_flag } }
+	tooltip = building_menu_samerican_customs_house_tt
+}
+custom_button = {
+	name = building_menu_samerican_tax_assessor
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_tax_assessor_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_tax_assessor_opened_flag } }
+	tooltip = building_menu_samerican_tax_assessor_tt
+}
+custom_button = {
+	name = building_menu_samerican_courthouse
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_courthouse_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
+	tooltip = building_menu_samerican_courthouse_tt
+}
+custom_button = {
+	name = building_menu_samerican_temple
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_temple_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	tooltip = building_menu_samerican_temple_tt
+}
+custom_button = {
+	name = building_menu_samerican_admiralty
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_admiralty_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_admiralty_opened_flag } }
+	tooltip = building_menu_samerican_admiralty_tt
+}
+custom_button = {
+	name = building_menu_samerican_market_place
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_market_place_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
+	tooltip = building_menu_samerican_market_place_tt
+}
+custom_button = {
+	name = building_menu_samerican_shipyard
+	potential = {
+		owned_by = FROM
+		FROM = {
+			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
+			has_country_flag = building_menu_opened_flag
+		}
+		FROM = { has_country_flag = building_menu_shipyard_flag }
+	}
+	effect = { FROM = { set_country_flag = building_menu_shipyard_opened_flag } }
+	tooltip = building_menu_samerican_shipyard_tt
+}
+######################
+######################

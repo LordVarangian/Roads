@@ -573,6 +573,23 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 
 
+			### Core
+
+			##DEBUG GUI
+			iconType = {
+				name = debug_gui_bg
+				spriteType = debug_gui_bg
+				position = { x = 5 y = -315 }
+				scripted = yes
+			}
+			guiButtonType = {
+				name = debug_gui_Test
+				spriteType = debug_gui_button_s
+				position = { x = 25 y = -300 }
+				scripted = yes
+				buttonFont = "vic_18"
+				buttonText = "debug_gui_Test_t"
+			}
 			##DEBUG GUI
 			iconType = { scripted = yes
 				name = debug_gui_bg
@@ -635,25 +652,16 @@ guiTypes = {
 			}
 
 			##END DEBUG GUI
-
-
-			### Core
-
-			##DEBUG GUI
-			iconType = {
-				name = debug_gui_bg
-				spriteType = debug_gui_bg
-				position = { x = 5 y = -315 }
+			
+			guiButtonType =
+			{
+				name ="building_menu_button"
 				scripted = yes
+				spriteType = "GFX_building_menu_button"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
 			}
-			guiButtonType = {
-				name = debug_gui_btn1
-				spriteType = debug_gui_button_s
-				position = { x = 25 y = -300 }
-				scripted = yes
-				buttonFont = "vic_18"
-				buttonText = "debug_gui_btn1_t"
-			}
+
 
 
 			iconType =
@@ -2467,16 +2475,6 @@ guiTypes = {
 				}
 			}
 
-			# Needs to be here, behind that small window below.
-			guiButtonType =
-			{
-				name ="building_menu_button"
-				scripted = yes
-				spriteType = "GFX_building_menu_button"
-				position = { x= 192 y = 37 }
-				Orientation = "LOWER_LEFT"
-			}
-
 			##### Trade good interface
 			windowType = {
 				name = "tradegoods_province_window"
@@ -2719,79 +2717,1313 @@ guiTypes = {
 				shortcut = "ESCAPE"
 				clicksound = back_click
 			}
-
+			
+			######################
+			#####  AFRICAN  ######
 			iconType =
 			{
-				name ="building_menu_background1"
+				name ="building_menu_african_background1"
 				scripted = yes
-				spriteType = "GFX_building_menu_background1"
+				spriteType = "GFX_building_menu_african_background1"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
 			iconType =
 			{
-				name ="building_menu_background2"
+				name ="building_menu_african_background2"
 				scripted = yes
-				spriteType = "GFX_building_menu_background2"
+				spriteType = "GFX_building_menu_african_background2"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
 			iconType =
 			{
-				name ="building_menu_background3"
+				name ="building_menu_african_background3"
 				scripted = yes
-				spriteType = "GFX_building_menu_background3"
+				spriteType = "GFX_building_menu_african_background3"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
 			iconType =
 			{
-				name ="building_menu_background4"
+				name ="building_menu_african_background4"
 				scripted = yes
-				spriteType = "GFX_building_menu_background4"
+				spriteType = "GFX_building_menu_african_background4"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
 			iconType =
 			{
-				name ="building_menu_background_wall1"
+				name ="building_menu_african_background_wall1"
 				scripted = yes
-				spriteType = "GFX_building_menu_background_wall1"
+				spriteType = "GFX_building_menu_african_background_wall1"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
 			iconType =
 			{
-				name ="building_menu_background_wall2"
+				name ="building_menu_african_background_wall2"
 				scripted = yes
-				spriteType = "GFX_building_menu_background_wall2"
+				spriteType = "GFX_building_menu_african_background_wall2"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
 			iconType =
 			{
-				name ="building_menu_background_wall3"
+				name ="building_menu_african_background_wall3"
 				scripted = yes
-				spriteType = "GFX_building_menu_background_wall3"
+				spriteType = "GFX_building_menu_african_background_wall3"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
 			iconType =
 			{
-				name ="building_menu_background_wall4"
+				name ="building_menu_african_background_wall4"
 				scripted = yes
-				spriteType = "GFX_building_menu_background_wall4"
+				spriteType = "GFX_building_menu_african_background_wall4"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
 			iconType =
 			{
-				name ="building_menu_background_wall5"
+				name ="building_menu_african_background_wall5"
 				scripted = yes
-				spriteType = "GFX_building_menu_background_wall5"
+				spriteType = "GFX_building_menu_african_background_wall5"
 				position = { x= 12 y = 96 }
 				Orientation = "UPPER_LEFT"
 			}
+			# Buildings:
+			guiButtonType =
+			{
+				name ="building_menu_african_courthouse"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_courthouse"
+				position = { x= 41 y = -306 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_war_office"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_war_office"
+				position = { x= 173 y = -321 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_tax_assessor"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_tax_assessor"
+				position = { x= 298 y = -333 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_constable"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_constable"
+				position = { x= 398 y = -321 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_customs_house"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_customs_house"
+				position = { x= 130 y = -277 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_temple"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_temple"
+				position = { x= 224 y = -308 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_admiralty"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_admiralty"
+				position = { x= 187 y = -196 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_workshop"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_workshop"
+				position = { x= 349 y = -235 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_regimental_camp"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_regimental_camp"
+				position = { x= 442 y = -192 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_market_place"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_market_place"
+				position = { x= 291 y = -217 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_african_shipyard"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_shipyard"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			#####  CHINESE  ######
+			iconType =
+			{
+				name ="building_menu_chinese_background1"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background2"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background3"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background4"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background_wall1"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background_wall1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background_wall2"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background_wall2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background_wall3"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background_wall3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background_wall4"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background_wall4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background_wall5"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background_wall5"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			# Buildings:
+			guiButtonType =
+			{
+				name ="building_menu_chinese_war_office"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_war_office"
+				position = { x= 46 y = -352 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_workshop"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_workshop"
+				position = { x= 198 y = -369 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_customs_house"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_customs_house"
+				position = { x= 327 y = -362 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_courthouse"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_courthouse"
+				position = { x= 242 y = -331 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_regimental_camp"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_regimental_camp"
+				position = { x= 335 y = -310 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_temple"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_temple"
+				position = { x= 132 y = -356 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_tax_assessor"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_tax_assessor"
+				position = { x= 316 y = -321 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_constable"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_constable"
+				position = { x= 103 y = -259 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_market_place"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_market_place"
+				position = { x= 224 y = -247 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_admiralty"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_admiralty"
+				position = { x= 347 y = -222 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_chinese_shipyard"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_shipyard"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			#####  EASTERN  ######
+			iconType =
+			{
+				name ="building_menu_eastern_background1"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background2"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background3"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background4"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background_wall1"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background_wall1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background_wall2"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background_wall2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background_wall3"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background_wall3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background_wall4"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background_wall4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background_wall5"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background_wall5"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			# Buildings:
+			guiButtonType =
+			{
+				name ="building_menu_eastern_admiralty"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_admiralty"
+				position = { x= 143 y = -323 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_workshop"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_workshop"
+				position = { x= 223 y = -316 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_constable"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_constable"
+				position = { x= 310 y = -365 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_war_office"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_war_office"
+				position = { x= 389 y = -316 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_tax_assessor"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_tax_assessor"
+				position = { x= 101 y = -351 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_courthouse"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_courthouse"
+				position = { x= 198 y = -303 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_temple"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_temple"
+				position = { x= 266 y = -366 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_customs_house"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_customs_house"
+				position = { x= 351 y = -276 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_market_place"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_market_place"
+				position = { x= 231 y = -189 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_regimental_camp"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_regimental_camp"
+				position = { x= 245 y = -155 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_eastern_shipyard"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_shipyard"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			######  INDIAN  ######
+			iconType =
+			{
+				name ="building_menu_indian_background1"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background2"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background3"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background4"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background_wall1"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background_wall1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background_wall2"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background_wall2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background_wall3"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background_wall3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background_wall4"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background_wall4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background_wall5"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background_wall5"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			# Buildings:
+			guiButtonType =
+			{
+				name ="building_menu_indian_regimental_camp"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_regimental_camp"
+				position = { x= 130 y = -342 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_workshop"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_workshop"
+				position = { x= 219 y = -337 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_tax_assessor"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_tax_assessor"
+				position = { x= 153 y = -313 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_war_office"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_war_office"
+				position = { x= 301 y = -308 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_courthouse"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_courthouse"
+				position = { x= 201 y = -312 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_admiralty"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_admiralty"
+				position = { x= 68 y = -283 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_temple"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_temple"
+				position = { x= 221 y = -320 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_constable"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_constable"
+				position = { x= 351 y = -328 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_market_place"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_market_place"
+				position = { x= 130 y = -227 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_customs_house"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_customs_house"
+				position = { x= 375 y = -241 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_indian_shipyard"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_shipyard"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			######  LATIN  #######
+			iconType =
+			{
+				name ="building_menu_latin_background1"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background2"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background3"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background4"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background_wall1"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background_wall1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background_wall2"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background_wall2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background_wall3"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background_wall3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background_wall4"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background_wall4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background_wall5"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background_wall5"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			# Buildings:
+			guiButtonType =
+			{
+				name ="building_menu_latin_workshop"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_workshop"
+				position = { x= 127 y = -333 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_war_office"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_war_office"
+				position = { x= 268 y = -340 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_constable"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_constable"
+				position = { x= 413 y = -365 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_regimental_camp"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_regimental_camp"
+				position = { x= 59 y = -307 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_customs_house"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_customs_house"
+				position = { x= 107 y = -285 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_tax_assessor"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_tax_assessor"
+				position = { x= 177 y = -310 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_courthouse"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_courthouse"
+				position = { x= 328 y = -273 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_temple"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_temple"
+				position = { x= 230 y = -327 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_admiralty"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_admiralty"
+				position = { x= 22 y = -236 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_market_place"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_market_place"
+				position = { x= 279 y = -208 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_latin_shipyard"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_shipyard"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			######  MUSLIM  ######
+			iconType =
+			{
+				name ="building_menu_muslim_background1"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background2"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background3"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background4"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background_wall1"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background_wall1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background_wall2"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background_wall2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background_wall3"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background_wall3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background_wall4"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background_wall4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background_wall5"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background_wall5"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			# Buildings:
+			guiButtonType =
+			{
+				name ="building_menu_muslim_regimental_camp"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_regimental_camp"
+				position = { x= 79 y = -276 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_constable"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_constable"
+				position = { x= 190 y = -319 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_customs_house"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_customs_house"
+				position = { x= 275 y = -308 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_workshop"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_workshop"
+				position = { x= 345 y = -288 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_tax_assessor"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_tax_assessor"
+				position = { x= 419 y = -257 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_temple"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_temple"
+				position = { x= 258 y = -321 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_war_office"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_war_office"
+				position = { x= 15 y = -249 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_courthouse"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_courthouse"
+				position = { x= 173 y = -249 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_market_place"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_market_place"
+				position = { x= 285 y = -190 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_admiralty"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_admiralty"
+				position = { x= 320 y = -154 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_muslim_shipyard"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_shipyard"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			##  NORTH AMERICAN  ##
+			iconType =
+			{
+				name ="building_menu_namerican_background1"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background2"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background3"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background4"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background_wall1"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background_wall1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background_wall2"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background_wall2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background_wall3"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background_wall3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background_wall4"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background_wall4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background_wall5"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background_wall5"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			# Buildings:
+			guiButtonType =
+			{
+				name ="building_menu_namerican_workshop"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_workshop"
+				position = { x= 127 y = -333 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_war_office"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_war_office"
+				position = { x= 268 y = -340 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_constable"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_constable"
+				position = { x= 413 y = -365 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_regimental_camp"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_regimental_camp"
+				position = { x= 59 y = -307 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_customs_house"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_customs_house"
+				position = { x= 107 y = -285 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_tax_assessor"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_tax_assessor"
+				position = { x= 177 y = -310 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_courthouse"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_courthouse"
+				position = { x= 328 y = -273 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_temple"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_temple"
+				position = { x= 230 y = -327 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_admiralty"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_admiralty"
+				position = { x= 22 y = -236 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_market_place"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_market_place"
+				position = { x= 279 y = -208 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_namerican_shipyard"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_shipyard"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			##  SOUTH AMERICAN  ##
+			iconType =
+			{
+				name ="building_menu_samerican_background1"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background2"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background3"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background4"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background_wall1"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background_wall1"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background_wall2"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background_wall2"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background_wall3"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background_wall3"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background_wall4"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background_wall4"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background_wall5"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background_wall5"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+			# Buildings:
+			guiButtonType =
+			{
+				name ="building_menu_samerican_workshop"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_workshop"
+				position = { x= 127 y = -333 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_war_office"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_war_office"
+				position = { x= 268 y = -340 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_constable"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_constable"
+				position = { x= 413 y = -365 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_regimental_camp"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_regimental_camp"
+				position = { x= 59 y = -307 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_customs_house"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_customs_house"
+				position = { x= 107 y = -285 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_tax_assessor"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_tax_assessor"
+				position = { x= 177 y = -310 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_courthouse"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_courthouse"
+				position = { x= 328 y = -273 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_temple"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_temple"
+				position = { x= 230 y = -327 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_admiralty"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_admiralty"
+				position = { x= 22 y = -236 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_market_place"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_market_place"
+				position = { x= 279 y = -208 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_samerican_shipyard"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_shipyard"
+				position = { x= 192 y = 37 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			######################
 			guiButtonType =
 			{
 				name ="building_menu_button_back"
@@ -2801,95 +4033,6 @@ guiTypes = {
 				Orientation = "LOWER_LEFT"
 				shortcut = "ESCAPE"
 				clicksound = back_click
-			}
-			# Buildings:
-			guiButtonType =
-			{
-				name ="building_menu_workshop"
-				scripted = yes
-				spriteType = "GFX_building_menu_workshop"
-				position = { x= 127 y = -333 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_war_office"
-				scripted = yes
-				spriteType = "GFX_building_menu_war_office"
-				position = { x= 268 y = -340 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_constable"
-				scripted = yes
-				spriteType = "GFX_building_menu_constable"
-				position = { x= 413 y = -365 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_regimental_camp"
-				scripted = yes
-				spriteType = "GFX_building_menu_regimental_camp"
-				position = { x= 59 y = -307 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_customs_house"
-				scripted = yes
-				spriteType = "GFX_building_menu_customs_house"
-				position = { x= 107 y = -285 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_tax_assessor"
-				scripted = yes
-				spriteType = "GFX_building_menu_tax_assessor"
-				position = { x= 177 y = -310 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_courthouse"
-				scripted = yes
-				spriteType = "GFX_building_menu_courthouse"
-				position = { x= 328 y = -273 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_temple"
-				scripted = yes
-				spriteType = "GFX_building_menu_temple"
-				position = { x= 230 y = -327 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_admiralty"
-				scripted = yes
-				spriteType = "GFX_building_menu_admiralty"
-				position = { x= 22 y = -236 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_market_place"
-				scripted = yes
-				spriteType = "GFX_building_menu_market_place"
-				position = { x= 279 y = -208 }
-				Orientation = "LOWER_LEFT"
-			}
-			guiButtonType =
-			{
-				name ="building_menu_shipyard"
-				scripted = yes
-				spriteType = "GFX_building_menu_shipyard"
-				position = { x= 192 y = 37 }
-				Orientation = "LOWER_LEFT"
 			}
 		}
 

@@ -6,14 +6,17 @@ spriteTypes = {
 	spriteType = {
 		name = "debug_gui_bg"
 		texturefile = "images/debug_gui_bg.dds"
+		transparencecheck = yes
 	}
 	spriteType = {
 		name = "debug_gui_button_s"
 		texturefile = "images/debug_gui_button_s.dds"
+		transparencecheck = yes
 	}
 	spriteType = {
 		name = "debug_gui_button_l"
 		texturefile = "images/debug_gui_button_l.dds"
+		transparencecheck = yes
 	}
 	
 

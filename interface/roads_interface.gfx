@@ -11,114 +11,900 @@ spriteTypes = {
 		texturefile = "gfx/interface/buildings_menu/building_menu_button_back.dds"
 		transparencecheck = yes
 	}
+	######################
+	#####  AFRICAN  ######
 	spriteType = {
-		name = "GFX_building_menu_background1"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background1.dds"
+		name = "GFX_building_menu_african_background1"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background1.dds"
 		noOfFrames = 10
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_background2"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background2.dds"
+		name = "GFX_building_menu_african_background2"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background2.dds"
 		noOfFrames = 10
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_background3"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background3.dds"
+		name = "GFX_building_menu_african_background3"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background3.dds"
 		noOfFrames = 10
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_background4"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background4.dds"
+		name = "GFX_building_menu_african_background4"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background4.dds"
 		noOfFrames = 10
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_background_wall1"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall1.dds"
-		noOfFrames = 13
+		name = "GFX_building_menu_african_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background_wall1.dds"
+		noOfFrames = 10
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_background_wall2"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall2.dds"
-		noOfFrames = 13
+		name = "GFX_building_menu_african_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background_wall2.dds"
+		noOfFrames = 10
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_background_wall3"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall3.dds"
-		noOfFrames = 13
+		name = "GFX_building_menu_african_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background_wall3.dds"
+		noOfFrames = 10
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_background_wall4"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall4.dds"
-		noOfFrames = 13
+		name = "GFX_building_menu_african_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background_wall4.dds"
+		noOfFrames = 10
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_background_wall5"
-		texturefile = "gfx/interface/buildings_menu/building_menu_background_wall5.dds"
+		name = "GFX_building_menu_african_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background_wall5.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	# Buildings:
+	spriteType = {
+		name = "GFX_building_menu_african_courthouse"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_courthouse.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_war_office"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_war_office.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_tax_assessor.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_constable"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_constable.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_customs_house"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_customs_house.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_temple"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_temple.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_admiralty"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_admiralty.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_workshop"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_workshop.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_regimental_camp.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_market_place"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_market_place.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_shipyard"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_shipyard.dds"
+		transparencecheck = yes
+	}
+	######################
+	#####  CHINESE  ######
+	spriteType = {
+		name = "GFX_building_menu_chinese_background1"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background1.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background2"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background2.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background3"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background3.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background4"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background4.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background_wall1.dds"
+		noOfFrames = 9
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background_wall2.dds"
+		noOfFrames = 9
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background_wall3.dds"
+		noOfFrames = 9
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background_wall4.dds"
+		noOfFrames = 9
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background_wall5.dds"
+		noOfFrames = 9
+		transparencecheck = yes
+	}
+	# Buildings:
+	spriteType = {
+		name = "GFX_building_menu_chinese_war_office"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_war_office.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_workshop"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_workshop.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_customs_house"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_customs_house.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_courthouse"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_courthouse.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_regimental_camp.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_temple"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_temple.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_tax_assessor.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_constable"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_constable.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_market_place"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_market_place.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_admiralty"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_admiralty.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_shipyard"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_shipyard.dds"
+		transparencecheck = yes
+	}
+	######################
+	#####  EASTERN  ######
+	spriteType = {
+		name = "GFX_building_menu_eastern_background1"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background1.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background2"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background2.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background3"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background3.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background4"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background4.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background_wall1.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background_wall2.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background_wall3.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background_wall4.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background_wall5.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	# Buildings:
+	spriteType = {
+		name = "GFX_building_menu_eastern_admiralty"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_admiralty.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_workshop"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_workshop.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_constable"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_constable.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_war_office"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_war_office.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_tax_assessor.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_courthouse"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_courthouse.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_temple"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_temple.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_customs_house"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_customs_house.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_market_place"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_market_place.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_regimental_camp.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_shipyard"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_shipyard.dds"
+		transparencecheck = yes
+	}
+	######################
+	######  INDIAN  ######
+	spriteType = {
+		name = "GFX_building_menu_indian_background1"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background1.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background2"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background2.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background3"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background3.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background4"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background4.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background_wall1.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background_wall2.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background_wall3.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background_wall4.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background_wall5.dds"
 		noOfFrames = 13
 		transparencecheck = yes
 	}
 	# Buildings:
 	spriteType = {
-		name = "GFX_building_menu_workshop"
-		texturefile = "gfx/interface/buildings_menu/building_menu_workshop.dds"
+		name = "GFX_building_menu_indian_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_regimental_camp.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_war_office"
-		texturefile = "gfx/interface/buildings_menu/building_menu_war_office.dds"
+		name = "GFX_building_menu_indian_workshop"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_workshop.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_constable"
-		texturefile = "gfx/interface/buildings_menu/building_menu_constable.dds"
+		name = "GFX_building_menu_indian_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_tax_assessor.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_regimental_camp"
-		texturefile = "gfx/interface/buildings_menu/building_menu_regimental_camp.dds"
+		name = "GFX_building_menu_indian_war_office"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_war_office.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_customs_house"
-		texturefile = "gfx/interface/buildings_menu/building_menu_customs_house.dds"
+		name = "GFX_building_menu_indian_courthouse"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_courthouse.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_tax_assessor"
-		texturefile = "gfx/interface/buildings_menu/building_menu_tax_assessor.dds"
+		name = "GFX_building_menu_indian_admiralty"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_admiralty.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_courthouse"
-		texturefile = "gfx/interface/buildings_menu/building_menu_courthouse.dds"
+		name = "GFX_building_menu_indian_temple"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_temple.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_temple"
-		texturefile = "gfx/interface/buildings_menu/building_menu_temple.dds"
+		name = "GFX_building_menu_indian_constable"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_constable.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_admiralty"
-		texturefile = "gfx/interface/buildings_menu/building_menu_admiralty.dds"
+		name = "GFX_building_menu_indian_market_place"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_market_place.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_market_place"
-		texturefile = "gfx/interface/buildings_menu/building_menu_market_place.dds"
+		name = "GFX_building_menu_indian_customs_house"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_customs_house.dds"
 		transparencecheck = yes
 	}
 	spriteType = {
-		name = "GFX_building_menu_shipyard"
-		texturefile = "gfx/interface/buildings_menu/building_menu_shipyard.dds"
+		name = "GFX_building_menu_indian_shipyard"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_shipyard.dds"
+		transparencecheck = yes
+	}
+	######################
+	######  LATIN  #######
+	spriteType = {
+		name = "GFX_building_menu_latin_background1"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background1.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background2"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background2.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background3"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background3.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background4"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background4.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background_wall1.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background_wall2.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background_wall3.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background_wall4.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background_wall5.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	# Buildings:
+	spriteType = {
+		name = "GFX_building_menu_latin_workshop"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_workshop.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_war_office"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_war_office.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_constable"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_constable.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_regimental_camp.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_customs_house"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_customs_house.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_tax_assessor.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_courthouse"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_courthouse.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_temple"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_temple.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_admiralty"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_admiralty.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_market_place"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_market_place.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_shipyard"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_shipyard.dds"
+		transparencecheck = yes
+	}
+	######################
+	######  MUSLIM  ######
+	spriteType = {
+		name = "GFX_building_menu_muslim_background1"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background1.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background2"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background2.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background3"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background3.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background4"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background4.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background_wall1.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background_wall2.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background_wall3.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background_wall4.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background_wall5.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	# Buildings:
+	spriteType = {
+		name = "GFX_building_menu_muslim_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_regimental_camp.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_constable"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_constable.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_customs_house"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_customs_house.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_workshop"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_workshop.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_tax_assessor.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_temple"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_temple.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_war_office"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_war_office.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_courthouse"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_courthouse.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_market_place"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_market_place.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_admiralty"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_admiralty.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_shipyard"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_shipyard.dds"
+		transparencecheck = yes
+	}
+	######################
+	##  NORTH AMERICAN  ##
+	spriteType = {
+		name = "GFX_building_menu_namerican_background1"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background1.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background2"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background2.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background3"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background3.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background4"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background4.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background_wall1.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background_wall2.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background_wall3.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background_wall4.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background_wall5.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	# Buildings:
+	spriteType = {
+		name = "GFX_building_menu_namerican_workshop"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_workshop.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_war_office"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_war_office.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_constable"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_constable.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_regimental_camp.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_customs_house"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_customs_house.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_tax_assessor.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_courthouse"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_courthouse.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_temple"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_temple.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_admiralty"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_admiralty.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_market_place"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_market_place.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_shipyard"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_shipyard.dds"
+		transparencecheck = yes
+	}
+	######################
+	##  SOUTH AMERICAN  ##
+	spriteType = {
+		name = "GFX_building_menu_samerican_background1"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background1.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background2"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background2.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background3"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background3.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background4"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background4.dds"
+		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background_wall1"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background_wall1.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background_wall2"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background_wall2.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background_wall3"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background_wall3.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background_wall4"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background_wall4.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background_wall5"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background_wall5.dds"
+		noOfFrames = 13
+		transparencecheck = yes
+	}
+	# Buildings:
+	spriteType = {
+		name = "GFX_building_menu_samerican_workshop"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_workshop.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_war_office"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_war_office.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_constable"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_constable.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_regimental_camp"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_regimental_camp.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_customs_house"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_customs_house.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_tax_assessor"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_tax_assessor.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_courthouse"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_courthouse.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_temple"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_temple.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_admiralty"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_admiralty.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_market_place"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_market_place.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_shipyard"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_shipyard.dds"
 		transparencecheck = yes
 	}
 	######################
