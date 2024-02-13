@@ -16,4 +16,10 @@ spriteTypes = {
 		texturefile = "images/debug_gui_button_l.dds"
 	}
 	
+
+	spriteType = {
+		name = "GFX_trading_post_background"
+		texturefile = "gfx/interface/trading_post_menu/trade_post_background.dds"
+		transparencecheck = yes
+	}
 }

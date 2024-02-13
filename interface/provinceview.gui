@@ -1873,6 +1873,13 @@ guiTypes = {
 				scale = 0.7
 			}
 
+			guiButtonType = {
+				name ="open_trading_city_button"
+				quadTextureSprite = "GFX_trade_post_button"
+				scripted = yes
+				position = { x = 357 y = 507 }
+			}
+
 			iconType =
 			{
 				name ="trade_pie"
@@ -2656,6 +2663,28 @@ guiTypes = {
 				name = "buildings_button"
 				position = { x=478 y=144}
 				quadTextureSprite ="GFX_build_interface_building_tab"
+			}
+
+			##TRADING OUTPOSTS
+
+			iconType =
+			{
+				name ="trade_post_menu"
+				scripted = yes
+				spriteType = "GFX_trading_post_background"
+				position = { x= 12 y = 96 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			guiButtonType =
+			{
+				name ="close_trading_city_button"
+				scripted = yes
+				spriteType = "GFX_building_menu_button_back"
+				position = { x= 203 y = 57 }
+				Orientation = "LOWER_LEFT"
+				shortcut = "ESCAPE"
+				clicksound = back_click
 			}
 
 			iconType =

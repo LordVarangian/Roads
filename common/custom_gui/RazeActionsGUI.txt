@@ -34,10 +34,11 @@ custom_button = {
 }
 
 custom_button = {
-	name = raid_button
-	tooltip = raid_button_tooltip
+	name = open_trading_city_button
+	tooltip = open_trading_city_buttontt
 	potential = {
-		always = yes
+		province_has_center_of_trade_of_level = 1
+		NOT = { owned_by = FROM }
 	}
    frame = { 
        number = 1
@@ -46,7 +47,20 @@ custom_button = {
 	trigger = {
 
 	}
-	effect = {
+	effect = { FROM = { set_country_flag = trade_outpost_menu_opened_flag } }
+}
 
+custom_button = {
+	name = close_trading_city_button
+	potential = { FROM = { has_country_flag = trade_outpost_menu_opened_flag } }
+	effect = { FROM = { clr_country_flag = trade_outpost_menu_opened_flag } }
+	tooltip = building_menu_button_back_tt
+}
+
+custom_icon = {
+	name = trade_post_menu
+	potential = {
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
 	}
+	frame = { number = 1 trigger = { always = yes } }
 }
