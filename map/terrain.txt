@@ -64,6 +64,7 @@ categories =  {
 
 		movement_cost = 1.10
 		nation_designer_cost_multiplier = 1.05
+		supply_limit = 10
 		
 		terrain_override = {
 			104 109 108 1744 1865
@@ -139,6 +140,7 @@ categories =  {
 		
 		movement_cost = 1.25
 		nation_designer_cost_multiplier = 0.9
+		supply_limit = 4
 		
 		terrain_override = { 
 			2 4 8 9 11 18 29 30 31 315 4123 4124 # Sweden
@@ -163,6 +165,7 @@ categories =  {
 
 		movement_cost = 1.40
 		nation_designer_cost_multiplier = 0.85
+		supply_limit = 5
 		
 		terrain_override = {
 			508 509 511 515 525 527 530 545 550 554 557 1947 2036 
@@ -230,6 +233,7 @@ categories =  {
 
 		movement_cost = 1.10
 		nation_designer_cost_multiplier = 0.9
+		supply_limit = 6
 		
 		terrain_override = {
 			206 1851 # Spain
@@ -296,6 +300,7 @@ categories =  {
 
 		movement_cost = 1.5
 		nation_designer_cost_multiplier = 0.75
+		supply_limit = 4
 		
 		terrain_override = {
 			210	226 # Spain
@@ -371,6 +376,7 @@ categories =  {
 
 		movement_cost = 1.0
 		nation_designer_cost_multiplier = 1
+		supply_limit = 8
 		
 		terrain_override = {
 			2666 # North America
@@ -430,6 +436,7 @@ categories =  {
 
 		movement_cost = 1.5
 		nation_designer_cost_multiplier = 0.8
+		supply_limit = 5
 		
 		terrain_override = {
 			1237 1245 2703 #South East Asia
@@ -469,6 +476,7 @@ categories =  {
 
 		movement_cost = 1.3
 		nation_designer_cost_multiplier = 0.85
+		supply_limit = 5
 
 		terrain_override = {
 			1860 #England
@@ -499,6 +507,7 @@ categories =  {
 
 		movement_cost = 1.05
 		nation_designer_cost_multiplier = 0.8
+		supply_limit = 4
 		
 		terrain_override = {
 			503 2078 2088 #India
@@ -526,6 +535,7 @@ categories =  {
 
 		movement_cost = 1.0
 		nation_designer_cost_multiplier = 0.9
+		supply_limit = 4
 
 		terrain_override = {
 			792 793 796 805 806 2821 2822 2840 2841
@@ -549,6 +559,7 @@ categories =  {
 
 		movement_cost = 1.0
 		nation_designer_cost_multiplier = 0.85
+		supply_limit = 6
 		
 		terrain_override = {
 			957 962 2554 2561 2578 #n am
@@ -584,6 +595,7 @@ categories =  {
 
 		movement_cost = 1.00
 		nation_designer_cost_multiplier = 0.95
+		supply_limit = 7
 
 		terrain_override = {
 			1749 224
@@ -628,7 +640,8 @@ categories =  {
 		sound_type = mountains
 
 		movement_cost = 1.40
-		nation_designer_cost_multiplier = 0.9	
+		nation_designer_cost_multiplier = 0.9
+		supply_limit = 6	
 
 		terrain_override = {
 			520 536 542 544 578 2035 2077 2079 2085 2087 2093
@@ -676,6 +689,7 @@ categories =  {
 
 		movement_cost = 1.00
 		nation_designer_cost_multiplier = 0.95	
+		supply_limit = 6
 		
 		terrain_override = {
 			768 776 1800 2805 2809 2810 2812 2814 2815 2855 2859 2879 2884 2887 
@@ -712,6 +726,7 @@ categories =  {
 
 		movement_cost = 1.00
 		nation_designer_cost_multiplier = 0.9
+		supply_limit = 6
 		
 		terrain_override = {
 			2195 463 2197 2417 466 2367 470 472 2353 2369 2358 476 2354 479 2357 1966 2420
