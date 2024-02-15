@@ -10,4 +10,8 @@ on_startup = {
 			init = { v = r_dist }
 		}
 	}
+
+	every_province = {
+		place_terrain_modifiers = yes
+	}
 }

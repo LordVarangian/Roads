@@ -909,4 +909,18 @@ spriteTypes = {
 	}
 	######################
 	######################
+
+	######################
+	## Terrain
+	######################
+	spriteType = {
+		name = "GFX_modified_terrain"
+		texturefile = "gfx/interface/terrain/build_woods.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_terrain_text"
+		texturefile = "gfx/interface/terrain/transparent_build.dds"
+		transparencecheck = yes
+	}
 }

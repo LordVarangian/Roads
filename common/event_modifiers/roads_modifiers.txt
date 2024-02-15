@@ -5,3 +5,106 @@ regional_capital_modifier = {
 production_upgraded = {
     trade_goods_size = 1
 }
+
+fishery_modifier = {
+    trade_goods = 0.5
+}
+
+workshop_built = {
+    trade_goods = 1
+}
+
+coastal_defence_built = {
+    block_slave_raid = yes
+}
+
+#####
+#Terrain Modifiers
+#####
+
+farmlands_modifier = {
+    local_development_cost = -0.05
+    supply_limit = 10
+     allowed_num_of_buildings = 1
+}
+
+forest_modifier = {
+	supply_limit = 4
+	local_development_cost = 0.2
+    local_attacker_dice_roll_bonus = -1
+}
+
+hills_modifier = {
+    local_attacker_dice_roll_bonus = -1
+    local_defensiveness = 0.1
+    local_development_cost = 0.25
+    supply_limit = 5
+}
+
+woods_modifier = {
+    local_attacker_dice_roll_bonus = -1
+	local_development_cost = 0.15
+    supply_limit = 6
+}
+
+mountain_modifier = {
+    local_attacker_dice_roll_bonus = -2
+    local_defensiveness = 0.25
+    local_development_cost = 0.35
+    supply_limit = 4
+}
+
+grasslands_modifier = {
+    supply_limit = 8
+	allowed_num_of_buildings = 1
+}
+
+jungle_modifier = {
+    local_attacker_dice_roll_bonus = -1
+    local_development_cost = 0.35
+    supply_limit = 5
+}
+
+marsh_modifier = {
+    local_attacker_dice_roll_bonus = -1
+    local_development_cost = 0.25
+    supply_limit = 5
+}
+
+desert_modifier = {
+    supply_limit = 4
+	local_development_cost = 0.50
+}
+
+coastal_desert_modifier = {
+    local_development_cost = 0.35	
+    supply_limit = 4
+}
+
+coastline_modifier = {
+    local_development_cost = 0.15
+	supply_limit = 6
+}
+
+drylands_modifier = {
+    local_development_cost = 0.05
+    supply_limit = 7
+    allowed_num_of_buildings = 1
+}
+
+highlands_modifier = {
+    supply_limit = 6
+    local_attacker_dice_roll_bonus = -1
+    local_defensiveness = 0.1
+    local_development_cost = 0.2
+}
+
+savannah_modifier = {
+    supply_limit = 6
+    local_development_cost = 0.15
+}
+
+steppe_modifier = {
+    local_development_cost = 0.20
+    supply_limit = 6
+}

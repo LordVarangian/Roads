@@ -16,3 +16,55 @@
  building_counting_house_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Production Efficiency: §G+15.0%§!\n\n"
  
  building_output: "Building Output Growth"
+
+ #Terrain:
+ TERRAIN_TT: "Terrain: §YDeforested Woods§!\nSupply Limit: §G+8.00§!\nLocal Development Cost: §R+5.00%§!\n--------------\nThese woods have been chopped off to allow for the building of better infrastructure."
+ CHANGE_TERRAIN_OF_WOODS: "Change province terrain to §YDeforested Woods§!"
+ CHANGE_TERRAIN_TT: "Change Terrain"
+
+ farmlands_modifier: "Farmlands"
+ forest_modifier: "Forest"
+ hills_modifier: "Hills"
+ woods_modifier: "Woods"
+ mountain_modifier: "Mountains"
+ grasslands_modifier: "Grasslands"
+ jungle_modifier: "Jungle"
+ marsh_modifier: "Marsh"
+ desert_modifier: "Desert"
+ coastal_desert_modifier: "Coastal Desert"
+ drylands_modifier: "Drylands"
+ highlands_modifier: "Highlands"
+ savannah_modifier: "Savannah"
+ steppe_modifier: "Steppes"
+
+ TERRAIN_MODIFIERS_TT: "[Root.terrain_type_loc]"
+
+ farmlands_tt: "Terrain: §YFarmlands§!\nSupply Limit: §G+10.00§!\nLocal Development Cost: §G-5.0%§!\nPossible Numbers of Buildings: §G+1§!\n--------------\nFarmlands terrain represents highly cultivated areas where the landscape is dominated by agriculture and towns or villages."
+
+ forest_tt: "Terrain: §YForest§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R-20.0%§!\nDice Roll for Attacker: §R-1§!\n--------------\nForest terrain represents areas of conifer forest with high density of trees and underbrush."
+
+ hills_tt: "Terrain: §YHills§!\nSupply Limit: §G+5.00§!\nLocal Development Cost: §R+25.0%§!\nDice Roll for Attacker: §R-1§!\nLocal Defensiveness: §G+10.0%§!\n--------------\nHills terrain represents areas dominated by a rolling landscape of shifting elevation that are lower and less steep than mountains. Unlike the highland terrain hills represent areas with a higher density of trees and underbrush."
+
+ woods_tt: "Terrain: §YWoods§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\nDice Roll for Attacker: §R-1§!\n--------------\nWoods terrain represents areas of broadleaf forest with high density of trees and underbrush."
+
+ mountain_tt: "Terrain: §YMountains§!\nSupply Limit: §G+4.00§!\nDice Roll for Attacker: §R-2§!\nLocal Development Cost: §R+35.0%§!\nLocal Defensiveness: §G+25.0%§!\n--------------\nMountain terrain represents areas mainly occupied by rugged mountain ranges and narrow passes, often on high altitude and in cold climate."
+
+ grasslands_tt: "Terrain: §YGrasslands§!\nSupply Limit: §G+8.00§!\nPossible Numbers of Buildings: §G+1§!\n--------------\nGrasslands terrain represents areas of farmland where the vegetation is dominated by grass."
+
+ jungle_tt: "Terrain: §YJungle§!\nSupply Limit: §G+5.00§!\nDice Roll for Attacker: §R-1§!\nLocal Development Cost: §R+35.0%§!\n--------------\nJungle terrain represents areas overgrown with dense tropical vegetation, difficult for an army to maneuver in."
+
+ marsh_tt: "Terrain: §YMarsh§!\nSupply Limit: §G+5.00§!\nLocal Development Cost: §R+25.0%§!\nDice Roll for Attacker: §R-1§!\n--------------\nMarsh terrain represents tracts of wetland dominated by grasses or low-growing shrubs."
+
+ desert_tt: "Terrain: §YDesert§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R+50.0%§!\n--------------\nDesert terrain represents desolate and arid areas with little or no vegetation, often in a very warm climate."
+
+ coastal_desert_tt: "Terrain: §YCoastal Desert§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R+35.0%§!\n--------------\nCoastal Desert terrain represents areas where the desert meets the ocean, resulting in a milder and less inhospitable climate."
+
+ coastline_tt: "Terrain: §YCoastline§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\n--------------\nCoastline terrain represents the narrow areas where land and sea meet, comprised of cliffs or sand dunes."
+
+ drylands_tt: "Terrain: §YDrylands§!\nSupply Limit: §G+7.00§!\nLocal Development Cost: §R+5.0%§!\nPossible Numbers of Buildings: §G+1§!\n--------------\nDrylands represents large areas of dry, flat or rolling treeless land."
+
+ highlands_tt: "Terrain: §YHighlands§!\nSupply Limit: §G+6.00§!\nDice Roll for Attacker: §R-1§!\nLocal Development Cost: §R-20.0%§!\nLocal Defensiveness: §G+10.0%§!\n--------------\nHighlands terrain represents areas dominated by a rolling landscape of shifting elevation that are lower and less steep than mountains. Unlike the hills terrain highlands represent areas with a low density of trees and underbrush."
+
+ savannah_tt: "Terrain: §YSavannah§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\n--------------\nSavanna terrain represents large grass-covered areas with a high degree of trees mixed in."
+
+ steppe_tt: "Terrain: §YStepes§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+20.0%§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "

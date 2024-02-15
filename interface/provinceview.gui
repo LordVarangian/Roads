@@ -875,6 +875,38 @@ guiTypes = {
 
 			guiButtonType =
 			{
+				name ="change_terrain"
+				position = { x= 450 y = -15 }
+				quadTextureSprite ="GFX_move_capital"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				buttonFont = "vic_18"
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
+
+			iconType =
+			{
+				name ="province_upgraded_terrain"
+				spriteType = "GFX_modified_terrain"
+				position = { x = 58 y = -23 }
+				scripted = yes
+				transparencecheck = yes
+			}
+
+			iconType =
+			{
+				name ="override_terrain_text"
+				spriteType = "GFX_terrain_text"
+				position = { x = 58 y = -23 }
+				scripted = yes
+				transparencecheck = yes
+			}
+
+			guiButtonType =
+			{
 				name ="raze_button"
 				position = { x= 450 y = 60 }
 				quadTextureSprite ="GFX_development_button_raze"
@@ -2681,40 +2713,276 @@ guiTypes = {
 				spriteType = "GFX_building_menu_button_back"
 				position = { x= 203 y = 57 }
 				Orientation = "LOWER_LEFT"
-				shortcut = "ESCAPE"
 				clicksound = back_click
 			}
 
 			guiButtonType =
 			{
-				name ="upgrade_province_production"
+				name ="build_base_outpost"
 				scripted = yes
-				spriteType = "GFX_building_menu_button_back"
-				position = { x= 50 y = -200 }
+				spriteType = "GFX_building_default"
+				position = { x= 225 y = -365 }
 				Orientation = "LOWER_LEFT"
-				shortcut = "ESCAPE"
+				clicksound = back_click
+			}
+
+			iconType =
+			{
+				name ="base_outpost_built"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 225 y = -365 }
+				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
 
 			guiButtonType =
 			{
-				name ="increase_trade_power"
+				name ="trade_post_slot1"
 				scripted = yes
-				spriteType = "GFX_building_menu_button_back"
-				position = { x= 203 y = -200 }
+				spriteType = "GFX_building_default"
+				position = { x= 75 y = -300 }
 				Orientation = "LOWER_LEFT"
-				shortcut = "ESCAPE"
+				clicksound = back_click
+			}
+
+			iconType =
+			{
+				name ="trade_post_slot1_built"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 75 y = -300 }
+				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
 
 			guiButtonType =
 			{
-				name ="fabricate_coastal_claim"
+				name ="destroy_slot_1_post"
 				scripted = yes
-				spriteType = "GFX_building_menu_button_back"
-				position = { x= 350 y = -200 }
+				spriteType = "GFX_closebutton"
+				position = { x= 100 y = -260 }
 				Orientation = "LOWER_LEFT"
-				shortcut = "ESCAPE"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="recruit_foreign_mercenaries"
+				scripted = yes
+				spriteType = "GFX_closebutton"
+				position = { x= 60 y = -260 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_trade_hub"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 25 y = -240 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_overseas_mercenaries_post"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 125 y = -240 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="trade_post_slot2"
+				scripted = yes
+				spriteType = "GFX_building_default"
+				position = { x= 225 y = -300 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			iconType =
+			{
+				name ="trade_post_slot2_built"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 225 y = -300 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="destroy_slot_2_post"
+				scripted = yes
+				spriteType = "GFX_closebutton"
+				position = { x= 250 y = -260 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_trade_port"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 175 y = -240 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_shipyard"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 225 y = -240 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_fishery"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 275 y = -240 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_slot3"
+				scripted = yes
+				spriteType = "GFX_building_default"
+				position = { x= 375 y = -300 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			iconType =
+			{
+				name ="trade_post_slot3_built"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 375 y = -300 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="destroy_slot_3_post"
+				scripted = yes
+				spriteType = "GFX_closebutton"
+				position = { x= 400 y = -260 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_slot4"
+				scripted = yes
+				spriteType = "GFX_building_default"
+				position = { x= 75 y = -175 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			iconType =
+			{
+				name ="slot_4_built"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 75 y = -175 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="spawn_religious_propagation"
+				scripted = yes
+				spriteType = "GFX_closebutton"
+				position = { x= 60 y = -135 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="destroy_slot_4_post"
+				scripted = yes
+				spriteType = "GFX_closebutton"
+				position = { x= 100 y = -135 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_slot5"
+				scripted = yes
+				spriteType = "GFX_building_default"
+				position = { x= 225 y = -175 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			iconType =
+			{
+				name ="slot_5_built"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 225 y = -175 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="destroy_slot_5_post"
+				scripted = yes
+				spriteType = "GFX_closebutton"
+				position = { x= 250 y = -135 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="build_slot6"
+				scripted = yes
+				spriteType = "GFX_building_default"
+				position = { x= 375 y = -175 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			iconType =
+			{
+				name ="slot_6_built"
+				scripted = yes
+				spriteType = "GFX_temple"
+				position = { x= 375 y = -175 }
+				Orientation = "LOWER_LEFT"
+				clicksound = back_click
+			}
+
+			guiButtonType =
+			{
+				name ="destroy_slot_6_post"
+				scripted = yes
+				spriteType = "GFX_closebutton"
+				position = { x= 400 y = -135 }
+				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
 			

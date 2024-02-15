@@ -1,0 +1,94 @@
+defined_text = {
+	name = terrain_type_loc
+	random = no
+	text = {
+		localisation_key = farmlands_tt
+		trigger = { 
+			has_terrain = farmlands
+		}
+	}
+	text = {
+		localisation_key = forest_tt
+		trigger = { 
+			has_terrain = forest
+		}
+	}
+	text = {
+		localisation_key = hills_tt
+		trigger = { 
+			has_terrain = hills
+		}
+	}
+	text = {
+		localisation_key = woods_tt
+		trigger = { 
+			has_terrain = woods
+		}
+	}
+	text = {
+		localisation_key = mountain_tt
+		trigger = { 
+			has_terrain = mountain
+		}
+	}
+	text = {
+		localisation_key = grasslands_tt
+		trigger = { 
+			has_terrain = grasslands
+		}
+	}
+	text = {
+		localisation_key = jungle_tt
+		trigger = { 
+			has_terrain = jungle
+		}
+	}
+	text = {
+		localisation_key = marsh_tt
+		trigger = { 
+			has_terrain = marsh
+		}
+	}
+	text = {
+		localisation_key = desert_tt
+		trigger = { 
+			has_terrain = desert
+		}
+	}
+	text = {
+		localisation_key = coastal_desert_tt
+		trigger = { 
+			has_terrain = coastal_desert
+		}
+	}
+	text = {
+		localisation_key = coastline_tt
+		trigger = { 
+			has_terrain = coastline
+		}
+	}
+	text = {
+		localisation_key = drylands_tt
+		trigger = { 
+			has_terrain = drylands
+		}
+	}
+	text = {
+		localisation_key = highlands_tt
+		trigger = { 
+			has_terrain = highlands
+		}
+	}
+	text = {
+		localisation_key = savannah_tt
+		trigger = { 
+			has_terrain = savannah
+		}
+	}
+	text = {
+		localisation_key = steppe_tt
+		trigger = { 
+			has_terrain = steppe
+		}
+	}
+}

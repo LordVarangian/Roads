@@ -1,0 +1,161 @@
+clear_other_buildings_view = {
+    FROM = {
+        clr_country_flag = viewing_slot_1_buildings
+        clr_country_flag = viewing_slot_2_buildings
+    }
+}
+
+place_terrain_modifiers = {
+    if = {
+        limit = {
+            has_terrain = farmlands
+        }
+        add_province_modifier = {
+            name = farmslands_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = forest
+        }
+        add_province_modifier = {
+            name = forest_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = hills
+        }
+        add_province_modifier = {
+            name = hills_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = woods
+        }
+        add_province_modifier = {
+            name = woods_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = mountain
+        }
+        add_province_modifier = {
+            name = mountain_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = grasslands
+        }
+        add_province_modifier = {
+            name = grasslands_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = jungle
+        }
+        add_province_modifier = {
+            name = jungle_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = marsh
+        }
+        add_province_modifier = {
+            name = marsh_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+
+    if = {
+        limit = {
+            has_terrain = desert
+        }
+        add_province_modifier = {
+            name = desert_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+
+    if = {
+        limit = {
+            has_terrain = coastal_desert
+        }
+        add_province_modifier = {
+            name = coastal_desert_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = coastline
+        }
+        add_province_modifier = {
+            name = coastline_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = drylands
+        }
+        add_province_modifier = {
+            name = drylands_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = highlands
+        }
+        add_province_modifier = {
+            name = highlands_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = savannah
+        }
+        add_province_modifier = {
+            name = savannah_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+    if = {
+        limit = {
+            has_terrain = steppe
+        }
+        add_province_modifier = {
+            name = steppe_modifier
+            duration = -1
+            hidden = yes
+        }
+    }
+}
