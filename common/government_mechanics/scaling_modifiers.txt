@@ -1,0 +1,22 @@
+scaling_modifiers = {
+	alert_icon_gfx = GFX_alerticons_government_mechanics
+	alert_icon_index = 10
+	available = {
+		always = yes
+	}
+
+	powers = {
+		navy_forcelimit_trade_outposts = {
+			max = 10000
+			base_monthly_growth = 0
+			scaled_modifier = {
+				trigger = {
+					has_government_attribute = can_use_trade_post
+				}
+				modifier = {
+					naval_forcelimit = 100
+				}
+			}
+		}
+	}
+}

@@ -123,6 +123,7 @@ custom_button = {
 
 custom_icon = {
 	name = base_outpost_built
+	tooltip = GRANT_25_TRADE_POWER
 	potential = {
 		FROM = { has_government_attribute = can_use_trade_post }
 		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
@@ -370,7 +371,16 @@ custom_button = {
 		set_country_flag = built_shipyard
 		set_province_flag = built_slot_2
 		FROM = { add_years_of_income = -0.75 }
-		#Do funny effect here
+		custom_tooltip = ADD_2_NAVAL_FL
+		hidden_effect = {
+			FROM = {
+				add_government_power = {
+					mechanic_type = scaling_modifiers
+					power_type = navy_forcelimit_trade_outposts
+					value = 2
+				}
+			}
+		}
 		FROM = { clr_country_flag = viewing_slot_2_buildings }
 	}
 	tooltip = slot1_tt
@@ -442,6 +452,18 @@ custom_button = {
 				has_province_flag = built_fishery
 			}
 			remove_province_modifier = fishery_modifier
+		}
+		if = {
+			limit = {
+				has_province_flag = built_shipyard
+			}
+			FROM = {
+				add_government_power = {
+					mechanic_type = scaling_modifiers
+					power_type = navy_forcelimit_trade_outposts
+					value = -2
+				}
+			}
 		}
 		clr_province_flag = built_fishery
 		clr_province_flag = built_shipyard
@@ -525,7 +547,7 @@ custom_button = {
 	}
 	effect = { 
 		set_province_flag = built_slot_4
-		custom_tooltip = ALLOWS_RELIGIOUS_PROPAGATION_FROM_PROVINCE
+		change_religion = FROM
 	}
 	tooltip = slot1_tt
 }
@@ -539,29 +561,6 @@ custom_icon = {
 		has_province_flag = built_slot_4
 	}
 	frame = { number = 1 trigger = { always = yes } }
-}
-
-custom_button = {
-	name = spawn_religious_propagation
-	potential = { 
-		FROM = { has_country_flag = trade_outpost_menu_opened_flag } 
-		FROM = { has_government_attribute = can_use_trade_post }
-		has_province_flag = built_slot_4
-	}
-	trigger = {
-		FROM = {
-			adm_power = 100
-			years_of_income = 1
-		}
-	}
-	effect = { 
-		FROM = {
-			add_adm_power = -100
-			add_years_of_income = -1
-		}
-		add_reform_center = FROM
-	}
-	tooltip = slot1_tt
 }
 
 custom_button = {

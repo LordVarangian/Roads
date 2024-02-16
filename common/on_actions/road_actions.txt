@@ -15,3 +15,19 @@ on_startup = {
 		place_terrain_modifiers = yes
 	}
 }
+
+on_province_owner_change = {
+	if = {
+		limit = {
+			has_province_flag = built_shipyard
+		}
+		FROM = {
+			add_government_power = {
+				mechanic_type = scaling_modifiers
+				power_type = navy_forcelimit_trade_outposts
+				value = -2
+			}
+		}
+	}
+	#clear all trading outpost things
+}

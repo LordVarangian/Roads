@@ -7,11 +7,11 @@ production_upgraded = {
 }
 
 fishery_modifier = {
-    trade_goods = 0.5
+    trade_goods_size = 0.5
 }
 
 workshop_built = {
-    trade_goods = 1
+    trade_goods_size = 1
 }
 
 coastal_defence_built = {

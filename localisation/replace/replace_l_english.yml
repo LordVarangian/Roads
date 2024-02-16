@@ -68,3 +68,16 @@
  savannah_tt: "Terrain: §YSavannah§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\n--------------\nSavanna terrain represents large grass-covered areas with a high degree of trees mixed in."
 
  steppe_tt: "Terrain: §YStepes§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+20.0%§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+
+ navy_forcelimit_trade_outposts: "Trade Outposts"
+
+ #Trade Outpost:
+ build_base_outpost: "Base Outpost"
+ GRANT_25_TRADE_POWER: "Grants §G25§! Trade Power in the Province's Trade Node"
+
+ trade_post_slot1: "Slot 1"
+ trade_post_slot2: "Slot 2"
+ build_slot3: "Workshop"
+ build_slot4: "Temple"
+ build_slot5: "Coastal Fortifications"
+ build_slot6: "Build Fortifications"
