@@ -24,11 +24,34 @@ spriteTypes = {
 		name = "GFX_trading_post_background"
 		texturefile = "gfx/interface/trading_post_menu/trade_post_background.dds"
 		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_trading_outpost_banner"
+		texturefile = "gfx/interface/trading_post_menu/banner_trade_outposts.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_slot_1"
+		texturefile = "gfx/interface/trading_post_menu/slot_1_buildings.dds"
+		transparencecheck = yes
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_button_add"
-		texturefile = "gfx/interface/trading_post_menu/button_add.dds"
+		name = "GFX_slot_2"
+		texturefile = "gfx/interface/trading_post_menu/slot_2_buildings.dds"
 		transparencecheck = yes
+		noOfFrames = 3
+	}
+
+	maskedShieldType = {
+		name = "gfx_shield_trade_outposts_overlay"
+		textureFile1 = "gfx/interface/trading_post_menu/trade_outpost_owner_shield.dds"
+		textureFile2 = "gfx/interface/trading_post_menu/shield_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		transparencecheck = yes
+		textureFile3 = "gfx//interface//client_state_symbols_large.dds"
+		noOfFrames = 121
+		overlay_frames_per_row = 32
+		overlay_rows = 4
 	}
 }

@@ -66,9 +66,17 @@ custom_button = {
 				NOT = { has_province_flag = trade_outpost_built }
 			}
 			set_province_flag = trade_outpost_built
+			save_global_event_target_as = outpost_province
+			FROM = { set_country_flag = outpost_of_@event_target:outpost_province }
 		}
 		else = {
-			FROM = { set_country_flag = trade_outpost_menu_opened_flag } 
+			FROM = { set_country_flag = trade_outpost_menu_opened_flag }
+			random_country = {
+				limit = {
+					has_country_flag = outpost_of_@PREV_PREV
+				}
+				save_global_event_target_as = province_owner_of_this
+			}
 		}
 	}
 }
@@ -91,8 +99,6 @@ custom_icon = {
 		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
 		has_province_flag = trade_outpost_built
 	}
-	frame = { number = 1 trigger = { has_province_flag = trade_outpost_built } }
-	frame = { number = 2 trigger = { NOT = { has_province_flag = trade_outpost_built } } }
 }
 
 custom_button = {
@@ -111,14 +117,16 @@ custom_button = {
 	effect = { 
 		set_province_flag = built_base_outpost_flag
 		FROM = { add_years_of_income = -0.25 }
-		add_trade_modifier = {
-			who = FROM
-			duration = -1
-			power = 25
-			key = BASE_OUTPOST_BUILT
+		hidden_effect = {
+			add_trade_modifier = {
+				who = FROM
+				duration = -1
+				power = 25
+				key = BASE_OUTPOST_BUILT
+			}
 		}
 	}
-	tooltip = slot1_tt
+	tooltip = base_outpost_tt
 }
 
 custom_icon = {
@@ -132,6 +140,46 @@ custom_icon = {
 	}
 	frame = { number = 1 trigger = { always = yes } }
 }
+
+custom_shield = {
+	name = trade_outpost_owner_shield_overlay
+    potential = {
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
+	}
+	trigger = {
+		#has_saved_global_event_target = imperial_chaplain
+	}
+    #effect = { }
+    tooltip = test_tooltip
+    global_event_target = province_owner_of_this
+    open_country = yes
+}
+
+custom_text_box = {
+    name = display_owner_name
+    potential = {
+		FROM = { has_government_attribute = can_use_trade_post }
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
+	}
+	tooltip = display_owner_name_tt
+}
+
+custom_text_box = {
+    name = display_province_name
+    potential = {
+		FROM = { has_government_attribute = can_use_trade_post }
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
+	}
+}
+
+custom_icon = {
+	name = banner_trade_outposts
+	potential = {
+		FROM = { has_government_attribute = can_use_trade_post }
+		FROM = { has_country_flag = trade_outpost_menu_opened_flag }
+	}
+}
+
 
 ################################
 ## Slot 1
@@ -189,14 +237,16 @@ custom_button = {
 		set_province_flag = built_slot_1
 		FROM = { clr_country_flag = viewing_slot_1_buildings }
 		FROM = { add_years_of_income = -0.5 }
-		add_trade_modifier = {
-			who = FROM
-			duration = -1
-			power = 25
-			key = TRADE_HUB_BUILT
+		hidden_effect = {
+			add_trade_modifier = {
+				who = FROM
+				duration = -1
+				power = 25
+				key = TRADE_HUB_BUILT
+			}
 		}
 	}
-	tooltip = slot1_tt
+	tooltip = trade_hub_tt
 }
 
 custom_button = {
@@ -217,10 +267,12 @@ custom_button = {
 		set_province_flag = built_overseas_mercenary_post
 		set_province_flag = built_slot_1
 		FROM = { add_years_of_income = -0.5 }
-		add_base_manpower = 1
+		hidden_effect = {
+			add_base_manpower = 1
+		}
 		FROM = { clr_country_flag = viewing_slot_1_buildings }
 	}
-	tooltip = slot1_tt
+	tooltip = mercenary_post_tt
 }
 
 custom_icon = {
@@ -233,6 +285,8 @@ custom_icon = {
 	}
 	frame = { number = 1 trigger = { has_province_flag = built_trade_hub } }
 	frame = { number = 2 trigger = { has_province_flag = built_overseas_mercenary_post } }
+
+	tooltip = slot_1_built_tt
 }
 
 custom_button = {
@@ -247,24 +301,26 @@ custom_button = {
 
 	}
 	effect = { 
-		if = {
-			limit = {
-				has_province_flag = built_trade_hub
+		hidden_effect = {
+			if = {
+				limit = {
+					has_province_flag = built_trade_hub
+				}
+				remove_trade_modifier = {
+					who = FROM
+					key = TRADE_HUB_BUILT
+				}
 			}
-			remove_trade_modifier = {
-				who = FROM
-				key = TRADE_HUB_BUILT
+			if = {
+				limit = {
+					has_province_flag = built_overseas_mercenary_post
+				}
+				add_base_manpower = -1
 			}
+			clr_province_flag = built_trade_hub
+			clr_province_flag = built_overseas_mercenary_post
+			clr_province_flag = built_slot_1
 		}
-		if = {
-			limit = {
-				has_province_flag = built_overseas_mercenary_post
-			}
-			add_base_manpower = -1
-		}
-		clr_province_flag = built_trade_hub
-		clr_province_flag = built_overseas_mercenary_post
-		clr_province_flag = built_slot_1
 	}
 	tooltip = destroy_slot
 }
@@ -321,7 +377,7 @@ custom_button = {
 			}
 		}
 	}
-	tooltip = slot1_tt
+	tooltip = slot2_tt
 }
 
 custom_button = {
@@ -339,18 +395,20 @@ custom_button = {
 		FROM = { years_of_income = 0.75 }
 	}
 	effect = { 
-		set_country_flag = built_trade_port
+		set_province_flag = built_trade_port
 		set_province_flag = built_slot_2
 		FROM = { add_years_of_income = -0.75 }
-		add_trade_modifier = {
-			who = FROM
-			duration = -1
-			power = 55
-			key = TRADE_PORT_BUILT
+		hidden_effect = {
+			add_trade_modifier = {
+				who = FROM
+				duration = -1
+				power = 55
+				key = TRADE_PORT_BUILT
+			}
 		}
 		FROM = { clr_country_flag = viewing_slot_2_buildings }
 	}
-	tooltip = slot1_tt
+	tooltip = trade_port_tt
 }
 
 custom_button = {
@@ -368,10 +426,9 @@ custom_button = {
 		FROM = { years_of_income = 0.75 }
 	}
 	effect = { 
-		set_country_flag = built_shipyard
+		set_province_flag = built_shipyard
 		set_province_flag = built_slot_2
 		FROM = { add_years_of_income = -0.75 }
-		custom_tooltip = ADD_2_NAVAL_FL
 		hidden_effect = {
 			FROM = {
 				add_government_power = {
@@ -383,7 +440,7 @@ custom_button = {
 		}
 		FROM = { clr_country_flag = viewing_slot_2_buildings }
 	}
-	tooltip = slot1_tt
+	tooltip = shipyard_tt
 }
 
 custom_button = {
@@ -401,16 +458,18 @@ custom_button = {
 		FROM = { years_of_income = 0.75 }
 	}
 	effect = { 
-		set_country_flag = built_fishery
+		set_province_flag = built_fishery
 		set_province_flag = built_slot_2
 		FROM = { add_years_of_income = -0.75 }
-		add_province_modifier = {
-			name = fishery_modifier
-			duration = -1
+		hidden_effect = {
+			add_province_modifier = {
+				name = fishery_modifier
+				duration = -1
+			}
 		}
 		FROM = { clr_country_flag = viewing_slot_2_buildings }
 	}
-	tooltip = slot1_tt
+	tooltip = fishery_tt
 }
 
 custom_icon = {
@@ -421,9 +480,9 @@ custom_icon = {
 		has_province_flag = trade_outpost_built
 		has_province_flag = built_slot_2
 	}
-	frame = { number = 1 trigger = { has_province_flag = built_fishery } }
+	frame = { number = 1 trigger = { has_province_flag = built_trade_port } }
 	frame = { number = 2 trigger = { has_province_flag = built_shipyard } }
-	frame = { number = 3 trigger = { has_province_flag = built_trade_port } }
+	frame = { number = 3 trigger = { has_province_flag = built_fishery } }
 }
 
 custom_button = {
@@ -438,37 +497,39 @@ custom_button = {
 
 	}
 	effect = { 
-		if = {
-			limit = {
-				has_province_flag = built_trade_port
-			}
-			remove_trade_modifier = {
-				who = FROM
-				key = TRADE_PORT_BUILT
-			}
-		}
-		if = {
-			limit = {
-				has_province_flag = built_fishery
-			}
-			remove_province_modifier = fishery_modifier
-		}
-		if = {
-			limit = {
-				has_province_flag = built_shipyard
-			}
-			FROM = {
-				add_government_power = {
-					mechanic_type = scaling_modifiers
-					power_type = navy_forcelimit_trade_outposts
-					value = -2
+		hidden_effect = {
+			if = {
+				limit = {
+					has_province_flag = built_trade_port
+				}
+				remove_trade_modifier = {
+					who = FROM
+					key = TRADE_PORT_BUILT
 				}
 			}
+			if = {
+				limit = {
+					has_province_flag = built_fishery
+				}
+				remove_province_modifier = fishery_modifier
+			}
+			if = {
+				limit = {
+					has_province_flag = built_shipyard
+				}
+				FROM = {
+					add_government_power = {
+						mechanic_type = scaling_modifiers
+						power_type = navy_forcelimit_trade_outposts
+						value = -2
+					}
+				}
+			}
+			clr_province_flag = built_fishery
+			clr_province_flag = built_shipyard
+			clr_province_flag = built_trade_port
+			clr_province_flag = built_slot_2
 		}
-		clr_province_flag = built_fishery
-		clr_province_flag = built_shipyard
-		clr_province_flag = built_trade_port
-		clr_province_flag = built_slot_2
 	}
 	tooltip = destroy_slot
 }
@@ -492,13 +553,15 @@ custom_button = {
 	effect = { 
 		set_province_flag = built_slot_3
 		FROM = { add_years_of_income = -0.25 }
-		add_province_modifier = {
-			name = workshop_built
-			duration = -1
+		hidden_effect = {
+			add_province_modifier = {
+				name = workshop_built
+				duration = -1
+			}
+			add_base_production = 1
 		}
-		add_base_production = 1
 	}
-	tooltip = slot1_tt
+	tooltip = slot3_tt
 }
 
 custom_icon = {
@@ -510,6 +573,7 @@ custom_icon = {
 		has_province_flag = built_slot_3
 	}
 	frame = { number = 1 trigger = { always = yes } }
+	tooltip = slot3_built_tt
 }
 
 custom_button = {
@@ -524,10 +588,12 @@ custom_button = {
 	}
 	effect = { 
 		clr_province_flag = built_slot_3
-		add_base_production = -1
-		remove_province_modifier = workshop_built
+		hidden_effect = {
+			add_base_production = -1
+			remove_province_modifier = workshop_built
+		}
 	}
-	tooltip = slot1_tt
+	tooltip = destroy_slot
 }
 
 ################################
@@ -547,9 +613,9 @@ custom_button = {
 	}
 	effect = { 
 		set_province_flag = built_slot_4
-		change_religion = FROM
+		hidden_effect = { change_religion = FROM }
 	}
-	tooltip = slot1_tt
+	tooltip = slot4_tt
 }
 
 custom_icon = {
@@ -561,6 +627,7 @@ custom_icon = {
 		has_province_flag = built_slot_4
 	}
 	frame = { number = 1 trigger = { always = yes } }
+	tooltip = slot4_built_tt
 }
 
 custom_button = {
@@ -576,7 +643,7 @@ custom_button = {
 	effect = { 
 		clr_province_flag = built_slot_4
 	}
-	tooltip = slot1_tt
+	tooltip = destroy_slot
 }
 
 ################################
@@ -599,15 +666,17 @@ custom_button = {
 	}
 	effect = { 
 		set_province_flag = built_slot_5
-		add_province_modifier = {
-			name = coastal_defence_built
-			duration = -1
+		hidden_effect = {
+			add_province_modifier = {
+				name = coastal_defence_built
+				duration = -1
+			}
 		}
 		FROM = {
 			add_years_of_income = -0.1
 		}
 	}
-	tooltip = slot1_tt
+	tooltip = slot5_tt
 }
 
 custom_icon = {
@@ -619,6 +688,7 @@ custom_icon = {
 		has_province_flag = built_slot_5
 	}
 	frame = { number = 1 trigger = { always = yes } }
+	tooltip = slot5_built_tt
 }
 
 custom_button = {
@@ -633,9 +703,9 @@ custom_button = {
 	}
 	effect = { 
 		clr_province_flag = built_slot_5
-		remove_province_modifier = coastal_defence_built
+		hidden_effect = { remove_province_modifier = coastal_defence_built }
 	}
-	tooltip = slot1_tt
+	tooltip = destroy_slot
 }
 
 ################################
@@ -653,17 +723,16 @@ custom_button = {
 	trigger = {
 		has_province_flag = built_base_outpost_flag
 		FROM = {
-			years_of_income = 1.5
+			years_of_income = 2.5
 		}
 	}
 	effect = { 
 		FROM = {
-			add_years_of_income = -1.5
+			add_years_of_income = -2.5
 		}
 		set_province_flag = built_slot_6
-		custom_tooltip = WILL_CHANGE_PROVINCE_OWNERSHIP_TO_US_WHEN_GOING_TO_WAR
 	}
-	tooltip = slot1_tt
+	tooltip = slot6_tt
 }
 
 custom_icon = {
@@ -675,6 +744,7 @@ custom_icon = {
 		has_province_flag = built_slot_6
 	}
 	frame = { number = 1 trigger = { always = yes } }
+	tooltip = solt_6_built_tt
 }
 
 custom_button = {
@@ -690,7 +760,7 @@ custom_button = {
 	effect = { 
 		clr_province_flag = built_slot_6
 	}
-	tooltip = slot1_tt
+	tooltip = destroy_slot
 }
 
 #######################

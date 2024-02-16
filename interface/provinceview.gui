@@ -2714,12 +2714,56 @@ guiTypes = {
 				clicksound = back_click
 			}
 
+			iconType = {
+				name = "banner_trade_outposts"
+				scripted = yes
+				spriteType = "GFX_trading_outpost_banner"
+				position = { x= 15 y = 110 }
+				#alwaystransparent = yes
+			}
+
+			guiButtonType = {
+				name = "trade_outpost_owner_shield_overlay"
+				scripted = yes
+				spriteType = "gfx_shield_trade_outposts_overlay"
+				position = { x= 35 y = 110 }
+				#alwaystransparent = yes
+			}
+
+			instantTextBoxType =
+			{
+				name ="display_province_name"
+				scripted = yes
+				position = { x= 140 y = 113 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 3 y = 3}
+				maxWidth = 250
+				maxHeight = 20
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType =
+			{
+				name ="display_owner_name"
+				scripted = yes
+				position = { x= 10 y = 225 }
+				textureFile = ""
+				font = "vic_22"
+				borderSize = {x = 3 y = 3}
+				maxWidth = 150
+				maxHeight = 20
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+
 			guiButtonType =
 			{
 				name ="build_base_outpost"
 				scripted = yes
 				spriteType = "GFX_building_default"
-				position = { x= 225 y = -365 }
+				position = { x= 225 y = -290 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2728,10 +2772,23 @@ guiTypes = {
 			{
 				name ="base_outpost_built"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 225 y = -365 }
+				spriteType = "GFX_stock_exchange"
+				position = { x= 225 y = -290 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
+			}
+
+			instantTextBoxType =
+			{
+				name ="base_outpost_text"
+				position = { x= 225 y = -310 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 3 y = 3}
+				maxWidth = 250
+				maxHeight = 20
+				format = center
+				Orientation = "UPPER_LEFT"
 			}
 
 			guiButtonType =
@@ -2739,7 +2796,7 @@ guiTypes = {
 				name ="trade_post_slot1"
 				scripted = yes
 				spriteType = "GFX_building_default"
-				position = { x= 75 y = -300 }
+				position = { x= 75 y = -200 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2748,8 +2805,8 @@ guiTypes = {
 			{
 				name ="trade_post_slot1_built"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 75 y = -300 }
+				spriteType = "GFX_slot_1"
+				position = { x= 75 y = -200 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2759,7 +2816,7 @@ guiTypes = {
 				name ="destroy_slot_1_post"
 				scripted = yes
 				spriteType = "GFX_closebutton"
-				position = { x= 100 y = -260 }
+				position = { x= 100 y = -160 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2769,7 +2826,7 @@ guiTypes = {
 				name ="recruit_foreign_mercenaries"
 				scripted = yes
 				spriteType = "GFX_closebutton"
-				position = { x= 60 y = -260 }
+				position = { x= 60 y = -160 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2778,8 +2835,8 @@ guiTypes = {
 			{
 				name ="build_trade_hub"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 25 y = -240 }
+				spriteType = "GFX_marketplace"
+				position = { x= 25 y = -140 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2788,10 +2845,23 @@ guiTypes = {
 			{
 				name ="build_overseas_mercenaries_post"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 125 y = -240 }
+				spriteType = "GFX_barracks"
+				position = { x= 125 y = -140 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
+			}
+
+			instantTextBoxType =
+			{
+				name ="slot_1_text"
+				position = { x= 75 y = -220 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 3 y = 3}
+				maxWidth = 250
+				maxHeight = 20
+				format = center
+				Orientation = "UPPER_LEFT"
 			}
 
 			guiButtonType =
@@ -2799,7 +2869,7 @@ guiTypes = {
 				name ="trade_post_slot2"
 				scripted = yes
 				spriteType = "GFX_building_default"
-				position = { x= 225 y = -300 }
+				position = { x= 225 y = -200 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2808,8 +2878,8 @@ guiTypes = {
 			{
 				name ="trade_post_slot2_built"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 225 y = -300 }
+				spriteType = "GFX_slot_2"
+				position = { x= 225 y = -200 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2819,7 +2889,7 @@ guiTypes = {
 				name ="destroy_slot_2_post"
 				scripted = yes
 				spriteType = "GFX_closebutton"
-				position = { x= 250 y = -260 }
+				position = { x= 250 y = -160 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2828,8 +2898,8 @@ guiTypes = {
 			{
 				name ="build_trade_port"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 175 y = -240 }
+				spriteType = "GFX_dock"
+				position = { x= 175 y = -140 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2838,8 +2908,8 @@ guiTypes = {
 			{
 				name ="build_shipyard"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 225 y = -240 }
+				spriteType = "GFX_shipyard"
+				position = { x= 225 y = -140 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2848,8 +2918,8 @@ guiTypes = {
 			{
 				name ="build_fishery"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 275 y = -240 }
+				spriteType = "GFX_grand_shipyard"
+				position = { x= 275 y = -140 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2859,7 +2929,7 @@ guiTypes = {
 				name ="build_slot3"
 				scripted = yes
 				spriteType = "GFX_building_default"
-				position = { x= 375 y = -300 }
+				position = { x= 375 y = -200 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2868,8 +2938,8 @@ guiTypes = {
 			{
 				name ="trade_post_slot3_built"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 375 y = -300 }
+				spriteType = "GFX_workshop"
+				position = { x= 375 y = -200 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2879,7 +2949,7 @@ guiTypes = {
 				name ="destroy_slot_3_post"
 				scripted = yes
 				spriteType = "GFX_closebutton"
-				position = { x= 400 y = -260 }
+				position = { x= 400 y = -160 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2889,7 +2959,7 @@ guiTypes = {
 				name ="build_slot4"
 				scripted = yes
 				spriteType = "GFX_building_default"
-				position = { x= 75 y = -175 }
+				position = { x= 75 y = -75 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2899,17 +2969,7 @@ guiTypes = {
 				name ="slot_4_built"
 				scripted = yes
 				spriteType = "GFX_temple"
-				position = { x= 75 y = -175 }
-				Orientation = "LOWER_LEFT"
-				clicksound = back_click
-			}
-
-			guiButtonType =
-			{
-				name ="spawn_religious_propagation"
-				scripted = yes
-				spriteType = "GFX_closebutton"
-				position = { x= 60 y = -135 }
+				position = { x= 75 y = -75 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2919,7 +2979,7 @@ guiTypes = {
 				name ="destroy_slot_4_post"
 				scripted = yes
 				spriteType = "GFX_closebutton"
-				position = { x= 100 y = -135 }
+				position = { x= 100 y = -35 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2929,7 +2989,7 @@ guiTypes = {
 				name ="build_slot5"
 				scripted = yes
 				spriteType = "GFX_building_default"
-				position = { x= 225 y = -175 }
+				position = { x= 225 y = -75 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2938,8 +2998,8 @@ guiTypes = {
 			{
 				name ="slot_5_built"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 225 y = -175 }
+				spriteType = "GFX_coastal_defence"
+				position = { x= 225 y = -75 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2949,7 +3009,7 @@ guiTypes = {
 				name ="destroy_slot_5_post"
 				scripted = yes
 				spriteType = "GFX_closebutton"
-				position = { x= 250 y = -135 }
+				position = { x= 250 y = -35 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2959,7 +3019,7 @@ guiTypes = {
 				name ="build_slot6"
 				scripted = yes
 				spriteType = "GFX_building_default"
-				position = { x= 375 y = -175 }
+				position = { x= 375 y = -75 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2968,8 +3028,8 @@ guiTypes = {
 			{
 				name ="slot_6_built"
 				scripted = yes
-				spriteType = "GFX_temple"
-				position = { x= 375 y = -175 }
+				spriteType = "GFX_native_palisade"
+				position = { x= 375 y = -75 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}
@@ -2979,7 +3039,7 @@ guiTypes = {
 				name ="destroy_slot_6_post"
 				scripted = yes
 				spriteType = "GFX_closebutton"
-				position = { x= 400 y = -135 }
+				position = { x= 400 y = -35 }
 				Orientation = "LOWER_LEFT"
 				clicksound = back_click
 			}

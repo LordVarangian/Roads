@@ -72,12 +72,34 @@
  navy_forcelimit_trade_outposts: "Trade Outposts"
 
  #Trade Outpost:
- build_base_outpost: "Base Outpost"
- GRANT_25_TRADE_POWER: "Grants §G25§! Trade Power in the Province's Trade Node"
+ base_outpost_tt: "§YBase Infrastructure§!"
+ GRANT_25_TRADE_POWER: "§YBase Infrastructure§!\nGrants §G25§! Trade Power in the Province's Trade Node"
+ BASE_OUTPOST_BUILT: "Base Infrastructure"
+ 
+ slot1_tt: "§YSlot 1§!"
+ trade_hub_tt: "§YTrade Hub§!\nTade Power: §G+25.0§!"
+ mercenary_post_tt: "§YMercenary Post§!\nAllows Recruitment of §YNative Infantry§!"
 
- trade_post_slot1: "Slot 1"
- trade_post_slot2: "Slot 2"
- build_slot3: "Workshop"
- build_slot4: "Temple"
- build_slot5: "Coastal Fortifications"
- build_slot6: "Build Fortifications"
+ slot2_tt: "§YSlot 2§!"
+ trade_port_tt: "§YTrading Port§!\nTade Power: §G+55.0§!"
+ shipyard_tt: "§YShipyard§!\n§Y[From.GetName]§!: Naval Force Limit: §G+2.00§!"
+ fishery_tt: "§YFishery§!\nLocal Goods Produced: §G+0.50§!"
+
+ slot3_tt: "§YBuild Workshop§!\nLocal Goods Produced: §G+1§!"
+ slot3_built_tt: "§YWorkshop§!\nLocal Goods Produced: §G+1§!"
+ 
+ slot4_tt: "§YBuild Temple§!\nThe religion of §Y[Root.GetName]§! changes to §Y[From.Religion.GetName]§!."
+ slot4_built_tt: "§YTemple§!\nThe religion of §Y[Root.GetName]§! changes to §Y[From.Religion.GetName]§!."
+
+ slot5_tt: "§YBuild Coastal Fortifications§!\nBlocks Slave Raids"
+ slot5_built_tt: "§YCoastal Fortifications§!\nBlocks Slave Raids"
+
+ slot6_tt: "§YBuild Fortifications§!\nWhen we go to war with §Y[Root.Owner.GetName]§!, transfer §Y[Root.GetName]§! under our occupation."
+ solt_6_built_tt: "§YFortifications§!\nWhen we go to war with §Y[Root.Owner.GetName]§!, transfer §Y[Root.GetName]§! under our occupation."
+
+ destroy_slot: "§RDestroy the current building in this slot§!"
+
+ display_owner_name: "Owned by §Y[province_owner_of_this.GetName]"
+ display_owner_name_tt: "Owned by §Y[province_owner_of_this.GetName]"
+
+ display_province_name: "Trade Outpost of [Root.GetName]"
