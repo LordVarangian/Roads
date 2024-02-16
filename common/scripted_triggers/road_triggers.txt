@@ -15,3 +15,10 @@ has_connection = {
 		check_variable = { which = r_cap value = 0.001 }
 	}
 }
+has_road_connection = {
+	#wip
+	check_variable = { which = r_cap value = 0.001 }
+}
+has_connectivity = { #level
+	check_variable = { which = r_cap value = $level$ }
+}
