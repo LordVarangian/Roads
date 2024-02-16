@@ -1,7 +1,17 @@
 has_road = {
-	has_province_flag = r_road
+	OR = {
+		has_building = dirt_road
+		has_building = road
+		has_building = upgraded_road
+	}
+}
+has_regional_capital = {
+	has_province_modifier = regional_capital_modifier
 }
 has_connection = {
-	has_road = yes
-	check_variable = { which = r_dist value = 0 }
+	OR = {
+		is_capital = yes
+		has_regional_capital = yes
+		check_variable = { which = r_cap value = 0.001 }
+	}
 }

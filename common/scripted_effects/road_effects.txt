@@ -1,11 +1,40 @@
 road_build = {
-	set_province_flag = r_road
-	add_base_tax = 50
+	if = {
+		limit = { has_building = upgraded_road }
+	}
+	else_if = {
+		limit = { has_building = road }
+		add_building = upgraded_road
+	}
+	else_if = {
+		limit = { has_building = dirt_road }
+		add_building = road
+	}
+	else = {
+		add_building = dirt_road
+	}
 }
 road_destroy = {
-	clr_province_flag = r_road
-	add_base_tax = -50
-	#road_recalculate_province = yes
+	trigger_switch = {
+		on_trigger = has_building
+		dirt_road = { remove_building = dirt_road }
+		road = {
+			remove_building = road
+			add_building = dirt_road
+		}
+		upgraded_road = {
+			remove_building = upgraded_road
+			add_building = road
+		}
+	}
+}
+road_cap_limit = {
+	trigger_switch = {
+		on_trigger = has_building
+		dirt_road = { limit_variable = { which = r_cap value = 1 } }
+		road = { limit_variable = { which = r_cap value = 2 } }
+		upgraded_road = { limit_variable = { which = r_cap value = 3 } }
+	}
 }
 road_recalculate_province = {
 	#wip
@@ -14,35 +43,12 @@ road_recalculate = {
 	log = log_4
 	save_event_target_as = country
 	set_variable = { which = r_step value = 0 }
-	every_owned_province = {
-		set_variable = { which = r_dist value = -1 }
-	}
-	capital_scope = {
-		set_variable = { which = r_dist value = 0 }
-		set_province_flag = r_calc
-	}
+	road_recalculate_setup = yes
 	set_country_flag = r_calc
 	while = {
 		limit = { has_country_flag = r_calc }
 		clr_country_flag = r_calc
-		every_owned_province = {
-			limit = { has_province_flag = r_calc }
-			PREV = { set_country_flag = r_calc }
-			clr_province_flag = r_calc
-			every_neighbor_province = {
-				limit = {
-					owned_by = event_target:country
-					has_road = yes
-					OR = {
-						is_variable_equal = { which = r_dist value = -1 }
-						PREV = { NOT = { check_variable = { which = r_dist which = PREV } } }
-					}
-				}
-				set_variable = { which = r_dist which = PREV }
-				road_distance_prev = yes
-				set_province_flag = r_calc
-			}
-		}
+		road_recalculate_h = {}
 	}
 	log = "  Done"
 }
@@ -57,42 +63,43 @@ road_recalculate_step = {
 		change_variable = { which = r_step value = 1 }
 		log = log_1
 		clr_country_flag = r_calc
-		every_owned_province = {
-			limit = { has_province_flag = r_calc }
-			log = log_2
-			PREV = { set_country_flag = r_calc }
-			clr_province_flag = r_calc
-			every_neighbor_province = {
-				limit = {
-					owned_by = event_target:country
-					has_road = yes
-					OR = {
-						is_variable_equal = { which = r_dist value = -1 }
-						PREV = { NOT = { check_variable = { which = r_dist which = PREV } } }
-					}
-				}
-				log = log_3
-				set_variable = { which = r_dist which = PREV }
-				road_distance_prev = yes
-				set_province_flag = r_calc
-			}
-		}
+		road_recalculate_h = { log = yes }
 	}
 	else = {
 		set_variable = { which = r_step value = 0 }
 		log = "  New Calculation"
-		every_owned_province = {
-			set_variable = { which = r_dist value = -1 }
-		}
-		capital_scope = {
-			set_variable = { which = r_dist value = 0 }
-			set_province_flag = r_calc
-		}
+		road_recalculate_setup = yes
 		set_country_flag = r_calc
 	}
 }
 
-road_distance_prev = {
-	#PREV
-	change_variable = { which = r_dist value = 1 }
+road_recalculate_h = {
+	every_owned_province = {
+		limit = { has_province_flag = r_calc }
+		[[log]log = log_2]
+		PREV = { set_country_flag = r_calc }
+		clr_province_flag = r_calc
+		every_neighbor_province = {
+			limit = {
+				owned_by = event_target:country
+				has_road = yes
+				NOT = { check_variable = { which = r_cap which = PREV } }
+			}
+			[[log]log = log_3]
+			set_variable = { which = r_cap which = PREV }
+			road_cap_limit = yes
+			set_province_flag = r_calc
+		}
+	}
+}
+road_recalculate_setup = {
+	every_owned_province = {
+		set_variable = { which = r_cap value = -1 }
+	}
+	capital_scope = {
+		set_variable = { which = r_cap value = 2147000 }
+		road_cap_limit = yes
+		limit_variable = { which = r_cap value = 1 lower = yes }
+		set_province_flag = r_calc
+	}
 }

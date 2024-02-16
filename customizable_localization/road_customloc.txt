@@ -10,11 +10,11 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = road_Distance
+	name = road_Capacity
 	random = no
 	text = {
 		localisation_key = road_Distance_y
-		trigger = { check_variable = { which = r_dist value = 0 } }
+		trigger = { has_connection = yes }
 	}
 	text = {
 		localisation_key = road_Distance_n

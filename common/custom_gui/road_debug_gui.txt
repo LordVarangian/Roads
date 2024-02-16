@@ -10,7 +10,6 @@ custom_button = {
 }
 custom_button = {
 	name = debug_gui_BuildRoad_n
-	potential = { has_road = no }
 	effect = {
 		hidden_effect = { road_build = yes }
 		custom_tooltip = "debug_gui_BuildRoad_n"
@@ -19,7 +18,6 @@ custom_button = {
 }
 custom_button = {
 	name = debug_gui_BuildRoad_y
-	potential = { has_road = yes }
 	effect = {
 		hidden_effect = { road_destroy = yes }
 		custom_tooltip = "debug_gui_BuildRoad_y"

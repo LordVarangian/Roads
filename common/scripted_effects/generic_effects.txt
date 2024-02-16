@@ -4,3 +4,13 @@ init = { #v
 		set_variable = { which = $v$ value = 0 }
 	}
 }
+limit_variable = { #which #value
+	if = {
+		limit = {
+			[[lower] NOT = { ]
+				check_variable = { which = $which$ value = $value$ }
+			[[lower] } ]
+		}
+		set_variable = { which = $which$ value = $value$ }
+	}
+}

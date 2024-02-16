@@ -613,18 +613,16 @@ guiTypes = {
 			guiButtonType = { scripted = yes
 				name = debug_gui_BuildRoad_y
 				spriteType = debug_gui_button_s
-				position = { x = 145 y = -275}
+				position = { x = 135 y = -275}
 				buttonFont = "vic_18"
 				buttonText = "debug_gui_BuildRoad_y"
-				shortcut = "b"
 			}
 			guiButtonType = { scripted = yes
 				name = debug_gui_BuildRoad_n
 				spriteType = debug_gui_button_s
-				position = { x = 145 y = -275}
+				position = { x = 245 y = -275}
 				buttonFont = "vic_18"
 				buttonText = "debug_gui_BuildRoad_n"
-				shortcut = "b"
 			}
 
 			#recalc all
