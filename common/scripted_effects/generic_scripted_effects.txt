@@ -1,0 +1,36 @@
+calculate_tax_dev_into_money = {
+    region = {
+        if = {
+            limit = {
+                has_tax_building_trigger = yes
+            }
+            area = {
+                owner = {
+                    change_variable = {
+                        which = TaxDevIntoTreasury
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+    while = {
+        limit = {
+            owner = {
+                check_variable = {
+                    which = TaxDevIntoTreasury
+                    value = 1
+                }
+            }
+        }
+        owner = {
+            subtract_variable = {
+                which = TaxDevIntoTreasury
+                value = 1
+            }
+            owner = {
+                add_treasury = 3
+            }
+        }
+    }
+}
