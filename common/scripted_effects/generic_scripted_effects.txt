@@ -8,7 +8,7 @@ calculate_tax_dev_into_money = {
                 owner = {
                     change_variable = {
                         which = TaxDevIntoTreasury
-                        value = 1
+                        value = base_tax
                     }
                 }
             }
