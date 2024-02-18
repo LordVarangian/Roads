@@ -1,0 +1,26 @@
+
+######################
+### REGIMENTAL CAMP ##
+has_building_menu_regimental_camp_modifiers_all_states = {
+	OR = {
+		area_for_scope_province = { type = all owned_by = FROM has_building = barracks }
+		area_for_scope_province = { type = all owned_by = FROM has_building = regimental_camp }
+		area_for_scope_province = { type = all owned_by = FROM has_building = conscription_center }
+	}
+}
+has_building_menu_regimental_camp_modifiers_province = {
+	OR = {
+		has_building = barracks
+		has_building = regimental_camp
+		has_building = conscription_center
+	}
+}
+######################
+###### SHIPYARD ######
+has_building_menu_shipyard_modifiers_province = {
+	OR = {
+		has_building = drydock
+		has_building = shipyard
+		has_building = grand_shipyard
+	}
+}

@@ -709,6 +709,12 @@ guiTypes = {
 			maxHeight = 18
 			text = "2000¤"	
 		}
+		
+		iconType = {
+			name = "drydock_to_shipyard_arrow"
+			position = { x = 105 y = 138 }
+			spriteType = "GFX_building_upgrade_icon"
+		}	
 
 		checkboxType = {
 			name = "build_grand_shipyard"
@@ -817,13 +823,13 @@ guiTypes = {
 		}			
 		
 		checkboxType = {
-			name = "build_barracks"
+			name = "build_training_fields"
 			position = { x = 9 y = 226 }
 			quadTextureSprite = "GFX_courthouse_muslimgfx" #Placeholder, real sprite is decided by game (based on button name).
 		}
 		
 		instantTextBoxType={
-			name = "barracks_cost"
+			name = "training_fields_cost"
 			position = {x = 9 y = 276 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}	
@@ -833,13 +839,13 @@ guiTypes = {
 		}
 		
 		checkboxType = {
-			name = "build_training_fields"
+			name = "build_barracks"
 			position = { x = 61 y = 226 }
 			quadTextureSprite = "GFX_courthouse_muslimgfx" #Placeholder, real sprite is decided by game (based on button name).
 		}
 		
 		instantTextBoxType={
-			name = "training_fields_cost"
+			name = "barracks_cost"
 			position = {x = 61 y = 276 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}	
@@ -849,7 +855,7 @@ guiTypes = {
 		}
 		
 		iconType = {
-			name = "barracks_to_training_fields_arrow"
+			name = "training_fields_to_barracks_arrow"
 			position = { x = 53 y = 235 }
 			spriteType = "GFX_building_upgrade_icon"
 		}			
@@ -869,6 +875,12 @@ guiTypes = {
 			maxHeight = 18
 			text = "2000¤"	
 		}
+		
+		iconType = {
+			name = "barracks_to_regimental_camp_arrow"
+			position = { x = 105 y = 235 }
+			spriteType = "GFX_building_upgrade_icon"
+		}	
 		
 		checkboxType = {
 			name = "build_conscription_center"

@@ -217,152 +217,6 @@ temple = {
 	}
 }
 
-barracks = {
-	cost = 100
-	time = 12
-	modifier = {
-		local_manpower_modifier = 0.5
-	}
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					has_government_attribute = manpower_sailors_on_build
-				}
-			}
-			FROM = {
-				add_manpower = 1
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = 0.001
-			}
-		}
-		add_development_from_building = {
-			building = barracks
-			type = manpower
-			value = 1
-		}
-		update_improved_military_buildings_modifier = {
-			building = barracks
-		}
-	}
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					has_government_attribute = manpower_sailors_on_build
-				}
-			}
-			FROM = {
-				add_manpower = -1
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.001
-			}
-		}
-		remove_development_from_building = {
-			building = barracks
-			type = manpower
-			value = 1
-		}
-		update_improved_military_buildings_modifier = {
-			building = barracks
-		}
-	}
-	on_obsolete = {
-	}
-
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.005
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.005
-#			}
-#		}
-#	}
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-shipyard = {
-	cost = 100
-	time = 12
-	build_trigger = {
-		has_port = yes
-	}
-	modifier = {
-		naval_forcelimit = 2
-		ship_recruit_speed = -0.25
-		local_ship_repair = 0.25
-		local_has_man_of_war = yes
-		local_has_galleass = yes
-	}
-	on_built = {
-		add_development_from_building = {
-			building = shipyard
-			type = production
-			value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = shipyard
-			type = production
-			value = 1
-		}
-		if = {
-			limit = { has_province_modifier = sca_swe_danish_shipyard }
-			remove_province_modifier = sca_swe_danish_shipyard
-		}
-	}
-	on_obsolete = {
-	}
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5 # bit more likely if close to the naval force limit
-			FROM = { navy_size_percentage = 0.95 }
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
-	}
-}
-
 fort_15th = {
 	cost = 200
 	time = 30
@@ -556,192 +410,6 @@ courthouse = {
 			area_for_scope_province = {
 				is_capital_of = FROM
 			}
-		}
-	}
-}
-
-dock = {
-	cost = 100
-	time = 12
-	build_trigger = {
-		has_port = yes
-	}
-	modifier = {
-		local_sailors_modifier = 0.5
-		local_has_man_of_war = yes
-		local_has_galleass = yes
-	}
-	
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					has_government_attribute = manpower_sailors_on_build
-				}
-			}
-			FROM = {
-				add_sailors = 200
-			}
-		}
-		add_development_from_building = {
-			building = dock
-			type = production
-			value = 1
-		}
-	}
-	
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					has_government_attribute = manpower_sailors_on_build
-				}
-			}
-			FROM = {
-				add_sailors = -200
-			}
-		}
-		remove_development_from_building = {
-			building = dock
-			type = production
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			current_age = age_of_discovery 
-			owner = { NOT = { navy_size = 25 } }
-			factor = 0.25
-		}
-		modifier = {
-			current_age = age_of_reformation
-			owner = { NOT = { navy_size = 50 } }
-			factor = 0.35
-		}
-		modifier = {
-			current_age = age_of_absolutism
-			owner = { NOT = { navy_size = 75 } }
-			factor = 0.5
-		}
-		modifier = {
-			current_age = age_of_revolutions 
-			owner = { NOT = { navy_size = 100 } }
-			factor = 0.75
-		}
-		modifier = {
-			owner = {
-				OR = {
-					full_idea_group = naval_ideas
-					has_idea_group = maritime_ideas
-				}
-			}
-			factor = 1.25
-		}
-		modifier = {
-			owner = {
-				capital_scope = { 
-					has_port = yes 
-					is_island = yes 
-				}
-			}
-			factor = 1.35
-		}
-		modifier = {
-			owner = {
-				sailors_percentage = 0.75 
-			}
-			factor = 0
-		}
-	}
-}
-
-regimental_camp = {
-	cost = 200
-	time = 12
-	modifier = {
-		land_forcelimit = 1
-	}
-
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.005
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.005
-#			}
-#		}
-#	}
-	on_built = {
-		add_development_from_building = {
-			building = regimental_camp
-			type = manpower
-			value = 1
-		}
-		update_improved_military_buildings_modifier = {
-			building = regimental_camp
-		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = 0.001
-			}
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = regimental_camp
-			type = manpower
-			value = 1
-		}
-		update_improved_military_buildings_modifier = {
-			building = regimental_camp
-		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.001
-			}
-		}
-	}
-	on_obsolete = {
-	}
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5 # more likely if we have an army close to the force limit
-			FROM = { army_size_percentage = 0.95 }
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
 		}
 	}
 }
@@ -1088,44 +756,353 @@ trade_depot = {
 	}
 }
 
-grand_shipyard = {
+######################
+### REGIMENTAL CAMP ##
+training_fields = {
+	cost = 100
+	time = 12
+	modifier = {
+		regiment_recruit_speed = -0.1
+		local_regiment_cost = -0.1
+		land_forcelimit = 0.1
+		local_manpower_modifier = 0.1
+	}
+	on_built = {
+		if = {
+			limit = { FROM = { has_government_attribute = manpower_sailors_on_build } }
+			FROM = { add_manpower = 1 }
+		}
+		if = {
+			limit = { FROM = { mission_completed = jap_tanegashima_teppo has_dlc = "Cradle of Civilization" } }
+			FROM = { add_army_professionalism = 0.001 }
+		}
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	on_destroyed = {
+		if = {
+			limit = { FROM = { has_government_attribute = manpower_sailors_on_build } }
+			FROM = { add_manpower = -1 }
+		}
+		if = {
+			limit = { FROM = { mission_completed = jap_tanegashima_teppo has_dlc = "Cradle of Civilization" } }
+			FROM = { add_army_professionalism = -0.001 }
+		}
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	on_obsolete = {
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+barracks = {
+	cost = 200
+	time = 12
+	make_obsolete = training_fields
+	modifier = {
+		regiment_recruit_speed = -0.2
+		local_regiment_cost = -0.2
+	}
+	build_trigger = {
+		has_building = training_fields
+	}
+	on_built = {
+		if = {
+			limit = { FROM = { has_government_attribute = manpower_sailors_on_build } }
+			FROM = { add_manpower = 1 }
+		}
+		if = {
+			limit = { FROM = { mission_completed = jap_tanegashima_teppo has_dlc = "Cradle of Civilization" } }
+			FROM = { add_army_professionalism = 0.001 }
+		}
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes set_variable = { which = mp2 value = 0 } add_province_modifier = { name = building_menu_regimental_camp_modifiers_manpower_modifier2_2 duration = -1 hidden = yes }}
+	}
+	on_destroyed = {
+		if = {
+			limit = { FROM = { has_government_attribute = manpower_sailors_on_build } }
+			FROM = { add_manpower = -1 }
+		}
+		if = {
+			limit = { FROM = { mission_completed = jap_tanegashima_teppo has_dlc = "Cradle of Civilization" } }
+			FROM = { add_army_professionalism = -0.001 }
+		}
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	on_obsolete = {
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+regimental_camp = {
 	cost = 300
 	time = 12
-
-	make_obsolete = shipyard
-
+	make_obsolete = barracks
+	modifier = {
+		regiment_recruit_speed = -0.3
+		local_regiment_cost = -0.3
+	}
+	build_trigger = {
+		has_building = barracks
+		NOT = { OR = { has_building = training_fields has_construction = training_fields } }
+	}
+	on_built = {
+		if = {
+			limit = { FROM = { mission_completed = jap_tanegashima_teppo has_dlc = "Cradle of Civilization" } }
+			FROM = { add_army_professionalism = 0.001 }
+		}
+		hidden_effect = {
+			building_menu_regimental_camp_modifiers_remove = yes
+			if = {
+				limit = { is_variable_equal = { which = mp2 value = 1 } } 
+				set_variable = { which = mp3 value = 1 } add_province_modifier = { name = building_menu_regimental_camp_modifiers_manpower_modifier3_3 duration = -1 hidden = yes }
+			}
+			else = { set_variable = { which = mp3 value = 0 } add_province_modifier = { name = building_menu_regimental_camp_modifiers_manpower_modifier3_2 duration = -1 hidden = yes } }
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = { FROM = { mission_completed = jap_tanegashima_teppo has_dlc = "Cradle of Civilization" } }
+			FROM = { add_army_professionalism = -0.001 }
+		}
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	on_obsolete = {
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+conscription_center = {
+	cost = 400
+	time = 12
+	make_obsolete = regimental_camp
+	modifier = {
+		regiment_recruit_speed = -0.4
+		local_regiment_cost = -0.4
+	}
+	build_trigger = {
+		has_building = regimental_camp
+		NOT = { OR = { has_building = training_fields has_construction = training_fields has_building = barracks has_construction = barracks } }
+	}
+	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = 0.001
+			}
+		}
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes set_variable = { which = mp4 value = 0 } add_province_modifier = { name = building_menu_regimental_camp_modifiers_manpower_modifier4_3 duration = -1 hidden = yes } }
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = -0.001
+			}
+		}
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	on_obsolete = {
+		hidden_effect = { building_menu_regimental_camp_modifiers_remove = yes }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+######################
+###### SHIPYARD ######
+dock = {
+	cost = 100
+	time = 12
 	build_trigger = {
 		has_port = yes
 	}
 	modifier = {
-		naval_forcelimit = 4
-		ship_recruit_speed = -0.50
-		local_ship_repair = 0.50
+		ship_recruit_speed = -0.1
+		local_ship_cost = -0.1
+		naval_forcelimit = 0.25
+		local_sailors_modifier = 0.1
+		local_has_man_of_war = yes
+		local_has_galleass = yes
+	}
+	on_built = {
+		if = {
+			limit = { FROM = { has_government_attribute = manpower_sailors_on_build } }
+			FROM = { add_sailors = 200 }
+		}
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
+	}
+	
+	on_destroyed = {
+		if = {
+			limit = { FROM = { has_government_attribute = manpower_sailors_on_build } }
+			FROM = { add_sailors = -200 }
+		}
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
+	}
+	on_obsolete = {
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			current_age = age_of_discovery 
+			owner = { NOT = { navy_size = 25 } }
+			factor = 0.25
+		}
+		modifier = {
+			current_age = age_of_reformation
+			owner = { NOT = { navy_size = 50 } }
+			factor = 0.35
+		}
+		modifier = {
+			current_age = age_of_absolutism
+			owner = { NOT = { navy_size = 75 } }
+			factor = 0.5
+		}
+		modifier = {
+			current_age = age_of_revolutions 
+			owner = { NOT = { navy_size = 100 } }
+			factor = 0.75
+		}
+		modifier = {
+			owner = { OR = { full_idea_group = naval_ideas has_idea_group = maritime_ideas } }
+			factor = 1.25
+		}
+		modifier = {
+			owner = { capital_scope = { has_port = yes is_island = yes } }
+			factor = 1.35
+		}
+		modifier = {
+			owner = { sailors_percentage = 0.75 }
+			factor = 0
+		}
+	}
+}
+drydock = {
+	cost = 200
+	time = 12
+
+	make_obsolete = dock
+	build_trigger = {
+		has_port = yes
+		has_building = dock
+	}
+	modifier = {
+		ship_recruit_speed = -0.2
+		local_ship_cost = -0.2
+		local_has_man_of_war = yes
+		local_has_galleass = yes
+	}
+	on_built = {
+		if = {
+			limit = { FROM = { has_government_attribute = manpower_sailors_on_build } }
+			FROM = { add_sailors = 200 }
+		}
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes set_variable = { which = sl2 value = 0 } add_province_modifier = { name = building_menu_shipyard_modifiers_sailor_modifier2_2 duration = -1 hidden = yes }}
+	}
+	
+	on_destroyed = {
+		if = {
+			limit = { FROM = { has_government_attribute = manpower_sailors_on_build } }
+			FROM = { add_sailors = -200 }
+		}
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
+	}
+	on_obsolete = {
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
+	}
+	ai_will_do = { factor = 1 }
+}
+shipyard = {
+	cost = 300
+	time = 12
+	make_obsolete = drydock
+	build_trigger = {
+		has_port = yes
+		has_building = drydock
+		NOT = { OR = { has_building = dock has_construction = dock } }
+	}
+	modifier = {
+		ship_recruit_speed = -0.3
+		local_ship_cost = -0.3
+		local_has_man_of_war = yes
+		local_has_galleass = yes
+	}
+	on_built = {
+		hidden_effect = {
+			building_menu_shipyard_modifiers_remove = yes
+			if = {
+				limit = { is_variable_equal = { which = sl2 value = 1 } } 
+				set_variable = { which = sl3 value = 1 } add_province_modifier = { name = building_menu_shipyard_modifiers_sailor_modifier3_3 duration = -1 hidden = yes }
+			}
+			else = { set_variable = { which = sl3 value = 0 } add_province_modifier = { name = building_menu_shipyard_modifiers_sailor_modifier3_2 duration = -1 hidden = yes } }
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = sca_swe_danish_shipyard }
+			remove_province_modifier = sca_swe_danish_shipyard
+		}
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
+	}
+	on_obsolete = {
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
+	}
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 1.5 # bit more likely if close to the naval force limit
+			FROM = { navy_size_percentage = 0.95 }
+		}
+		modifier = {
+			factor = 1.1
+			local_autonomy = 50
+		}
+	}
+}
+grand_shipyard = {
+	cost = 400
+	time = 12
+	make_obsolete = shipyard
+	build_trigger = {
+		has_port = yes
+		has_building = shipyard
+		NOT = { OR = { has_building = dock has_construction = dock has_building = drydock has_construction = drydock } }
+	}
+	modifier = {
+		ship_recruit_speed = -0.4
+		local_ship_cost = -0.4
 		local_has_man_of_war = yes
 		local_has_galleass = yes
 	}
 
 	on_built = {
-		add_development_from_upgrading_or_building = {
-			building = grand_shipyard
-			obsolete_building = shipyard
-			type = production
-			value = 2
-			upgrade_value = 1
-		}
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes set_variable = { which = sl4 value = 0 } add_province_modifier = { name = building_menu_shipyard_modifiers_sailor_modifier4_3 duration = -1 hidden = yes } }
 	}
 	on_destroyed = {
-		remove_development_from_building = {
-			building = grand_shipyard
-			type = production
-			value = 2
-		}
 		if = {
 			limit = { has_province_modifier = sca_swe_danish_shipyard }
 			remove_province_modifier = sca_swe_danish_shipyard
 		}
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
 	}
 	on_obsolete = {
+		hidden_effect = { building_menu_shipyard_modifiers_remove = yes }
 	}
 
 	ai_will_do = {
@@ -1140,111 +1117,8 @@ grand_shipyard = {
 		}
 	}
 }
-
-training_fields = {
-	cost = 300
-	time = 12
-
-	make_obsolete = barracks
-
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.02
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.01
-#			}
-#		}
-#	}
-
-	modifier = {
-		local_manpower_modifier = 1
-	}
-	
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					has_government_attribute = manpower_sailors_on_build
-				}
-			}
-			FROM = {
-				add_manpower = 1
-			}
-		}
-		add_development_from_upgrading_or_building = {
-			building = training_fields
-			obsolete_building = barracks
-			type = manpower
-			value = 2
-			upgrade_value = 1
-		}
-		update_improved_military_buildings_modifier = {
-			building = training_fields
-		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = 0.001
-			}
-		}
-	}
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					has_government_attribute = manpower_sailors_on_build
-				}
-			}
-			FROM = {
-				add_manpower = -1
-			}
-		}
-		update_improved_military_buildings_modifier = {
-			building = training_fields
-		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.001
-			}
-		}
-		remove_development_from_building = {
-			building = training_fields
-			type = manpower
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-
-	ai_will_do = {
-		factor = 1
-	}
-}
+######################
+######################
 
 
 fort_17th = {
@@ -1538,163 +1412,6 @@ town_hall = {
 		}
 	}
 }
-
-drydock = {
-	cost = 300
-	time = 12
-
-	make_obsolete = dock
-
-	build_trigger = {
-		has_port = yes
-	}
-
-	modifier = {
-		local_sailors_modifier = 1.0
-		local_has_man_of_war = yes
-		local_has_galleass = yes
-	}
-	
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					has_government_attribute = manpower_sailors_on_build
-				}
-			}
-			FROM = {
-				add_sailors = 200
-			}
-		}
-		add_development_from_upgrading_or_building = {
-			building = drydock
-			obsolete_building = dock
-			type = production
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					has_government_attribute = manpower_sailors_on_build
-				}
-			}
-			FROM = {
-				add_sailors = -200
-			}
-		}
-		remove_development_from_building = {
-			building = drydock
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-
-
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-conscription_center = {
-	cost = 400
-	time = 12
-
-
-	make_obsolete = regimental_camp
-
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.02
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.01
-#			}
-#		}
-#	}
-
-	modifier = {
-		land_forcelimit = 2
-	}
-	on_built = {
-		add_development_from_upgrading_or_building = {
-			building = conscription_center
-			obsolete_building = regimental_camp
-			type = manpower
-			value = 2
-			upgrade_value = 1
-		}
-		update_improved_military_buildings_modifier = {
-			building = conscription_center
-		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = 0.001
-			}
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = conscription_center
-			type = manpower
-			value = 2
-		}
-		update_improved_military_buildings_modifier = {
-			building = conscription_center
-		}
-		if = {
-			limit = {
-				FROM = {
-					mission_completed = jap_tanegashima_teppo
-					has_dlc = "Cradle of Civilization" 
-				}
-			}
-			FROM = {
-				add_army_professionalism = -0.001
-			}
-		}
-	}
-	on_obsolete = {
-	}
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5 # more likely if we have an army close to the force limit
-			FROM = { army_size_percentage = 0.95 }
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
-	}
-}
-
-
 
 fort_18th = {
 	cost = 800

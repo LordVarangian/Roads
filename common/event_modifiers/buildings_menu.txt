@@ -1,0 +1,117 @@
+
+######################
+### REGIMENTAL CAMP ##
+building_menu_regimental_camp_modifiers_manpower_modifier2_1 = {
+	#land_forcelimit = 0
+	local_manpower_modifier = 0.5
+}
+building_menu_regimental_camp_modifiers_manpower_modifier2_2 = {
+	land_forcelimit = 0.5
+	local_manpower_modifier = 0.25
+}
+building_menu_regimental_camp_modifiers_manpower_modifier2_3 = {
+	land_forcelimit = 1
+	#local_manpower_modifier = 0
+}
+#
+building_menu_regimental_camp_modifiers_manpower_modifier3_1 = {
+	#land_forcelimit = 0
+	local_manpower_modifier = 0.75
+}
+building_menu_regimental_camp_modifiers_manpower_modifier3_2 = {
+	land_forcelimit = 0.5
+	local_manpower_modifier = 0.5
+}
+building_menu_regimental_camp_modifiers_manpower_modifier3_3 = {
+	land_forcelimit = 1
+	local_manpower_modifier = 0.25
+}
+building_menu_regimental_camp_modifiers_manpower_modifier3_4 = {
+	land_forcelimit = 1.5
+	#local_manpower_modifier = 0
+}
+#
+building_menu_regimental_camp_modifiers_manpower_modifier4_1 = {
+	#land_forcelimit = 0
+	local_manpower_modifier = 1
+}
+building_menu_regimental_camp_modifiers_manpower_modifier4_2 = {
+	land_forcelimit = 0.5
+	local_manpower_modifier = 0.75
+}
+building_menu_regimental_camp_modifiers_manpower_modifier4_3 = {
+	land_forcelimit = 1
+	local_manpower_modifier = 0.5
+}
+building_menu_regimental_camp_modifiers_manpower_modifier4_4 = {
+	land_forcelimit = 1.5
+	local_manpower_modifier = 0.25
+}
+building_menu_regimental_camp_modifiers_manpower_modifier4_5 = {
+	land_forcelimit = 2
+	#local_manpower_modifier = 0
+}
+######################
+###### SHIPYARD ######
+building_menu_shipyard_modifiers_sailor_modifier2_0 = {
+	local_ship_repair = 1
+	local_monthly_devastation = 0.1
+}
+building_menu_shipyard_modifiers_sailor_modifier2_1 = {
+	#naval_forcelimit = 0
+	local_sailors_modifier = 0.5
+}
+building_menu_shipyard_modifiers_sailor_modifier2_2 = {
+	naval_forcelimit = 1
+	local_sailors_modifier = 0.25
+}
+building_menu_shipyard_modifiers_sailor_modifier2_3 = {
+	naval_forcelimit = 2
+	#local_sailors_modifier = 0
+}
+#
+building_menu_shipyard_modifiers_sailor_modifier3_0 = {
+	local_ship_repair = 2
+	local_monthly_devastation = 0.1
+}
+building_menu_shipyard_modifiers_sailor_modifier3_1 = {
+	#naval_forcelimit = 0
+	local_sailors_modifier = 0.75
+}
+building_menu_shipyard_modifiers_sailor_modifier3_2 = {
+	naval_forcelimit = 1
+	local_sailors_modifier = 0.5
+}
+building_menu_shipyard_modifiers_sailor_modifier3_3 = {
+	naval_forcelimit = 2
+	local_sailors_modifier = 0.25
+}
+building_menu_shipyard_modifiers_sailor_modifier3_4 = {
+	naval_forcelimit = 3
+	#local_sailors_modifier = 0
+}
+#
+building_menu_shipyard_modifiers_sailor_modifier4_0 = {
+	local_ship_repair = 3
+	local_monthly_devastation = 0.1
+}
+building_menu_shipyard_modifiers_sailor_modifier4_1 = {
+	#naval_forcelimit = 0
+	local_sailors_modifier = 1
+}
+building_menu_shipyard_modifiers_sailor_modifier4_2 = {
+	naval_forcelimit = 1
+	local_sailors_modifier = 0.75
+}
+building_menu_shipyard_modifiers_sailor_modifier4_3 = {
+	naval_forcelimit = 2
+	local_sailors_modifier = 0.5
+}
+building_menu_shipyard_modifiers_sailor_modifier4_4 = {
+	naval_forcelimit = 3
+	local_sailors_modifier = 0.25
+}
+building_menu_shipyard_modifiers_sailor_modifier4_5 = {
+	naval_forcelimit = 4
+	#local_sailors_modifier = 0
+}

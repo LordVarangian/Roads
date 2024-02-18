@@ -574,22 +574,7 @@ guiTypes = {
 
 
 			### Core
-
-			##DEBUG GUI
-			iconType = {
-				name = debug_gui_bg
-				spriteType = debug_gui_bg
-				position = { x = 5 y = -315 }
-				scripted = yes
-			}
-			guiButtonType = {
-				name = debug_gui_Test
-				spriteType = debug_gui_button_s
-				position = { x = 25 y = -300 }
-				scripted = yes
-				buttonFont = "vic_18"
-				buttonText = "debug_gui_Test_t"
-			}
+			
 			##DEBUG GUI
 			iconType = { scripted = yes
 				name = debug_gui_bg
@@ -891,7 +876,6 @@ guiTypes = {
 				spriteType = "GFX_modified_terrain"
 				position = { x = 58 y = -23 }
 				scripted = yes
-				transparencecheck = yes
 			}
 
 			iconType =
@@ -900,7 +884,6 @@ guiTypes = {
 				spriteType = "GFX_terrain_text"
 				position = { x = 58 y = -23 }
 				scripted = yes
-				transparencecheck = yes
 			}
 
 			guiButtonType =
@@ -2700,8 +2683,8 @@ guiTypes = {
 				name ="trade_post_menu"
 				scripted = yes
 				spriteType = "GFX_trading_post_background"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 
 			guiButtonType =
@@ -3051,72 +3034,80 @@ guiTypes = {
 				name ="building_menu_african_background1"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_african_background2"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_african_background3"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_african_background4"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_african_background_wall1"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background_wall1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_african_background_wall2"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background_wall2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_african_background_wall3"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background_wall3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_african_background_wall4"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background_wall4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_african_background_wall5"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_background_wall5"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_african_background_coast"
+				scripted = yes
+				spriteType = "GFX_building_menu_african_background_coast"
+				position = { x= 15 y = -129 }
+				Orientation = "LOWER_LEFT"
 			}
 			# Buildings:
 			guiButtonType =
@@ -3204,7 +3195,7 @@ guiTypes = {
 				name ="building_menu_african_shipyard"
 				scripted = yes
 				spriteType = "GFX_building_menu_african_shipyard"
-				position = { x= 192 y = 37 }
+				position = { x= 15 y = -211 }
 				Orientation = "LOWER_LEFT"
 			}
 			######################
@@ -3214,72 +3205,80 @@ guiTypes = {
 				name ="building_menu_chinese_background1"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_chinese_background2"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_chinese_background3"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_chinese_background4"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_chinese_background_wall1"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background_wall1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_chinese_background_wall2"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background_wall2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_chinese_background_wall3"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background_wall3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_chinese_background_wall4"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background_wall4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_chinese_background_wall5"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_background_wall5"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_chinese_background_coast"
+				scripted = yes
+				spriteType = "GFX_building_menu_chinese_background_coast"
+				position = { x= 151 y = -167 }
+				Orientation = "LOWER_LEFT"
 			}
 			# Buildings:
 			guiButtonType =
@@ -3367,7 +3366,7 @@ guiTypes = {
 				name ="building_menu_chinese_shipyard"
 				scripted = yes
 				spriteType = "GFX_building_menu_chinese_shipyard"
-				position = { x= 192 y = 37 }
+				position = { x= 253 y = -208 }
 				Orientation = "LOWER_LEFT"
 			}
 			######################
@@ -3377,72 +3376,80 @@ guiTypes = {
 				name ="building_menu_eastern_background1"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_eastern_background2"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_eastern_background3"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_eastern_background4"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_eastern_background_wall1"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background_wall1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_eastern_background_wall2"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background_wall2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_eastern_background_wall3"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background_wall3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_eastern_background_wall4"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background_wall4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_eastern_background_wall5"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_background_wall5"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_eastern_background_coast"
+				scripted = yes
+				spriteType = "GFX_building_menu_eastern_background_coast"
+				position = { x= 15 y = -215 }
+				Orientation = "LOWER_LEFT"
 			}
 			# Buildings:
 			guiButtonType =
@@ -3530,7 +3537,7 @@ guiTypes = {
 				name ="building_menu_eastern_shipyard"
 				scripted = yes
 				spriteType = "GFX_building_menu_eastern_shipyard"
-				position = { x= 192 y = 37 }
+				position = { x= 49 y = -249 }
 				Orientation = "LOWER_LEFT"
 			}
 			######################
@@ -3540,72 +3547,80 @@ guiTypes = {
 				name ="building_menu_indian_background1"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_indian_background2"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_indian_background3"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_indian_background4"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_indian_background_wall1"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background_wall1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_indian_background_wall2"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background_wall2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_indian_background_wall3"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background_wall3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_indian_background_wall4"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background_wall4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_indian_background_wall5"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_background_wall5"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_indian_background_coast"
+				scripted = yes
+				spriteType = "GFX_building_menu_indian_background_coast"
+				position = { x= 15 y = -166 }
+				Orientation = "LOWER_LEFT"
 			}
 			# Buildings:
 			guiButtonType =
@@ -3693,7 +3708,7 @@ guiTypes = {
 				name ="building_menu_indian_shipyard"
 				scripted = yes
 				spriteType = "GFX_building_menu_indian_shipyard"
-				position = { x= 192 y = 37 }
+				position = { x= 68 y = -262 }
 				Orientation = "LOWER_LEFT"
 			}
 			######################
@@ -3703,72 +3718,80 @@ guiTypes = {
 				name ="building_menu_latin_background1"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_latin_background2"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_latin_background3"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_latin_background4"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_latin_background_wall1"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background_wall1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_latin_background_wall2"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background_wall2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_latin_background_wall3"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background_wall3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_latin_background_wall4"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background_wall4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_latin_background_wall5"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_background_wall5"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_latin_background_coast"
+				scripted = yes
+				spriteType = "GFX_building_menu_latin_background_coast"
+				position = { x= 15 y = -162 }
+				Orientation = "LOWER_LEFT"
 			}
 			# Buildings:
 			guiButtonType =
@@ -3856,7 +3879,7 @@ guiTypes = {
 				name ="building_menu_latin_shipyard"
 				scripted = yes
 				spriteType = "GFX_building_menu_latin_shipyard"
-				position = { x= 192 y = 37 }
+				position = { x= 71 y = -232 }
 				Orientation = "LOWER_LEFT"
 			}
 			######################
@@ -3866,72 +3889,80 @@ guiTypes = {
 				name ="building_menu_muslim_background1"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_muslim_background2"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_muslim_background3"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_muslim_background4"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_muslim_background_wall1"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background_wall1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_muslim_background_wall2"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background_wall2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_muslim_background_wall3"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background_wall3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_muslim_background_wall4"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background_wall4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_muslim_background_wall5"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_background_wall5"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_muslim_background_coast"
+				scripted = yes
+				spriteType = "GFX_building_menu_muslim_background_coast"
+				position = { x= 15 y = -128 }
+				Orientation = "LOWER_LEFT"
 			}
 			# Buildings:
 			guiButtonType =
@@ -4019,7 +4050,7 @@ guiTypes = {
 				name ="building_menu_muslim_shipyard"
 				scripted = yes
 				spriteType = "GFX_building_menu_muslim_shipyard"
-				position = { x= 192 y = 37 }
+				position = { x= 75 y = -195 }
 				Orientation = "LOWER_LEFT"
 			}
 			######################
@@ -4029,72 +4060,80 @@ guiTypes = {
 				name ="building_menu_namerican_background1"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_namerican_background2"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_namerican_background3"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_namerican_background4"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_namerican_background_wall1"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background_wall1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_namerican_background_wall2"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background_wall2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_namerican_background_wall3"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background_wall3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_namerican_background_wall4"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background_wall4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_namerican_background_wall5"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_background_wall5"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_namerican_background_coast"
+				scripted = yes
+				spriteType = "GFX_building_menu_namerican_background_coast"
+				position = { x= 15 y = -162 }
+				Orientation = "LOWER_LEFT"
 			}
 			# Buildings:
 			guiButtonType =
@@ -4182,7 +4221,7 @@ guiTypes = {
 				name ="building_menu_namerican_shipyard"
 				scripted = yes
 				spriteType = "GFX_building_menu_namerican_shipyard"
-				position = { x= 192 y = 37 }
+				position = { x= 71 y = -232 }
 				Orientation = "LOWER_LEFT"
 			}
 			######################
@@ -4192,72 +4231,80 @@ guiTypes = {
 				name ="building_menu_samerican_background1"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_samerican_background2"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_samerican_background3"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_samerican_background4"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_samerican_background_wall1"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background_wall1"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_samerican_background_wall2"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background_wall2"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_samerican_background_wall3"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background_wall3"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_samerican_background_wall4"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background_wall4"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
 			}
 			iconType =
 			{
 				name ="building_menu_samerican_background_wall5"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_background_wall5"
-				position = { x= 12 y = 96 }
-				Orientation = "UPPER_LEFT"
+				position = { x= 12 y = -384 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_samerican_background_coast"
+				scripted = yes
+				spriteType = "GFX_building_menu_samerican_background_coast"
+				position = { x= 15 y = -162 }
+				Orientation = "LOWER_LEFT"
 			}
 			# Buildings:
 			guiButtonType =
@@ -4345,7 +4392,264 @@ guiTypes = {
 				name ="building_menu_samerican_shipyard"
 				scripted = yes
 				spriteType = "GFX_building_menu_samerican_shipyard"
-				position = { x= 192 y = 37 }
+				position = { x= 71 y = -232 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			### REGIMENTAL CAMP ##
+			iconType =
+			{
+				name ="building_menu_regimental_camp_background"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_background"
+				position = { x= 12 y = -51 }
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_regimental_camp_modifiers_recruit_speed"
+				scripted = yes
+				position = { x = 101 y = 2 }
+				font = "vic_18"
+				text = "building_menu_regimental_camp_modifiers_recruit_speed"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_regimental_camp_modifiers_regiment_cost"
+				scripted = yes
+				position = { x = 340 y = 2 }
+				font = "vic_18"
+				text = "building_menu_regimental_camp_modifiers_regiment_cost"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_regimental_camp_modifiers_manpower_modifier"
+				scripted = yes
+				position = { x = 101 y = 38 }
+				font = "vic_18"
+				text = "building_menu_regimental_camp_modifiers_manpower_modifier"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_regimental_camp_modifiers_land_forcelimit"
+				scripted = yes
+				position = { x = 340 y = 38 }
+				font = "vic_18"
+				text = "building_menu_regimental_camp_modifiers_land_forcelimit"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_regimental_camp_bar_frame"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_bar_frame"
+				position = { x= 168 y = 4 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_regimental_camp_bar1"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_bar1"
+				position = { x= 175 y = 49 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_regimental_camp_bar2"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_bar2"
+				position = { x= 175 y = 49 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_regimental_camp_bar3"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_bar3"
+				position = { x= 175 y = 49 }
+				Orientation = "LOWER_LEFT"
+			}
+			#
+			guiButtonType =
+			{
+				name ="building_menu_regimental_camp_button_state"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_button_state"
+				position = { x= 209 y = -14 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_regimental_camp_button_province"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_button_province"
+				position = { x= 256 y = -14 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_regimental_camp_button_left"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_button_left"
+				position = { x= 184 y = 14 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_regimental_camp_button_confirm"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_button_confirm"
+				position = { x= 233 y = 14 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_regimental_camp_button_right"
+				scripted = yes
+				spriteType = "GFX_building_menu_regimental_camp_button_right"
+				position = { x= 281 y = 14 }
+				Orientation = "LOWER_LEFT"
+			}
+			######################
+			###### SHIPYARD ######
+			iconType =
+			{
+				name ="building_menu_shipyard_background"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_background"
+				position = { x= 12 y = -51 }
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_shipyard_modifiers_shipbuilding_speed"
+				scripted = yes
+				position = { x = 101 y = 2 }
+				font = "vic_18"
+				text = "building_menu_shipyard_modifiers_shipbuilding_speed"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_shipyard_modifiers_ship_cost"
+				scripted = yes
+				position = { x = 340 y = 2 }
+				font = "vic_18"
+				text = "building_menu_shipyard_modifiers_ship_cost"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_shipyard_modifiers_sailor_modifier"
+				scripted = yes
+				position = { x = 101 y = 38 }
+				font = "vic_18"
+				text = "building_menu_shipyard_modifiers_sailor_modifier"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_shipyard_modifiers_naval_forcelimit"
+				scripted = yes
+				position = { x = 340 y = 38 }
+				font = "vic_18"
+				text = "building_menu_shipyard_modifiers_naval_forcelimit"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_shipyard_bar_frame"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_bar_frame"
+				position = { x= 168 y = 38 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_shipyard_bar1"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_bar1"
+				position = { x= 175 y = 52 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_shipyard_bar2"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_bar2"
+				position = { x= 175 y = 52 }
+				Orientation = "LOWER_LEFT"
+			}
+			iconType =
+			{
+				name ="building_menu_shipyard_bar3"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_bar3"
+				position = { x= 175 y = 52 }
+				Orientation = "LOWER_LEFT"
+			}
+			#
+			guiButtonType =
+			{
+				name ="building_menu_shipyard_button_repair"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_button_repair"
+				position = { x= 255 y = -22 }
+				Orientation = "LOWER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "building_menu_shipyard_modifiers_repair"
+				scripted = yes
+				position = { x= 201 y = -10 }
+				font = "vic_18"
+				text = "building_menu_shipyard_modifiers_repair"
+				format = center
+				maxWidth = 61
+				maxHeight = 21
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_shipyard_button_left"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_button_left"
+				position = { x= 184 y = 17 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_shipyard_button_confirm"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_button_confirm"
+				position = { x= 233 y = 17 }
+				Orientation = "LOWER_LEFT"
+			}
+			guiButtonType =
+			{
+				name ="building_menu_shipyard_button_right"
+				scripted = yes
+				spriteType = "GFX_building_menu_shipyard_button_right"
+				position = { x= 281 y = 17 }
 				Orientation = "LOWER_LEFT"
 			}
 			######################
@@ -4355,7 +4659,7 @@ guiTypes = {
 				name ="building_menu_button_back"
 				scripted = yes
 				spriteType = "GFX_building_menu_button_back"
-				position = { x= 203 y = 57 }
+				position = { x= 211 y = 71 }
 				Orientation = "LOWER_LEFT"
 				shortcut = "ESCAPE"
 				clicksound = back_click
@@ -7877,6 +8181,12 @@ guiTypes = {
 			text = "2000¤"
 		}
 
+		iconType = {
+			name = "drydock_to_shipyard_arrow"
+			position = { x = 105 y = 138 }
+			spriteType = "GFX_building_upgrade_icon"
+		}
+
 		checkboxType = {
 			name = "build_grand_shipyard"
 			position = { x = 165 y = 129 }
@@ -7988,13 +8298,13 @@ guiTypes = {
 		}
 
 		checkboxType = {
-			name = "build_barracks"
+			name = "build_training_fields"
 			position = { x = 9 y = 226 }
 			quadTextureSprite = "GFX_courthouse_muslimgfx" #Placeholder, real sprite is decided by game (based on button name).
 		}
 
 		instantTextBoxType={
-			name = "barracks_cost"
+			name = "training_fields_cost"
 			position = {x = 9 y = 276 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -8004,13 +8314,13 @@ guiTypes = {
 		}
 
 		checkboxType = {
-			name = "build_training_fields"
+			name = "build_barracks"
 			position = { x = 61 y = 226 }
 			quadTextureSprite = "GFX_courthouse_muslimgfx" #Placeholder, real sprite is decided by game (based on button name).
 		}
 
 		instantTextBoxType={
-			name = "training_fields_cost"
+			name = "barracks_cost"
 			position = {x = 61 y = 276 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -8020,7 +8330,7 @@ guiTypes = {
 		}
 
 		iconType = {
-			name = "barracks_to_training_fields_arrow"
+			name = "training_fields_to_barracks_arrow"
 			position = { x = 53 y = 235 }
 			spriteType = "GFX_building_upgrade_icon"
 		}
@@ -8039,6 +8349,12 @@ guiTypes = {
 			maxWidth = 128
 			maxHeight = 18
 			text = "2000¤"
+		}
+
+		iconType = {
+			name = "barracks_to_regimental_camp_arrow"
+			position = { x = 105 y = 235 }
+			spriteType = "GFX_building_upgrade_icon"
 		}
 
 		checkboxType = {

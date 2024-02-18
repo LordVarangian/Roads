@@ -1,0 +1,346 @@
+
+######################
+### REGIMENTAL CAMP ##
+defined_text = {
+	name = building_menu_regimental_camp_modifiers_recruit_speed0
+	random = no
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_recruit_speed1
+		trigger = { has_building = training_fields }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_recruit_speed2
+		trigger = { has_building = barracks }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_recruit_speed3
+		trigger = { has_building = regimental_camp }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_recruit_speed4
+		trigger = { has_building = conscription_center }
+	}
+}
+defined_text = {
+	name = building_menu_regimental_camp_modifiers_regiment_cost0
+	random = no
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_regiment_cost1
+		trigger = { has_building = training_fields }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_regiment_cost2
+		trigger = { has_building = barracks }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_regiment_cost3
+		trigger = { has_building = regimental_camp }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_regiment_cost4
+		trigger = { has_building = conscription_center }
+	}
+}
+defined_text = {
+	name = building_menu_regimental_camp_modifiers_manpower_modifier0
+	random = no
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier1
+		trigger = {
+			OR = {
+				has_building = training_fields
+				AND = { has_building = barracks is_variable_equal = { which = mp2 value = 1 } }
+				AND = { has_building = regimental_camp is_variable_equal = { which = mp3 value = 2 } }
+				AND = { has_building = conscription_center is_variable_equal = { which = mp4 value = 2 } }
+			}
+		}
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier21
+		trigger = { has_building = barracks is_variable_equal = { which = mp2 value = -1 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier22
+		trigger = { has_building = barracks is_variable_equal = { which = mp2 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier31
+		trigger = { has_building = regimental_camp is_variable_equal = { which = mp3 value = -1 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier32
+		trigger = { has_building = regimental_camp is_variable_equal = { which = mp3 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier33
+		trigger = { has_building = regimental_camp is_variable_equal = { which = mp3 value = 1 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier41
+		trigger = { has_building = conscription_center is_variable_equal = { which = mp4 value = -2 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier42
+		trigger = { has_building = conscription_center is_variable_equal = { which = mp4 value = -1 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier43
+		trigger = { has_building = conscription_center is_variable_equal = { which = mp4 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_manpower_modifier44
+		trigger = { has_building = conscription_center is_variable_equal = { which = mp4 value = 1 } }
+	}
+}
+defined_text = {
+	name = building_menu_regimental_camp_modifiers_land_forcelimit0
+	random = no
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit1
+		trigger = {
+			OR = {
+				has_building = training_fields
+				AND = { has_building = barracks is_variable_equal = { which = mp2 value = -1 } }
+				AND = { has_building = regimental_camp is_variable_equal = { which = mp3 value = -1 } }
+				AND = { has_building = conscription_center is_variable_equal = { which = mp4 value = -2 } }
+			}
+		}
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit22
+		trigger = { has_building = barracks is_variable_equal = { which = mp2 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit23
+		trigger = { has_building = barracks is_variable_equal = { which = mp2 value = 1 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit32
+		trigger = { has_building = regimental_camp is_variable_equal = { which = mp3 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit33
+		trigger = { has_building = regimental_camp is_variable_equal = { which = mp3 value = 1 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit34
+		trigger = { has_building = regimental_camp is_variable_equal = { which = mp3 value = 2 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit42
+		trigger = { has_building = conscription_center is_variable_equal = { which = mp4 value = -1 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit43
+		trigger = { has_building = conscription_center is_variable_equal = { which = mp4 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit44
+		trigger = { has_building = conscription_center is_variable_equal = { which = mp4 value = 1 } }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_modifiers_land_forcelimit45
+		trigger = { has_building = conscription_center is_variable_equal = { which = mp4 value = 2 } }
+	}
+}
+defined_text = {
+	name = building_menu_regimental_camp_button_confirm_ttt
+	random = no
+	text = {
+		localisation_key = building_menu_regimental_camp_button_confirm_area_tt
+		trigger = { has_province_flag = building_menu_regimental_camp_button_state_flag }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_button_confirm_province_tt
+		trigger = { has_province_flag = building_menu_regimental_camp_button_province_flag }
+	}
+	text = {
+		localisation_key = building_menu_regimental_camp_button_confirm_nothing_tt
+	}
+}
+######################
+###### SHIPYARD ######
+defined_text = {
+	name = building_menu_shipyard_modifiers_shipbuilding_speed0
+	random = no
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_shipbuilding_speed1
+		trigger = { has_building = dock }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_shipbuilding_speed2
+		trigger = { has_building = drydock }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_shipbuilding_speed3
+		trigger = { has_building = shipyard }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_shipbuilding_speed4
+		trigger = { has_building = grand_shipyard }
+	}
+}
+defined_text = {
+	name = building_menu_shipyard_modifiers_ship_cost0
+	random = no
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_ship_cost1
+		trigger = { has_building = dock }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_ship_cost2
+		trigger = { has_building = drydock }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_ship_cost3
+		trigger = { has_building = shipyard }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_ship_cost4
+		trigger = { has_building = grand_shipyard }
+	}
+}
+defined_text = {
+	name = building_menu_shipyard_modifiers_sailor_modifier0
+	random = no
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier1
+		trigger = {
+			OR = {
+				has_building = dock
+				AND = { has_building = drydock is_variable_equal = { which = sl2 value = 1 } }
+				AND = { has_building = shipyard is_variable_equal = { which = sl3 value = 2 } }
+				AND = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = 2 } }
+			}
+		}
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier21
+		trigger = { has_building = drydock is_variable_equal = { which = sl2 value = -1 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier22
+		trigger = { has_building = drydock is_variable_equal = { which = sl2 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier31
+		trigger = { has_building = shipyard is_variable_equal = { which = sl3 value = -1 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier32
+		trigger = { has_building = shipyard is_variable_equal = { which = sl3 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier33
+		trigger = { has_building = shipyard is_variable_equal = { which = sl3 value = 1 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier41
+		trigger = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = -2 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier42
+		trigger = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = -1 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier43
+		trigger = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_sailor_modifier44
+		trigger = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = 1 } }
+	}
+}
+defined_text = {
+	name = building_menu_shipyard_modifiers_naval_forcelimit0
+	random = no
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit1
+		trigger = {
+			OR = {
+				has_building = dock
+				AND = { has_building = drydock is_variable_equal = { which = sl2 value = -1 } }
+				AND = { has_building = shipyard is_variable_equal = { which = sl3 value = -1 } }
+				AND = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = -2 } }
+			}
+		}
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit22
+		trigger = { has_building = drydock is_variable_equal = { which = sl2 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit23
+		trigger = { has_building = drydock is_variable_equal = { which = sl2 value = 1 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit32
+		trigger = { has_building = shipyard is_variable_equal = { which = sl3 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit33
+		trigger = { has_building = shipyard is_variable_equal = { which = sl3 value = 1 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit34
+		trigger = { has_building = shipyard is_variable_equal = { which = sl3 value = 2 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit42
+		trigger = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = -1 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit43
+		trigger = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = 0 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit44
+		trigger = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = 1 } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_naval_forcelimit45
+		trigger = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = 2 } }
+	}
+}
+defined_text = {
+	name = building_menu_shipyard_button_repair_ttt
+	random = no
+	text = {
+		localisation_key = building_menu_shipyard_button_repair1_tt
+		trigger = { has_building = drydock NOT = { OR = { has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier2_0 has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier3_0 has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier4_0 } } FROM = { OR = { NOT = { has_country_flag = building_menu_shipyard_button_repair_cooldown_flag } had_country_flag = { flag = building_menu_shipyard_button_repair_cooldown_flag days = 1095 } } } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_button_repair2_tt
+		trigger = { has_building = shipyard NOT = { OR = { has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier2_0 has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier3_0 has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier4_0 } } FROM = { OR = { NOT = { has_country_flag = building_menu_shipyard_button_repair_cooldown_flag } had_country_flag = { flag = building_menu_shipyard_button_repair_cooldown_flag days = 1095 } } } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_button_repair3_tt
+		trigger = { has_building = grand_shipyard NOT = { OR = { has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier2_0 has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier3_0 has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier4_0 } } FROM = { OR = { NOT = { has_country_flag = building_menu_shipyard_button_repair_cooldown_flag } had_country_flag = { flag = building_menu_shipyard_button_repair_cooldown_flag days = 1095 } } } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_button_repair4_tt
+		trigger = { has_building_menu_shipyard_modifiers_province = yes FROM = { NOT = { had_country_flag = { flag = building_menu_shipyard_button_repair_cooldown_flag days = 1095 } } } }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_button_repair_nothing_tt
+	}
+}
+defined_text = {
+	name = building_menu_shipyard_modifiers_repair_text
+	random = no
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_repair2
+		trigger = { has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier2_0 }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_repair3
+		trigger = { has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier3_0 }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_repair4
+		trigger = { has_province_modifier = building_menu_shipyard_modifiers_sailor_modifier4_0 }
+	}
+	text = {
+		localisation_key = building_menu_shipyard_modifiers_repair1
+	}
+}

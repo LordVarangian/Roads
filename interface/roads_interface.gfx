@@ -12,6 +12,117 @@ spriteTypes = {
 		transparencecheck = yes
 	}
 	######################
+	### REGIMENTAL CAMP ##
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_background"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_background.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_button_state"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_button_state.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_button_province"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_button_province.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_button_left"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_button_left.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_button_confirm"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_button_confirm.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_button_right"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_button_right.dds"
+		noOfFrames = 3
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_bar_frame"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_bar_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_bar1"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_bar1.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_bar2"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_bar2.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_regimental_camp_bar3"
+		texturefile = "gfx/interface/buildings_menu/regimental_camp/building_menu_regimental_camp_bar3.dds"
+		noOfFrames = 6
+		transparencecheck = yes
+	}
+	######################
+	###### SHIPYARD ######
+	spriteType = {
+		name = "GFX_building_menu_shipyard_background"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_background.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard_button_repair"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_button_repair.dds"
+		noOfFrames = 2
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard_button_left"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_button_left.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard_button_confirm"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_button_confirm.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard_button_right"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_button_right.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard_bar_frame"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_bar_frame.dds"
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard_bar1"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_bar1.dds"
+		noOfFrames = 4
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard_bar2"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_bar2.dds"
+		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_shipyard_bar3"
+		texturefile = "gfx/interface/buildings_menu/shipyard/building_menu_shipyard_bar3.dds"
+		noOfFrames = 6
+		transparencecheck = yes
+	}
+	######################
 	#####  AFRICAN  ######
 	spriteType = {
 		name = "GFX_building_menu_african_background1"
@@ -65,6 +176,11 @@ spriteTypes = {
 		name = "GFX_building_menu_african_background_wall5"
 		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background_wall5.dds"
 		noOfFrames = 10
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_african_background_coast"
+		texturefile = "gfx/interface/buildings_menu/african/building_menu_african_background_coast.dds"
 		transparencecheck = yes
 	}
 	# Buildings:
@@ -179,6 +295,11 @@ spriteTypes = {
 		noOfFrames = 9
 		transparencecheck = yes
 	}
+	spriteType = {
+		name = "GFX_building_menu_chinese_background_coast"
+		texturefile = "gfx/interface/buildings_menu/chinese/building_menu_chinese_background_coast.dds"
+		transparencecheck = yes
+	}
 	# Buildings:
 	spriteType = {
 		name = "GFX_building_menu_chinese_war_office"
@@ -289,6 +410,11 @@ spriteTypes = {
 		name = "GFX_building_menu_eastern_background_wall5"
 		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background_wall5.dds"
 		noOfFrames = 5
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_eastern_background_coast"
+		texturefile = "gfx/interface/buildings_menu/eastern/building_menu_eastern_background_coast.dds"
 		transparencecheck = yes
 	}
 	# Buildings:
@@ -403,6 +529,11 @@ spriteTypes = {
 		noOfFrames = 13
 		transparencecheck = yes
 	}
+	spriteType = {
+		name = "GFX_building_menu_indian_background_coast"
+		texturefile = "gfx/interface/buildings_menu/indian/building_menu_indian_background_coast.dds"
+		transparencecheck = yes
+	}
 	# Buildings:
 	spriteType = {
 		name = "GFX_building_menu_indian_regimental_camp"
@@ -513,6 +644,11 @@ spriteTypes = {
 		name = "GFX_building_menu_latin_background_wall5"
 		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background_wall5.dds"
 		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_latin_background_coast"
+		texturefile = "gfx/interface/buildings_menu/latin/building_menu_latin_background_coast.dds"
 		transparencecheck = yes
 	}
 	# Buildings:
@@ -627,6 +763,11 @@ spriteTypes = {
 		noOfFrames = 4
 		transparencecheck = yes
 	}
+	spriteType = {
+		name = "GFX_building_menu_muslim_background_coast"
+		texturefile = "gfx/interface/buildings_menu/muslim/building_menu_muslim_background_coast.dds"
+		transparencecheck = yes
+	}
 	# Buildings:
 	spriteType = {
 		name = "GFX_building_menu_muslim_regimental_camp"
@@ -739,6 +880,11 @@ spriteTypes = {
 		noOfFrames = 13
 		transparencecheck = yes
 	}
+	spriteType = {
+		name = "GFX_building_menu_namerican_background_coast"
+		texturefile = "gfx/interface/buildings_menu/namerican/building_menu_namerican_background_coast.dds"
+		transparencecheck = yes
+	}
 	# Buildings:
 	spriteType = {
 		name = "GFX_building_menu_namerican_workshop"
@@ -849,6 +995,11 @@ spriteTypes = {
 		name = "GFX_building_menu_samerican_background_wall5"
 		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background_wall5.dds"
 		noOfFrames = 13
+		transparencecheck = yes
+	}
+	spriteType = {
+		name = "GFX_building_menu_samerican_background_coast"
+		texturefile = "gfx/interface/buildings_menu/samerican/building_menu_samerican_background_coast.dds"
 		transparencecheck = yes
 	}
 	# Buildings:
