@@ -11,7 +11,7 @@ place_terrain_modifiers = {
             has_terrain = farmlands
         }
         add_province_modifier = {
-            name = farmslands_modifier
+            name = farmlands_modifier
             duration = -1
             hidden = yes
         }

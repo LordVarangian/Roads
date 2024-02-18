@@ -6,3 +6,13 @@ estate_special = {
 		}
 	}
 }
+
+estate_special = {
+	modifier_definition = {
+		type = privileges
+		key = max_development_modifier
+		trigger = {
+			always = yes
+		}
+	}
+}

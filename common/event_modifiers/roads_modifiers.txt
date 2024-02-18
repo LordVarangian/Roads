@@ -25,11 +25,13 @@ coastal_defence_built = {
 farmlands_modifier = {
     local_development_cost = -0.05
     allowed_num_of_buildings = 1
+    max_development_modifier = 59
 }
 
 forest_modifier = {
 	local_development_cost = 0.2
     local_attacker_dice_roll_bonus = -1
+    max_development_modifier = 29
 }
 
 hills_modifier = {
