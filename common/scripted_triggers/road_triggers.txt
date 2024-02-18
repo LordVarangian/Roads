@@ -8,15 +8,20 @@ has_road = {
 has_regional_capital = {
 	has_province_modifier = regional_capital_modifier
 }
-has_connection = {
+has_road_start = {
 	OR = {
 		is_capital = yes
 		has_regional_capital = yes
-		check_variable = { which = r_cap value = 0.001 }
 	}
 }
+has_connection = {
+	check_variable = { which = r_cap value = 0.001 }
+}
 has_road_connection = {
-	#wip
+	OR = {
+		has_road = yes
+		has_road_start = yes
+	}
 	check_variable = { which = r_cap value = 0.001 }
 }
 has_connectivity = { #level

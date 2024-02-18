@@ -1,7 +1,9 @@
 custom_icon = {
+	potential = { owner = { has_country_flag = debug } }
 	name = debug_gui_bg
 }
 custom_button = {
+	potential = { owner = { has_country_flag = debug } }
 	name = debug_gui_Test
 	effect = {
 		owner = { add_treasury = 1 }
@@ -9,6 +11,7 @@ custom_button = {
 	tooltip = debug_gui_Test_tt
 }
 custom_button = {
+	potential = { owner = { has_country_flag = debug } }
 	name = debug_gui_BuildRoad_n
 	effect = {
 		hidden_effect = { road_build = yes }
@@ -17,6 +20,7 @@ custom_button = {
 	tooltip = debug_gui_BuildRoad_tt
 }
 custom_button = {
+	potential = { owner = { has_country_flag = debug } }
 	name = debug_gui_BuildRoad_y
 	effect = {
 		hidden_effect = { road_destroy = yes }
@@ -25,19 +29,23 @@ custom_button = {
 	tooltip = debug_gui_BuildRoad_tt
 }
 custom_text_box = {
+	potential = { owner = { has_country_flag = debug } }
 	name = debug_gui_RoadDistance
 	tooltip = debug_gui_RoadDistance_tt
 }
 custom_button = {
+	potential = { owner = { has_country_flag = debug } }
 	name = debug_gui_RecalcAll
 	tooltip = debug_gui_RecalcAll_tt
 	effect = { hidden_effect = { owner = { road_recalculate = yes } } }
 }
 custom_button = {
+	potential = { owner = { has_country_flag = debug } }
 	name = debug_gui_RecalcStep
 	tooltip = debug_gui_RecalcStep_tt
 	effect = { hidden_effect = { owner = { road_recalculate_step = yes } } }
 }
 custom_text_box = {
+	potential = { owner = { has_country_flag = debug } }
 	name = debug_gui_RecalcStepInfo
 }

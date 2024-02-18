@@ -14,3 +14,6 @@ limit_variable = { #which #value
 		set_variable = { which = $which$ value = $value$ }
 	}
 }
+max_variable = { #which
+	set_variable = { which = $which$ value = 2147000.000 }
+}

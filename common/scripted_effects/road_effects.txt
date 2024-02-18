@@ -28,17 +28,31 @@ road_destroy = {
 		}
 	}
 }
-road_cap_limit = {
+
+road_cap_limit = { #which
 	trigger_switch = {
 		on_trigger = has_building
-		dirt_road = { limit_variable = { which = r_cap value = 1 } }
-		road = { limit_variable = { which = r_cap value = 2 } }
-		upgraded_road = { limit_variable = { which = r_cap value = 3 } }
+		dirt_road = { limit_variable = { which = $which$ value = 1 } }
+		road = { limit_variable = { which = $which$ value = 2 } }
+		upgraded_road = { limit_variable = { which = $which$ value = 3 } }
 	}
 }
 road_recalculate_province = {
 	#wip
 }
+road_recalculate_country = {
+	if = {
+		limit = {
+			NOT = { has_country_modifier = road_calc }
+		}
+		add_country_modifier = {
+			name = road_calc
+			duration = 1
+		}
+		road_recalculate = yes
+	}
+}
+
 road_recalculate = {
 	log = log_4
 	save_event_target_as = country
@@ -54,6 +68,7 @@ road_recalculate = {
 }
 
 road_recalculate_step = {
+	#old
 	save_event_target_as = country
 	log = "====="
 	if = {
@@ -87,7 +102,7 @@ road_recalculate_h = {
 			}
 			[[log]log = log_3]
 			set_variable = { which = r_cap which = PREV }
-			road_cap_limit = yes
+			road_cap_limit = { which = r_cap }
 			set_province_flag = r_calc
 		}
 	}
@@ -96,10 +111,35 @@ road_recalculate_setup = {
 	every_owned_province = {
 		set_variable = { which = r_cap value = -1 }
 	}
-	capital_scope = {
-		set_variable = { which = r_cap value = 2147000 }
-		road_cap_limit = yes
+	every_owned_province = {
+		limit = {
+			OR = {
+				is_capital = yes
+				has_province_modifier = regional_capital_modifier
+			}
+		}
+		max_variable = { which = r_cap }
+		road_cap_limit = { which = r_cap }
 		limit_variable = { which = r_cap value = 1 lower = yes }
 		set_province_flag = r_calc
+	}
+}
+road_recalculate_end = {
+	every_owned_province = {
+		limit = { has_road_connection = yes }
+		set_variable = { which = r_cap_road which = r_cap }
+	}
+	every_owned_province = {
+		limit = { has_road_connection = yes }
+		set_variable = { which = temp which = r_cap_road }
+		every_neighbor_province = {
+			limit = {
+				owned_by = event_target:country
+				NOT = { check_variable = { which = r_cap which = PREV } }
+				NOT = { check_variable = { which = r_cap_road which = PREV } }
+			}
+			set_variable = { which = temp which = PREV }
+			set_variable = { which = r_cap which = temp }
+		}
 	}
 }

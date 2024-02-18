@@ -4,19 +4,17 @@ on_startup = {
 		set_global_flag = r_setup
 
 		every_country = {
-			init = { v = r_step }
+			road_recalculate = yes
 		}
 		every_province = {
-			init = { v = r_dist }
+			place_terrain_modifiers = yes
 		}
-	}
-
-	every_province = {
-		place_terrain_modifiers = yes
 	}
 }
 
 on_province_owner_change = {
+	road_recalculate_country = yes
+	FROM = { road_recalculate_country = yes }
 	if = {
 		limit = {
 			has_province_flag = built_shipyard
