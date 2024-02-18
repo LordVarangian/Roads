@@ -5,36 +5,50 @@ road_build = {
 	else_if = {
 		limit = { has_building = road }
 		add_building = upgraded_road
+		owner = { road_recalculate_country = yes }
 	}
 	else_if = {
 		limit = { has_building = dirt_road }
 		add_building = road
+		owner = { road_recalculate_country = yes }
 	}
 	else = {
 		add_building = dirt_road
+		owner = { road_recalculate_country = yes }
 	}
 }
 road_destroy = {
 	trigger_switch = {
 		on_trigger = has_building
-		dirt_road = { remove_building = dirt_road }
+		dirt_road = {
+			remove_building = dirt_road
+			owner = { road_recalculate_country = yes }
+		}
 		road = {
 			remove_building = road
 			add_building = dirt_road
+			owner = { road_recalculate_country = yes }
 		}
 		upgraded_road = {
 			remove_building = upgraded_road
 			add_building = road
+			owner = { road_recalculate_country = yes }
 		}
 	}
 }
 
 road_cap_limit = { #which
-	trigger_switch = {
-		on_trigger = has_building
-		dirt_road = { limit_variable = { which = $which$ value = 1 } }
-		road = { limit_variable = { which = $which$ value = 2 } }
-		upgraded_road = { limit_variable = { which = $which$ value = 3 } }
+	if = {
+		limit = { has_building = dirt_road }
+		limit_variable = { which = $which$ value = 1 }
+	}
+	else_if = {
+		limit = { has_building = road }
+		limit_variable = { which = $which$ value = 2 }
+	}
+	else = {
+		#advanced_road
+		limit_variable = { which = $which$ value = 3 }
 	}
 }
 road_recalculate_province = {
@@ -64,6 +78,7 @@ road_recalculate = {
 		clr_country_flag = r_calc
 		road_recalculate_h = {}
 	}
+	road_recalculate_end = yes
 	log = "  Done"
 }
 
@@ -120,7 +135,6 @@ road_recalculate_setup = {
 		}
 		max_variable = { which = r_cap }
 		road_cap_limit = { which = r_cap }
-		limit_variable = { which = r_cap value = 1 lower = yes }
 		set_province_flag = r_calc
 	}
 }

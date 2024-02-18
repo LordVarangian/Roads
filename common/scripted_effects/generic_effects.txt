@@ -17,3 +17,44 @@ limit_variable = { #which #value
 max_variable = { #which
 	set_variable = { which = $which$ value = 2147000.000 }
 }
+
+scaled_effect = { #effect #value #which
+	set_variable = { which = temp [[which]which = $which$] [[value]value = $value$] }
+	if = {
+		limit = {
+			check_variable = { which = temp value = 0 }
+		}
+		scaled_effect_h = { effect=$effect$ s=+ num= 1024 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 512 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 256 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 128 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 64 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 32 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 16 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 8 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 4 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 2 }
+		scaled_effect_h = { effect=$effect$ s=+ num= 1 }
+	}
+	else = {
+		multiply_variable = { which = temp value = -1 }
+		scaled_effect_h = { effect=$effect$ s=- num= 1024 }
+		scaled_effect_h = { effect=$effect$ s=- num= 512 }
+		scaled_effect_h = { effect=$effect$ s=- num= 256 }
+		scaled_effect_h = { effect=$effect$ s=- num= 128 }
+		scaled_effect_h = { effect=$effect$ s=- num= 64 }
+		scaled_effect_h = { effect=$effect$ s=- num= 32 }
+		scaled_effect_h = { effect=$effect$ s=- num= 16 }
+		scaled_effect_h = { effect=$effect$ s=- num= 8 }
+		scaled_effect_h = { effect=$effect$ s=- num= 4 }
+		scaled_effect_h = { effect=$effect$ s=- num= 2 }
+		scaled_effect_h = { effect=$effect$ s=- num= 1 }
+	}
+}
+scaled_effect_h = {
+	if = {
+		limit = { check_variable = { which = temp value = $num$ } }
+		subtract_variable = { which = temp value = $num$ }
+		$effect$ = $sign$$num$
+	}
+}
