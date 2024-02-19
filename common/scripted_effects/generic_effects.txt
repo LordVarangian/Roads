@@ -104,13 +104,13 @@ scaled_effect_if = {
 	if = {
 		limit = { check_variable = { which = temp value = $num$ } }
 		subtract_variable = { which = temp value = $num$ }
-		$effect$ = $sign$$num$
+		$effect$ = $s$$num$
 	}
 }
 scaled_effect_while = {
 	while = {
 		limit = { check_variable = { which = temp value = $num$ } }
 		subtract_variable = { which = temp value = $num$ }
-		$effect$ = $sign$$num$
+		$effect$ = $s$$num$
 	}
 }
