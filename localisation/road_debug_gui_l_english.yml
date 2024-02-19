@@ -26,6 +26,11 @@
  
  debug: ""
  
+
+ mod_roads.2_t: "Claim Temple Income"
+ mod_roads.2_d: "Gain income according to how much tax development you have in [From.GetRegionName]'s areas with at least one Church or Cathedral. You can only do this interaction once per year.\n\nYou will gain [This.building_menu_temple_yearly_tax_dev_prov.GetValue] ducats\n\n§RThis value may change if time passes§!"
+ mod_roads.2_o1: "Yes please!"
+ mod_roads.2_o1_tt: "Gain [This.building_menu_temple_yearly_tax_dev_prov.GetValue] ducats"
  
  ######################
  # Buildings Menu:
