@@ -18,6 +18,8 @@ coastal_defence_built = {
     block_slave_raid = yes
 }
 
+road_calc = {}
+
 #####
 #Terrain Modifiers
 #####

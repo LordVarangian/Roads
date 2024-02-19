@@ -1,0 +1,11 @@
+namespace = mod_roads
+country_event = {
+    id = mod_roads.1
+    title = debug
+    desc = debug
+    is_triggered_only = yes
+    hidden = yes
+    option = {
+        road_recalculate_country_immediate = yes
+    }
+}

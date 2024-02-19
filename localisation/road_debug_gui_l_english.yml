@@ -24,7 +24,7 @@
  log_3: "      To [This.GetName] ([This.r_cap.GetValue])"
  log_4: "Recalculating road distance for [This.GetName]..."
  
- 
+ debug: ""
  
  
  ######################

@@ -18,41 +18,97 @@ max_variable = { #which
 	set_variable = { which = $which$ value = 2147000.000 }
 }
 
-scaled_effect = { #effect #value #which
-	set_variable = { which = temp [[which]which = $which$] [[value]value = $value$] }
+scaled_effect = { #effect #which
+	set_variable = { which = temp which = $which$ }
 	if = {
 		limit = {
 			check_variable = { which = temp value = 0 }
 		}
-		scaled_effect_h = { effect=$effect$ s=+ num= 1024 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 512 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 256 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 128 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 64 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 32 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 16 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 8 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 4 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 2 }
-		scaled_effect_h = { effect=$effect$ s=+ num= 1 }
+		scaled_effect_while = { effect=$effect$ s=+ num= 1024 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 512 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 256 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 128 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 64 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 32 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 16 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 8 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 4 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 2 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 1 }
 	}
 	else = {
 		multiply_variable = { which = temp value = -1 }
-		scaled_effect_h = { effect=$effect$ s=- num= 1024 }
-		scaled_effect_h = { effect=$effect$ s=- num= 512 }
-		scaled_effect_h = { effect=$effect$ s=- num= 256 }
-		scaled_effect_h = { effect=$effect$ s=- num= 128 }
-		scaled_effect_h = { effect=$effect$ s=- num= 64 }
-		scaled_effect_h = { effect=$effect$ s=- num= 32 }
-		scaled_effect_h = { effect=$effect$ s=- num= 16 }
-		scaled_effect_h = { effect=$effect$ s=- num= 8 }
-		scaled_effect_h = { effect=$effect$ s=- num= 4 }
-		scaled_effect_h = { effect=$effect$ s=- num= 2 }
-		scaled_effect_h = { effect=$effect$ s=- num= 1 }
+		scaled_effect_while = { effect=$effect$ s=- num= 1024 }
+		scaled_effect_if = { effect=$effect$ s=- num= 512 }
+		scaled_effect_if = { effect=$effect$ s=- num= 256 }
+		scaled_effect_if = { effect=$effect$ s=- num= 128 }
+		scaled_effect_if = { effect=$effect$ s=- num= 64 }
+		scaled_effect_if = { effect=$effect$ s=- num= 32 }
+		scaled_effect_if = { effect=$effect$ s=- num= 16 }
+		scaled_effect_if = { effect=$effect$ s=- num= 8 }
+		scaled_effect_if = { effect=$effect$ s=- num= 4 }
+		scaled_effect_if = { effect=$effect$ s=- num= 2 }
+		scaled_effect_if = { effect=$effect$ s=- num= 1 }
 	}
 }
-scaled_effect_h = {
+scaled_effect_full = { #effect #which
+	set_variable = { which = temp which = $which$ }
 	if = {
+		limit = {
+			check_variable = { which = temp value = 0 }
+		}
+		scaled_effect_while = { effect=$effect$ s=+ num= 2621.44 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 1310.72 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 655.36 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 327.68 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 163.84 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 81.92 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 40.96 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 20.48 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 10.24 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 5.12 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 2.56 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 1.28 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 0.64 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 0.32 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 0.16 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 0.08 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 0.04 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 0.02 }
+		scaled_effect_if = { effect=$effect$ s=+ num= 0.01 }
+	}
+	else = {
+		multiply_variable = { which = temp value = -1 }
+		scaled_effect_while = { effect=$effect$ s=- num= 2621.44 }
+		scaled_effect_if = { effect=$effect$ s=- num= 1310.72 }
+		scaled_effect_if = { effect=$effect$ s=- num= 655.36 }
+		scaled_effect_if = { effect=$effect$ s=- num= 327.68 }
+		scaled_effect_if = { effect=$effect$ s=- num= 163.84 }
+		scaled_effect_if = { effect=$effect$ s=- num= 81.92 }
+		scaled_effect_if = { effect=$effect$ s=- num= 40.96 }
+		scaled_effect_if = { effect=$effect$ s=- num= 20.48 }
+		scaled_effect_if = { effect=$effect$ s=- num= 10.24 }
+		scaled_effect_if = { effect=$effect$ s=- num= 5.12 }
+		scaled_effect_if = { effect=$effect$ s=- num= 2.56 }
+		scaled_effect_if = { effect=$effect$ s=- num= 1.28 }
+		scaled_effect_if = { effect=$effect$ s=- num= 0.64 }
+		scaled_effect_if = { effect=$effect$ s=- num= 0.32 }
+		scaled_effect_if = { effect=$effect$ s=- num= 0.16 }
+		scaled_effect_if = { effect=$effect$ s=- num= 0.08 }
+		scaled_effect_if = { effect=$effect$ s=- num= 0.04 }
+		scaled_effect_if = { effect=$effect$ s=- num= 0.02 }
+		scaled_effect_if = { effect=$effect$ s=- num= 0.01 }
+	}
+}
+scaled_effect_if = {
+	if = {
+		limit = { check_variable = { which = temp value = $num$ } }
+		subtract_variable = { which = temp value = $num$ }
+		$effect$ = $sign$$num$
+	}
+}
+scaled_effect_while = {
+	while = {
 		limit = { check_variable = { which = temp value = $num$ } }
 		subtract_variable = { which = temp value = $num$ }
 		$effect$ = $sign$$num$
