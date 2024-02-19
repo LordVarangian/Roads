@@ -38,6 +38,9 @@ technology = { #Advanced Tribes
 	
 	tribal_democracy_legacy = yes
 	tribal_kingdom_legacy = yes
+	dirt_road = yes
+	road = yes
+	upgraded_road = yes
 }
 
 technology = { #Feudal Monarchy
