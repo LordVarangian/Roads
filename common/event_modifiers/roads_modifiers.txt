@@ -24,6 +24,31 @@ road_calc = {}
 #Terrain Modifiers
 #####
 
+city_modifier = {
+    local_development_cost = -0.2
+    allowed_num_of_buildings = 2
+    max_development_modifier = 89
+}
+
+irrigated_lands_modifier = {
+    trade_goods_size_modifier = 0.1
+    allowed_num_of_buildings = 1
+    max_development_modifier = 49
+}
+
+terraces_modifier = {
+    local_development_cost = 0.1
+    trade_goods_size_modifier = 0.05
+    max_development_modifier = 49
+}
+
+rich_soil_farms_modifier = {
+    local_development_cost = -0.1
+    allowed_num_of_buildings = 1
+    trade_goods_size_modifier = 0.25
+    max_development_modifier = 89
+}
+
 farmlands_modifier = {
     local_development_cost = -0.05
     allowed_num_of_buildings = 1
@@ -36,64 +61,83 @@ forest_modifier = {
     max_development_modifier = 29
 }
 
+deforested_forest_modifier = {
+	local_development_cost = 0.05
+    trade_goods_size_modifier = 0.1
+    max_development_modifier = 49
+}
+
 hills_modifier = {
     local_attacker_dice_roll_bonus = -1
     local_defensiveness = 0.1
     local_development_cost = 0.25
+    max_development_modifier = 29
 }
 
 woods_modifier = {
     local_attacker_dice_roll_bonus = -1
 	local_development_cost = 0.15
+    max_development_modifier = 29
 }
 
 mountain_modifier = {
     local_attacker_dice_roll_bonus = -2
     local_defensiveness = 0.25
     local_development_cost = 0.35
+    max_development_modifier = 19
 }
 
 grasslands_modifier = {
 	allowed_num_of_buildings = 1
+    max_development_modifier = 49
 }
 
 jungle_modifier = {
     local_attacker_dice_roll_bonus = -1
     local_development_cost = 0.35
+    max_development_modifier = 24
 }
 
 marsh_modifier = {
     local_attacker_dice_roll_bonus = -1
     local_development_cost = 0.25
+    max_development_modifier = 24
 }
 
 desert_modifier = {
 	local_development_cost = 0.50
+    max_development_modifier = 19
 }
 
 coastal_desert_modifier = {
-    local_development_cost = 0.35	
+    local_development_cost = 0.35
+    max_development_modifier = 24
 }
 
 coastline_modifier = {
     local_development_cost = 0.15
+    max_development_modifier = 39
 }
 
 drylands_modifier = {
     local_development_cost = 0.05
     allowed_num_of_buildings = 1
+    max_development_modifier = 44
 }
 
 highlands_modifier = {
     local_attacker_dice_roll_bonus = -1
     local_defensiveness = 0.1
     local_development_cost = 0.2
+    max_development_modifier = 19
 }
 
 savannah_modifier = {
     local_development_cost = 0.15
+    max_development_modifier = 24
 }
 
 steppe_modifier = {
     local_development_cost = 0.20
+    max_development_modifier = 24
 }

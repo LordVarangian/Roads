@@ -1068,10 +1068,23 @@ spriteTypes = {
 		name = "GFX_modified_terrain"
 		texturefile = "gfx/interface/terrain/build_woods.dds"
 		transparencecheck = yes
+		noOfFrames = 5
 	}
 	spriteType = {
 		name = "GFX_terrain_text"
 		texturefile = "gfx/interface/terrain/transparent_build.dds"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_terrain_text"
+		texturefile = "gfx/interface/terrain/transparent_build.dds"
+		transparencecheck = yes
+	}
+
+	spriteType = {
+		name = "GFX_upgrade_irrigated_lands"
+		texturefile = "gfx/interface/terrain/irrigated_lands.dds"
 		transparencecheck = yes
 	}
 }

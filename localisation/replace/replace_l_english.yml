@@ -18,7 +18,7 @@
  building_output: "Building Output Growth"
 
  #Terrain:
- TERRAIN_TT: "Terrain: §YDeforested Woods§!\nSupply Limit: §G+8.00§!\nLocal Development Cost: §R+5.00%§!\n--------------\nThese woods have been chopped off to allow for the building of better infrastructure."
+ deforested_woods_tt: "Terrain: §YDeforested Woods§!\nSupply Limit: §G+8.00§!\nLocal Development Cost: §R+5.0%§!\nMax Development: §G35§!\n--------------\nThese woods have been chopped off to allow for the building of better infrastructure."
  CHANGE_TERRAIN_OF_WOODS: "Change province terrain to §YDeforested Woods§!"
  CHANGE_TERRAIN_TT: "Change Terrain"
 
@@ -37,37 +37,47 @@
  savannah_modifier: "Savannah"
  steppe_modifier: "Steppes"
 
- TERRAIN_MODIFIERS_TT: "[Root.terrain_type_loc]"
+ TERRAIN_MODIFIERS_TT: "[Root.has_province_modifier_type_loc]"
 
- farmlands_tt: "Terrain: §YFarmlands§!\nSupply Limit: §G+10.00§!\nLocal Development Cost: §G-5.0%§!\nPossible Numbers of Buildings: §G+1§!\n--------------\nFarmlands terrain represents highly cultivated areas where the landscape is dominated by agriculture and towns or villages."
+ farmlands_tt: "Terrain: §YFarmlands§!\nSupply Limit: §G+10.00§!\nLocal Development Cost: §G-5.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G60§!\n--------------\nFarmlands terrain represents highly cultivated areas where the landscape is dominated by agriculture and towns or villages."
 
- forest_tt: "Terrain: §YForest§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R-20.0%§!\nDice Roll for Attacker: §R-1§!\n--------------\nForest terrain represents areas of conifer forest with high density of trees and underbrush."
+ forest_tt: "Terrain: §YForest§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R-20.0%§!\nDice Roll for Attacker: §R-1§!\nMax Development: §G30§!\n--------------\nForest terrain represents areas of conifer forest with high density of trees and underbrush."
 
- hills_tt: "Terrain: §YHills§!\nSupply Limit: §G+5.00§!\nLocal Development Cost: §R+25.0%§!\nDice Roll for Attacker: §R-1§!\nLocal Defensiveness: §G+10.0%§!\n--------------\nHills terrain represents areas dominated by a rolling landscape of shifting elevation that are lower and less steep than mountains. Unlike the highland terrain hills represent areas with a higher density of trees and underbrush."
+ hills_tt: "Terrain: §YHills§!\nSupply Limit: §G+5.00§!\nLocal Development Cost: §R+25.0%§!\nDice Roll for Attacker: §R-1§!\nLocal Defensiveness: §G+10.0%§!\nMax Development: §G30§!\n--------------\nHills terrain represents areas dominated by a rolling landscape of shifting elevation that are lower and less steep than mountains. Unlike the highland terrain hills represent areas with a higher density of trees and underbrush."
 
- woods_tt: "Terrain: §YWoods§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\nDice Roll for Attacker: §R-1§!\n--------------\nWoods terrain represents areas of broadleaf forest with high density of trees and underbrush."
+ woods_tt: "Terrain: §YWoods§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\nDice Roll for Attacker: §R-1§!\nMax Development: §G30§!\n--------------\nWoods terrain represents areas of broadleaf forest with high density of trees and underbrush."
 
- mountain_tt: "Terrain: §YMountains§!\nSupply Limit: §G+4.00§!\nDice Roll for Attacker: §R-2§!\nLocal Development Cost: §R+35.0%§!\nLocal Defensiveness: §G+25.0%§!\n--------------\nMountain terrain represents areas mainly occupied by rugged mountain ranges and narrow passes, often on high altitude and in cold climate."
+ mountain_tt: "Terrain: §YMountains§!\nSupply Limit: §G+4.00§!\nDice Roll for Attacker: §R-2§!\nLocal Development Cost: §R+35.0%§!\nLocal Defensiveness: §G+25.0%§!\nMax Development: §G19§!\n--------------\nMountain terrain represents areas mainly occupied by rugged mountain ranges and narrow passes, often on high altitude and in cold climate."
 
- grasslands_tt: "Terrain: §YGrasslands§!\nSupply Limit: §G+8.00§!\nPossible Numbers of Buildings: §G+1§!\n--------------\nGrasslands terrain represents areas of farmland where the vegetation is dominated by grass."
+ grasslands_tt: "Terrain: §YGrasslands§!\nSupply Limit: §G+8.00§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G50§!\n--------------\nGrasslands terrain represents areas of farmland where the vegetation is dominated by grass."
 
- jungle_tt: "Terrain: §YJungle§!\nSupply Limit: §G+5.00§!\nDice Roll for Attacker: §R-1§!\nLocal Development Cost: §R+35.0%§!\n--------------\nJungle terrain represents areas overgrown with dense tropical vegetation, difficult for an army to maneuver in."
+ jungle_tt: "Terrain: §YJungle§!\nSupply Limit: §G+5.00§!\nDice Roll for Attacker: §R-1§!\nLocal Development Cost: §R+35.0%§!\nMax Development: §G25§!\n--------------\nJungle terrain represents areas overgrown with dense tropical vegetation, difficult for an army to maneuver in."
 
- marsh_tt: "Terrain: §YMarsh§!\nSupply Limit: §G+5.00§!\nLocal Development Cost: §R+25.0%§!\nDice Roll for Attacker: §R-1§!\n--------------\nMarsh terrain represents tracts of wetland dominated by grasses or low-growing shrubs."
+ marsh_tt: "Terrain: §YMarsh§!\nSupply Limit: §G+5.00§!\nLocal Development Cost: §R+25.0%§!\nDice Roll for Attacker: §R-1§!\nMax Development: §G25§!\n--------------\nMarsh terrain represents tracts of wetland dominated by grasses or low-growing shrubs."
 
- desert_tt: "Terrain: §YDesert§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R+50.0%§!\n--------------\nDesert terrain represents desolate and arid areas with little or no vegetation, often in a very warm climate."
+ desert_tt: "Terrain: §YDesert§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R+50.0%§!\nMax Development: §G20§!\n--------------\nDesert terrain represents desolate and arid areas with little or no vegetation, often in a very warm climate."
 
- coastal_desert_tt: "Terrain: §YCoastal Desert§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R+35.0%§!\n--------------\nCoastal Desert terrain represents areas where the desert meets the ocean, resulting in a milder and less inhospitable climate."
+ coastal_desert_tt: "Terrain: §YCoastal Desert§!\nSupply Limit: §G+4.00§!\nLocal Development Cost: §R+35.0%§!\nMax Development: §G25§!\n--------------\nCoastal Desert terrain represents areas where the desert meets the ocean, resulting in a milder and less inhospitable climate."
 
- coastline_tt: "Terrain: §YCoastline§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\n--------------\nCoastline terrain represents the narrow areas where land and sea meet, comprised of cliffs or sand dunes."
+ coastline_tt: "Terrain: §YCoastline§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\nMax Development: §G40§!\n--------------\nCoastline terrain represents the narrow areas where land and sea meet, comprised of cliffs or sand dunes."
 
- drylands_tt: "Terrain: §YDrylands§!\nSupply Limit: §G+7.00§!\nLocal Development Cost: §R+5.0%§!\nPossible Numbers of Buildings: §G+1§!\n--------------\nDrylands represents large areas of dry, flat or rolling treeless land."
+ drylands_tt: "Terrain: §YDrylands§!\nSupply Limit: §G+7.00§!\nLocal Development Cost: §R+5.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G45§!\n--------------\nDrylands represents large areas of dry, flat or rolling treeless land."
 
- highlands_tt: "Terrain: §YHighlands§!\nSupply Limit: §G+6.00§!\nDice Roll for Attacker: §R-1§!\nLocal Development Cost: §R-20.0%§!\nLocal Defensiveness: §G+10.0%§!\n--------------\nHighlands terrain represents areas dominated by a rolling landscape of shifting elevation that are lower and less steep than mountains. Unlike the hills terrain highlands represent areas with a low density of trees and underbrush."
+ highlands_tt: "Terrain: §YHighlands§!\nSupply Limit: §G+6.00§!\nDice Roll for Attacker: §R-1§!\nLocal Development Cost: §R-20.0%§!\nLocal Defensiveness: §G+10.0%§!\nMax Development: §G20§!\n--------------\nHighlands terrain represents areas dominated by a rolling landscape of shifting elevation that are lower and less steep than mountains. Unlike the hills terrain highlands represent areas with a low density of trees and underbrush."
 
- savannah_tt: "Terrain: §YSavannah§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\n--------------\nSavanna terrain represents large grass-covered areas with a high degree of trees mixed in."
+ savannah_tt: "Terrain: §YSavannah§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+15.0%§!\nMax Development: §G25§!\n--------------\nSavanna terrain represents large grass-covered areas with a high degree of trees mixed in."
 
- steppe_tt: "Terrain: §YStepes§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+20.0%§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+ steppe_tt: "Terrain: §YStepes§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+20.0%§!\nMax Development: §G25§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+
+ city_tt: "Terrain: §YCity§!\nSupply Limit: §G+10.00§!\nLocal Development Cost: §G-20.0%§!\nPossible Numbers of Buildings: §G+2§!\nMax Development: §G90§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+
+ rich_soil_farms_tt: "Terrain: §YRich Soil Farmlands§!\nSupply Limit: §G+10.00§!\nLocal Goods Produced Modifier: §G+25.0%§!\nLocal Development Cost: §G-10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G90§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+
+ irrigated_lands_tt: "Terrain: §YIrrigated Lands§!\nLocal Goods Produced Modifier: §G+10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G50§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+
+ terraces_tt: "Terrain: §YTerraces§!\nLocal Goods Produced Modifier: §G+5.0%§!\nLocal Development Cost: §R-10.0%§!\nMax Development: §G50§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+
+ terraces_tt: "Terrain: §YTerraces§!\nLocal Goods Produced Modifier: §G+25.0%§!\nLocal Development Cost: §G-10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G90§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
 
  navy_forcelimit_trade_outposts: "Trade Outposts"
 
@@ -103,3 +113,7 @@
  display_owner_name_tt: "Owned by §Y[province_owner_of_this.GetName]"
 
  display_province_name: "Trade Outpost of [Root.GetName]"
+
+ ABOVE_MAX_DEVELOPMENT_TOOLTIP: "§RCannot develop above the Max Development limit.§!"
+
+ upgrade_terrain_text: "Terrain Upgrades"

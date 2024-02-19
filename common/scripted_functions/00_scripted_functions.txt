@@ -89,7 +89,7 @@ can_abandon_state = {
 
 can_improve_tax = {
 	condition = {
-		tooltip = TEST_TOOLTIP
+		tooltip = ABOVE_MAX_DEVELOPMENT_TOOLTIP
 		potential = {
 			always = yes
 		}
@@ -117,7 +117,7 @@ can_improve_tax = {
 
 can_improve_production = {
 	condition = {
-		tooltip = TEST_TOOLTIP
+		tooltip = ABOVE_MAX_DEVELOPMENT_TOOLTIP
 		potential = {
 			always = yes
 		}
@@ -145,7 +145,7 @@ can_improve_production = {
 
 can_improve_manpower = {
 	condition = {
-		tooltip = TEST_TOOLTIP
+		tooltip = ABOVE_MAX_DEVELOPMENT_TOOLTIP
 		potential = {
 			always = yes
 		}

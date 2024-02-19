@@ -34,3 +34,23 @@ calculate_tax_dev_into_money = {
         }
     }
 }
+
+remove_all_province_terrain_modifiers = {
+    remove_province_modifier = city_modifier
+    remove_province_modifier = farmlands_modifier
+    remove_province_modifier = forest_modifier
+    remove_province_modifier = deforested_forest_modifier
+    remove_province_modifier = hills_modifier
+    remove_province_modifier = woods_modifier
+    remove_province_modifier = mountain_modifier
+    remove_province_modifier = grasslands_modifier
+    remove_province_modifier = jungle_modifier
+    remove_province_modifier = marsh_modifier
+    remove_province_modifier = desert_modifier
+    remove_province_modifier = coastal_desert_modifier
+    remove_province_modifier = coastline_modifier
+    remove_province_modifier = drylands_modifier
+    remove_province_modifier = highlands_modifier
+    remove_province_modifier = savannah_modifier
+    remove_province_modifier = steppe_modifier
+}

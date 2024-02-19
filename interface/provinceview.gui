@@ -858,7 +858,7 @@ guiTypes = {
 
 			guiButtonType =
 			{
-				name ="change_terrain"
+				name ="open_upgrade_terrain_menu_button"
 				position = { x= 450 y = -15 }
 				quadTextureSprite ="GFX_move_capital"
 				tooltip = ""
@@ -5317,6 +5317,79 @@ guiTypes = {
 				}
 			}
 
+			iconType =
+			{
+				name ="upgrade_terrain_menu"
+				spriteType = "GFX_provinceview_great_projects_bg"
+				position = { x= 0 y = -115 }
+				scripted = yes
+			}
+
+			instantTextBoxType =
+			{
+				name ="upgrade_terrain_text"
+				position = { x = 105 y = -83 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 2 y = 2}
+				maxWidth = 120
+				maxHeight = 20
+				format = right
+				scripted = yes
+			}
+
+			instantTextBoxType =
+			{
+				name ="upgrade_1_text"
+				position = { x= 100 y = -40 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 2 y = 2}
+				maxWidth = 120
+				maxHeight = 20
+				format = right
+				scripted = yes
+			}
+
+			guiButtonType =
+			{
+				name ="terrain_upgrade_1"
+				position = { x= 100 y = -20 }
+				quadTextureSprite ="GFX_upgrade_irrigated_lands"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
+
+			instantTextBoxType =
+			{
+				name ="upgrade_2_text"
+				position = { x= 100 y = 40 }
+				textureFile = ""
+				font = "vic_18"
+				borderSize = {x = 2 y = 2}
+				maxWidth = 120
+				maxHeight = 20
+				format = right
+				scripted = yes
+			}
+
+			guiButtonType =
+			{
+				name ="terrain_upgrade_2"
+				position = { x= 100 y = 60 }
+				quadTextureSprite ="GFX_upgrade_irrigated_lands"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = ""
+				Orientation = "UPPER_LEFT"
+				scripted = yes
+			}
+
 			windowType = {
 				name = "select_building"
 				backGround=""
@@ -8381,7 +8454,6 @@ guiTypes = {
 
 		iconType = {
 			name = "taxation_banner"
-			scripted = yes
 			position = { x = 240 y = 194 }
 			spriteType = "GFX_banner_right_2"
 		}
@@ -8398,7 +8470,6 @@ guiTypes = {
 
 		iconType ={
 			name ="taxation_icon"
-			scripted = yes
 			spriteType = "GFX_macro_buildings_category_strip"
 			position = { x = 262 y = 197}
 		}

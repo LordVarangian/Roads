@@ -768,37 +768,228 @@ custom_button = {
 #######################
 
 custom_icon = {
-	name = province_upgraded_terrain
+	name = override_terrain_text
 	potential = {
-		has_province_flag = performed_province_terrain_action
+		always = yes
 	}
-	tooltip = TERRAIN_TT
+	tooltip = TERRAIN_MODIFIERS_TT
 }
 
 custom_icon = {
-	name = override_terrain_text
+	name = province_upgraded_terrain
 	potential = {
-		NOT = { has_province_flag = performed_province_terrain_action }
+		has_province_flag = performed_province_terrain_action
 	}
 	tooltip = TERRAIN_MODIFIERS_TT
 }
 
 custom_button = {
-	name = change_terrain
+	name = open_upgrade_terrain_menu_button
 	potential = {
-		has_terrain = woods
+		owned_by = FROM
+		OR = {
+			has_province_modifier = city_modifier
+			has_province_modifier = farmlands_modifier
+			has_province_modifier = forest_modifier
+			has_province_modifier = deforested_forest_modifier
+			has_province_modifier = hills_modifier
+			has_province_modifier = woods_modifier
+			has_province_modifier = mountain_modifier
+			has_province_modifier = grasslands_modifier
+			has_province_modifier = jungle_modifier
+			has_province_modifier = marsh_modifier
+			has_province_modifier = desert_modifier
+			has_province_modifier = coastal_desert_modifier
+			has_province_modifier = coastline_modifier
+			has_province_modifier = drylands_modifier
+			has_province_modifier = highlands_modifier
+			has_province_modifier = savannah_modifier
+			has_province_modifier = steppe_modifier
+		}
 		NOT = {
+			has_province_flag = province_made_city
+		}
+	}
+	effect = { 
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_country_flag = upgrade_terrain_menu_open
+					}
+				}
+			}
+			FROM = { set_country_flag = upgrade_terrain_menu_open }
+		}
+		else = {
+			FROM = { clr_country_flag = upgrade_terrain_menu_open }
+		}
+	}
+	tooltip = CHANGE_TERRAIN_TT
+}
+
+custom_icon = {
+	name = upgrade_terrain_menu
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = upgrade_terrain_menu_open }
+		NOT = {
+			has_province_flag = province_made_city
+			has_province_flag = performed_province_terrain_action
+		}
+	}
+}
+
+custom_text_box = {
+	name = upgrade_terrain_text
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = upgrade_terrain_menu_open }
+		NOT = {
+			has_province_flag = province_made_city
+			has_province_flag = performed_province_terrain_action
+		}
+	}
+}
+
+custom_button = {
+	name = terrain_upgrade_1
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = upgrade_terrain_menu_open }
+		NOT = {
+			has_province_flag = province_made_city
 			has_province_flag = performed_province_terrain_action
 		}
 	}
 	trigger = {
-
-	}
-	effect = { 
-		custom_tooltip = CHANGE_TERRAIN_OF_WOODS
-		hidden_effect = {
-			set_province_flag = performed_province_terrain_action
+		FROM = {
+			years_of_income = 5
 		}
 	}
-	tooltip = CHANGE_TERRAIN_TT
+	effect = {
+		FROM = {
+			add_years_of_income = -5
+		}
+		set_province_flag = performed_province_terrain_action
+		if = {
+			limit = {
+				OR = {
+					has_province_modifier = forest_modifier
+					has_province_modifier = woods_modifier
+					has_province_modifier = marsh_modifier
+				}
+			}
+			remove_province_modifier = forest_modifier
+			remove_province_modifier = woods_modifier
+			remove_province_modifier = marsh_modifier
+			add_province_modifier = {
+				name = deforested_forest_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_province_modifier = steppe_modifier
+					has_province_modifier = grasslands_modifier
+					has_province_modifier = savannah_modifier
+					has_province_modifier = desert_modifier
+				}
+			}
+			remove_province_modifier = steppe_modifier
+			remove_province_modifier = grasslands_modifier
+			remove_province_modifier = savannah_modifier
+			remove_province_modifier = desert_modifier
+			add_province_modifier = {
+				name = irrigated_lands_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_province_modifier = hills_modifier
+					has_province_modifier = mountain_modifier
+					has_province_modifier = highlands_modifier
+				}
+			}
+			remove_province_modifier = hills_modifier
+			remove_province_modifier = mountain_modifier
+			remove_province_modifier = highlands_modifier
+			add_province_modifier = {
+				name = terraces_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		else_if = {
+			limit = {
+				has_province_modifier = farmlands_modifier
+			}
+			remove_province_modifier = farmlands_modifier
+			add_province_modifier = {
+				name = rich_soil_farms_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+	}
+}
+
+custom_button = {
+	name = terrain_upgrade_2
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = upgrade_terrain_menu_open }
+		NOT = {
+			has_province_flag = province_made_city
+			has_province_flag = performed_province_terrain_action
+		}
+	}
+	trigger = {
+		FROM = {
+			years_of_income = 5
+		}
+	}
+	effect = {
+		FROM = {
+			add_years_of_income = -5
+		}
+		hidden_effect = {
+			remove_all_province_terrain_modifiers = yes
+			add_province_modifier = {
+				name = city_modifier
+				duration = -1
+				hidden = yes
+			}
+		}
+		set_province_flag = province_made_city
+	}
+}
+
+custom_text_box = {
+	name = upgrade_1_text
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = upgrade_terrain_menu_open }
+		NOT = {
+			has_province_flag = province_made_city
+			has_province_flag = performed_province_terrain_action
+		}
+	}
+}
+
+custom_text_box = {
+	name = upgrade_2_text
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = upgrade_terrain_menu_open }
+		NOT = {
+			has_province_flag = province_made_city
+			has_province_flag = performed_province_terrain_action
+		}
+	}
 }
