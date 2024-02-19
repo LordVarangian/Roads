@@ -19,15 +19,14 @@ country_event = {
 
     option = {
         name = mod_roads.2_o1
-        #event target: province
         hidden_effect = {
             set_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 0 }
             event_target:province = {
                 region = {
                     limit = {
-                        owned_by = FROM
+                        owned_by = event_target:country
                         area_for_scope_province = {
-                            owned_by = FROM
+                            owned_by = event_target:country
                             OR = { has_building = temple has_building = cathedral }
                         }
                     }
