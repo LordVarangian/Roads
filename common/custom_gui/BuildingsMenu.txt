@@ -436,7 +436,6 @@ custom_icon = {
 custom_icon = {
 	name = building_menu_temple_button_4_religion_icon
 	potential = { always = no owned_by = FROM FROM = { has_country_flag = building_menu_opened_flag } has_province_flag = building_menu_temple_opened_flag OR = { has_building = temple has_building = cathedral } }
-	
 }
 custom_button = {
 	name = building_menu_temple_button_1
@@ -541,23 +540,28 @@ custom_button = {
 	}
 	effect = {
 		hidden_effect = {
-			region = {
-				limit = {
-					owned_by = FROM
-					area_for_scope_province = {
-						owned_by = FROM
-						OR = { has_building = temple has_building = cathedral }
+			save_event_target_as = province
+            owner = {
+				set_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 0 }
+				event_target:province = {
+					region = {
+						limit = {
+							owned_by = FROM
+							area_for_scope_province = {
+								owned_by = FROM
+								OR = { has_building = temple has_building = cathedral }
+							}
+						}
+						export_to_variable = { which = building_menu_temple_yearly_tax_dev_prov value = base_tax }
+						ROOT = {
+							change_variable = { which = building_menu_temple_yearly_tax_dev_prov which = PREV }
+						}
 					}
 				}
-				export_to_variable = { which = building_menu_temple_yearly_tax_dev_prov value = base_tax }
-				change_variable = { which = building_menu_temple_yearly_tax_dev_prov value = PREV }
-				while = {
-					limit = { check_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 1 } }
-					subtract_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 1 }
-					FROM = { add_treasury = 3 }
-				}
+				multiply_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 3 }
 			}
 		}
+		owner = { country_event = { id = mod_roads.2 } }
 	}
 	#frame = {
 	#	number = 2 trigger = { }

@@ -19,28 +19,26 @@ country_event = {
 
     option = {
         name = mod_roads.2_o1
+        #event target: province
         hidden_effect = {
-            FROM = { set_variable = { which =  building_menu_temple_yearly_tax_dev_prov value = 0 } }
- 			region = {
-                limit = {
-                    owned_by = FROM
-                    area_for_scope_province = {
+            set_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 0 }
+            event_target:province = {
+                region = {
+                    limit = {
                         owned_by = FROM
-                        OR = { has_building = temple has_building = cathedral }
+                        area_for_scope_province = {
+                            owned_by = FROM
+                            OR = { has_building = temple has_building = cathedral }
+                        }
+                    }
+                    export_to_variable = { which = building_menu_temple_yearly_tax_dev_prov value = base_tax }
+                    ROOT = {
+                        change_variable = { which = building_menu_temple_yearly_tax_dev_prov which = PREV }
                     }
                 }
-                export_to_variable = { which = building_menu_temple_yearly_tax_dev_prov value = base_tax }
-                FROM = {
-                    change_variable = { which = building_menu_temple_yearly_tax_dev_prov which = PREV }
-                }
             }
-				scaled_effect_full = { effect = add_treasury which = building_menu_temple_yearly_tax_dev_prov }
-                while = {
-                    limit = { check_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 1 } }
-                    subtract_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 1 }
-                    FROM = { add_treasury = 3 change_variable = { which = building_menu_temple_yearly_tax_cash value = 3 } }
-                }
-            }
+            multiply_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 3 }
+			scaled_effect_full = { effect = add_treasury which = building_menu_temple_yearly_tax_dev_prov }
         }
     }
 }
