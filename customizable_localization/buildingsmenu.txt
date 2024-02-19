@@ -344,3 +344,91 @@ defined_text = {
 		localisation_key = building_menu_shipyard_modifiers_repair1
 	}
 }
+######################
+####### TEMPLE #######
+defined_text = {
+	name = building_menu_temple_modifiers_missionary_button_1
+	random = no
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_1_1
+		trigger = { has_building = temple }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_1_2
+		trigger = { has_building = cathedral }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_1_0
+	}
+}
+defined_text = {
+	name = building_menu_temple_modifiers_missionary_button_2
+	random = no
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_2_1
+		trigger = { has_building = temple }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_2_2
+		trigger = { has_building = cathedral }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_2_0
+	}
+}
+defined_text = {
+	name = building_menu_temple_modifiers_missionary_button_3
+	random = no
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_3_1
+		trigger = { has_building = temple }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_3_2
+		trigger = { has_building = cathedral }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_button_3_0
+	}
+}
+defined_text = {
+	name = building_menu_temple_modifiers_missionary0
+	random = no
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary1_1
+		trigger = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_1_flag OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary1_2
+		trigger = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_2_flag OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary1_3
+		trigger = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_3_flag OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary2_1
+		trigger = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_1_flag OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary2_2
+		trigger = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_2_flag OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary2_3
+		trigger = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_3_flag OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary0_1
+	}
+}
+defined_text = {
+	name = building_menu_temple_modifiers_missionary_cooldown
+	random = no
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_cooldown1
+		trigger = { NOT = { had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	text = {
+		localisation_key = building_menu_temple_modifiers_missionary_cooldown0
+	}

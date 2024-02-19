@@ -1,3 +1,5 @@
+
+# Should add for on_action province change the stuff
 custom_button = {
 	name = building_menu_button
 	potential = { owned_by = FROM FROM = { NOT = { has_country_flag = building_menu_opened_flag } } }
@@ -15,6 +17,11 @@ custom_button = {
 		else_if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		else_if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+			building_menu_temple_modifiers_selection_flag = yes
 		}
 		else = { FROM = { clr_country_flag = building_menu_opened_flag } }
 	}
@@ -408,6 +415,216 @@ custom_button = {
 	#tooltip = building_menu_shipyard_button_right_tt
 }
 ######################
+####### TEMPLE #######
+custom_icon = {
+	name = building_menu_temple_background
+	potential = { owned_by = FROM FROM = { has_country_flag = building_menu_opened_flag } has_province_flag = building_menu_temple_opened_flag }
+}
+#
+custom_icon = {
+	name = building_menu_temple_button_1_glow
+	potential = { owned_by = FROM FROM = { has_country_flag = building_menu_opened_flag } has_province_flag = building_menu_temple_opened_flag OR = { has_building = temple has_building = cathedral } OR = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier1_1 has_province_modifier = building_menu_temple_modifiers_missionary_modifier2_1 } NOT = { has_province_flag = building_menu_temple_button_confirm_flag } }
+}
+custom_icon = {
+	name = building_menu_temple_button_2_glow
+	potential = { owned_by = FROM FROM = { has_country_flag = building_menu_opened_flag } has_province_flag = building_menu_temple_opened_flag OR = { has_building = temple has_building = cathedral } OR = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier1_2 has_province_modifier = building_menu_temple_modifiers_missionary_modifier2_2 } NOT = { has_province_flag = building_menu_temple_button_confirm_flag } }
+}
+custom_icon = {
+	name = building_menu_temple_button_3_glow
+	potential = { owned_by = FROM FROM = { has_country_flag = building_menu_opened_flag } has_province_flag = building_menu_temple_opened_flag OR = { has_building = temple has_building = cathedral } OR = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier1_3 has_province_modifier = building_menu_temple_modifiers_missionary_modifier2_3 } NOT = { has_province_flag = building_menu_temple_button_confirm_flag } }
+}
+custom_icon = {
+	name = building_menu_temple_button_4_religion_icon
+	potential = { always = no owned_by = FROM FROM = { has_country_flag = building_menu_opened_flag } has_province_flag = building_menu_temple_opened_flag OR = { has_building = temple has_building = cathedral } }
+	
+}
+custom_button = {
+	name = building_menu_temple_button_1
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = building_menu_opened_flag }
+		has_province_flag = building_menu_temple_opened_flag
+		OR = { has_building = temple has_building = cathedral }
+		NOT = { has_province_flag = building_menu_temple_button_confirm_flag }
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+				if = {
+					limit = { has_building = temple }
+					set_province_flag = building_menu_temple_button_confirm_flag
+					set_province_flag = building_menu_temple_modifiers_missionary_modifier1_1_flag 
+				}
+				if = {
+					limit = { has_building = cathedral }
+					set_province_flag = building_menu_temple_button_confirm_flag
+					set_province_flag = building_menu_temple_modifiers_missionary_modifier2_1_flag 
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2 trigger = { OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	tooltip = building_menu_temple_button_1_tt
+}
+custom_button = {
+	name = building_menu_temple_button_2
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = building_menu_opened_flag }
+		has_province_flag = building_menu_temple_opened_flag
+		OR = { has_building = temple has_building = cathedral }
+		NOT = { has_province_flag = building_menu_temple_button_confirm_flag }
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+				if = {
+					limit = { has_building = temple }
+					set_province_flag = building_menu_temple_button_confirm_flag
+					set_province_flag = building_menu_temple_modifiers_missionary_modifier1_2_flag 
+				}
+				if = {
+					limit = { has_building = cathedral }
+					set_province_flag = building_menu_temple_button_confirm_flag
+					set_province_flag = building_menu_temple_modifiers_missionary_modifier2_2_flag 
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2 trigger = { OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	tooltip = building_menu_temple_button_2_tt
+}
+custom_button = {
+	name = building_menu_temple_button_3
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = building_menu_opened_flag }
+		has_province_flag = building_menu_temple_opened_flag
+		OR = { has_building = temple has_building = cathedral }
+		NOT = { has_province_flag = building_menu_temple_button_confirm_flag }
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+				if = {
+					limit = { has_building = temple }
+					set_province_flag = building_menu_temple_button_confirm_flag
+					set_province_flag = building_menu_temple_modifiers_missionary_modifier1_3_flag 
+				}
+				if = {
+					limit = { has_building = cathedral }
+					set_province_flag = building_menu_temple_button_confirm_flag
+					set_province_flag = building_menu_temple_modifiers_missionary_modifier2_3_flag 
+				}
+			}
+		}
+	}
+	frame = {
+		number = 2 trigger = { OR = { NOT = { has_province_flag = building_menu_temple_modifiers_cooldown_flag } had_province_flag = { flag = building_menu_temple_modifiers_cooldown_flag days = 365 } } }
+	}
+	tooltip = building_menu_temple_button_3_tt
+}
+custom_button = {
+	name = building_menu_temple_button_4
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = building_menu_opened_flag }
+		has_province_flag = building_menu_temple_opened_flag
+		OR = { has_building = temple has_building = cathedral }
+	}
+	effect = {
+		hidden_effect = {
+			region = {
+				limit = {
+					owned_by = FROM
+					area_for_scope_province = {
+						owned_by = FROM
+						OR = { has_building = temple has_building = cathedral }
+					}
+				}
+				export_to_variable = { which = building_menu_temple_yearly_tax_dev_prov value = base_tax }
+				change_variable = { which = building_menu_temple_yearly_tax_dev_prov value = PREV }
+				while = {
+					limit = { check_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 1 } }
+					subtract_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 1 }
+					FROM = { add_treasury = 3 }
+				}
+			}
+		}
+	}
+	#frame = {
+	#	number = 2 trigger = { }
+	#}
+	tooltip = building_menu_temple_button_4_tt
+}
+custom_button = {
+	name = building_menu_temple_button_cancel
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = building_menu_opened_flag }
+		has_province_flag = building_menu_temple_opened_flag
+		has_province_flag = building_menu_temple_button_confirm_flag
+	}
+	effect = {
+		hidden_effect = {
+			building_menu_temple_modifiers_selection_flag = yes
+		}
+	}
+}
+custom_button = {
+	name = building_menu_temple_button_confirm
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = building_menu_opened_flag }
+		has_province_flag = building_menu_temple_opened_flag
+		has_province_flag = building_menu_temple_button_confirm_flag
+	}
+	effect = {
+		hidden_effect = {
+			clr_province_flag = building_menu_temple_button_confirm_flag
+			set_province_flag = building_menu_temple_modifiers_cooldown_flag
+			if = {
+				limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_1_flag }
+				area = { limit = { owned_by = FROM } building_menu_temple_modifiers_remove = yes add_province_modifier = { name = building_menu_temple_modifiers_missionary_modifier1_1 duration = -1 hidden = yes } }
+				clr_province_flag = building_menu_temple_modifiers_missionary_modifier1_1_flag 
+			}
+			if = {
+				limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_1_flag }
+				area = { limit = { owned_by = FROM } building_menu_temple_modifiers_remove = yes add_province_modifier = { name = building_menu_temple_modifiers_missionary_modifier2_1 duration = -1 hidden = yes } }
+				clr_province_flag = building_menu_temple_modifiers_missionary_modifier2_1_flag
+			}
+			if = {
+				limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_2_flag }
+				area = { limit = { owned_by = FROM } building_menu_temple_modifiers_remove = yes add_province_modifier = { name = building_menu_temple_modifiers_missionary_modifier1_2 duration = -1 hidden = yes } }
+				clr_province_flag = building_menu_temple_modifiers_missionary_modifier1_2_flag 
+			}
+			if = {
+				limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_2_flag }
+				area = { limit = { owned_by = FROM } building_menu_temple_modifiers_remove = yes add_province_modifier = { name = building_menu_temple_modifiers_missionary_modifier2_2 duration = -1 hidden = yes } }
+				clr_province_flag = building_menu_temple_modifiers_missionary_modifier2_2_flag
+			}
+			if = {
+				limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_3_flag }
+				area = { limit = { owned_by = FROM } building_menu_temple_modifiers_remove = yes add_province_modifier = { name = building_menu_temple_modifiers_missionary_modifier1_3 duration = -1 hidden = yes } }
+				clr_province_flag = building_menu_temple_modifiers_missionary_modifier1_3_flag 
+			}
+			if = {
+				limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_3_flag }
+				area = { limit = { owned_by = FROM } building_menu_temple_modifiers_remove = yes add_province_modifier = { name = building_menu_temple_modifiers_missionary_modifier2_3 duration = -1 hidden = yes } }
+				clr_province_flag = building_menu_temple_modifiers_missionary_modifier2_3_flag
+			}
+		}
+	}
+	tooltip = building_menu_temple_button_confirm_tt
+}
+######################
 #####  AFRICAN  ######
 custom_icon = { # Does not allow to have too big GFX, so had to make it into smaller ones...
 	name = building_menu_african_background1
@@ -626,7 +843,7 @@ custom_button = {
 			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_courthouse_flag } # change from flag to building on that province
+		OR = { has_building = courthouse has_building = town_hall }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
 	tooltip = building_menu_african_courthouse_tt
@@ -691,9 +908,27 @@ custom_button = {
 			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_temple_flag }
+		OR = { has_building = temple has_building = cathedral }
 	}
-	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_shipyard_opened_flag }
+			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
+			clr_province_flag = building_menu_regimental_camp_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		else = { set_province_flag = building_menu_temple_opened_flag }
+	}
 	tooltip = building_menu_african_temple_tt
 }
 custom_button = {
@@ -717,7 +952,7 @@ custom_button = {
 			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_workshop_flag }
+		OR = { has_building = workshop has_building = counting_house }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
 	tooltip = building_menu_african_workshop_tt
@@ -733,6 +968,14 @@ custom_button = {
 		OR = { has_building = training_fields has_building = barracks has_building = regimental_camp has_building = conscription_center }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
@@ -753,7 +996,7 @@ custom_button = {
 			OR = { technology_group = east_african technology_group = central_african technology_group = sub_saharan technology_group = aboriginal_tech }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_market_place_flag }
+		OR = { has_building = marketplace has_building = trade_depot has_building = stock_exchange }
 	}
 	effect = {
 		if = {
@@ -775,6 +1018,14 @@ custom_button = {
 		OR = { has_building = dock has_building = drydock has_building = shipyard has_building = grand_shipyard }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
 			clr_province_flag = building_menu_regimental_camp_opened_flag
@@ -1014,7 +1265,7 @@ custom_button = {
 			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_workshop_flag }
+		OR = { has_building = workshop has_building = counting_house }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
 	tooltip = building_menu_chinese_workshop_tt
@@ -1040,7 +1291,7 @@ custom_button = {
 			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_courthouse_flag }
+		OR = { has_building = courthouse has_building = town_hall }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
 	tooltip = building_menu_chinese_courthouse_tt
@@ -1056,6 +1307,14 @@ custom_button = {
 		OR = { has_building = training_fields has_building = barracks has_building = regimental_camp has_building = conscription_center }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
@@ -1076,9 +1335,27 @@ custom_button = {
 			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_temple_flag }
+		OR = { has_building = temple has_building = cathedral }
 	}
-	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_shipyard_opened_flag }
+			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
+			clr_province_flag = building_menu_regimental_camp_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		else = { set_province_flag = building_menu_temple_opened_flag }
+	}
 	tooltip = building_menu_chinese_temple_tt
 }
 custom_button = {
@@ -1115,7 +1392,7 @@ custom_button = {
 			OR = { technology_group = chinese technology_group = ottoman AND = { technology_group = nomad_group NOT = { religion_group = muslim } } }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_market_place_flag }
+		OR = { has_building = marketplace has_building = trade_depot has_building = stock_exchange }
 	}
 	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
 	tooltip = building_menu_chinese_market_place_tt
@@ -1144,6 +1421,14 @@ custom_button = {
 		OR = { has_building = dock has_building = drydock has_building = shipyard has_building = grand_shipyard }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
 			clr_province_flag = building_menu_regimental_camp_opened_flag
@@ -1327,7 +1612,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_workshop_flag }
+		OR = { has_building = workshop has_building = counting_house }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
 	tooltip = building_menu_eastern_workshop_tt
@@ -1367,7 +1652,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_courthouse_flag }
+		OR = { has_building = courthouse has_building = town_hall }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
 	tooltip = building_menu_eastern_courthouse_tt
@@ -1377,9 +1662,27 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_temple_flag }
+		OR = { has_building = temple has_building = cathedral }
 	}
-	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_shipyard_opened_flag }
+			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
+			clr_province_flag = building_menu_regimental_camp_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		else = { set_province_flag = building_menu_temple_opened_flag }
+	}
 	tooltip = building_menu_eastern_temple_tt
 }
 custom_button = {
@@ -1397,7 +1700,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = eastern has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_market_place_flag }
+		OR = { has_building = marketplace has_building = trade_depot has_building = stock_exchange }
 	}
 	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
 	tooltip = building_menu_eastern_market_place_tt
@@ -1410,6 +1713,14 @@ custom_button = {
 		OR = { has_building = training_fields has_building = barracks has_building = regimental_camp has_building = conscription_center }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
@@ -1430,6 +1741,14 @@ custom_button = {
 		OR = { has_building = dock has_building = drydock has_building = shipyard has_building = grand_shipyard }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
 			clr_province_flag = building_menu_regimental_camp_opened_flag
@@ -1602,6 +1921,14 @@ custom_button = {
 	}
 	effect = {
 		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
 		}
@@ -1618,7 +1945,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_workshop_flag }
+		OR = { has_building = workshop has_building = counting_house }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
 	tooltip = building_menu_indian_workshop_tt
@@ -1648,7 +1975,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_courthouse_flag }
+		OR = { has_building = courthouse has_building = town_hall }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
 	tooltip = building_menu_indian_courthouse_tt
@@ -1668,9 +1995,27 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_temple_flag }
+		OR = { has_building = temple has_building = cathedral }
 	}
-	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_shipyard_opened_flag }
+			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
+			clr_province_flag = building_menu_regimental_camp_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		else = { set_province_flag = building_menu_temple_opened_flag }
+	}
 	tooltip = building_menu_indian_temple_tt
 }
 custom_button = {
@@ -1688,7 +2033,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = indian has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_market_place_flag }
+		OR = { has_building = marketplace has_building = trade_depot has_building = stock_exchange }
 	}
 	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
 	tooltip = building_menu_indian_market_place_tt
@@ -1711,6 +2056,14 @@ custom_button = {
 		OR = { has_building = dock has_building = drydock has_building = shipyard has_building = grand_shipyard }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
 			clr_province_flag = building_menu_regimental_camp_opened_flag
@@ -1924,7 +2277,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_workshop_flag }
+		OR = { has_building = workshop has_building = counting_house }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
 	tooltip = building_menu_latin_workshop_tt
@@ -1957,6 +2310,14 @@ custom_button = {
 		OR = { has_building = training_fields has_building = barracks has_building = regimental_camp has_building = conscription_center }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
@@ -1994,7 +2355,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_courthouse_flag }
+		OR = { has_building = courthouse has_building = town_hall }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
 	tooltip = building_menu_latin_courthouse_tt
@@ -2004,9 +2365,27 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_temple_flag }
+		OR = { has_building = temple has_building = cathedral }
 	}
-	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_shipyard_opened_flag }
+			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
+			clr_province_flag = building_menu_regimental_camp_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		else = { set_province_flag = building_menu_temple_opened_flag }
+	}
 	tooltip = building_menu_latin_temple_tt
 }
 custom_button = {
@@ -2024,7 +2403,7 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		FROM = { technology_group = western has_country_flag = building_menu_opened_flag }
-		FROM = { has_country_flag = building_menu_market_place_flag }
+		OR = { has_building = marketplace has_building = trade_depot has_building = stock_exchange }
 	}
 	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
 	tooltip = building_menu_latin_market_place_tt
@@ -2037,6 +2416,14 @@ custom_button = {
 		OR = { has_building = dock has_building = drydock has_building = shipyard has_building = grand_shipyard }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
 			clr_province_flag = building_menu_regimental_camp_opened_flag
@@ -2242,6 +2629,14 @@ custom_button = {
 	}
 	effect = {
 		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
 		}
@@ -2287,7 +2682,7 @@ custom_button = {
 			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_workshop_flag }
+		OR = { has_building = workshop has_building = counting_house }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
 	tooltip = building_menu_muslim_workshop_tt
@@ -2313,9 +2708,27 @@ custom_button = {
 			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_temple_flag }
+		OR = { has_building = temple has_building = cathedral }
 	}
-	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_shipyard_opened_flag }
+			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
+			clr_province_flag = building_menu_regimental_camp_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		else = { set_province_flag = building_menu_temple_opened_flag }
+	}
 	tooltip = building_menu_muslim_temple_tt
 }
 custom_button = {
@@ -2339,7 +2752,7 @@ custom_button = {
 			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_courthouse_flag }
+		OR = { has_building = courthouse has_building = town_hall }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
 	tooltip = building_menu_muslim_courthouse_tt
@@ -2352,7 +2765,7 @@ custom_button = {
 			OR = { technology_group = muslim technology_group = ottoman AND = { technology_group = nomad_group religion_group = muslim } }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_market_place_flag }
+		OR = { has_building = marketplace has_building = trade_depot has_building = stock_exchange }
 	}
 	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
 	tooltip = building_menu_muslim_market_place_tt
@@ -2381,6 +2794,14 @@ custom_button = {
 		OR = { has_building = dock has_building = drydock has_building = shipyard has_building = grand_shipyard }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
 			clr_province_flag = building_menu_regimental_camp_opened_flag
@@ -2627,7 +3048,7 @@ custom_button = {
 			OR = { technology_group = north_american technology_group = polynesian_tech }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_workshop_flag }
+		OR = { has_building = workshop has_building = counting_house }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
 	tooltip = building_menu_namerican_workshop_tt
@@ -2669,6 +3090,14 @@ custom_button = {
 		OR = { has_building = training_fields has_building = barracks has_building = regimental_camp has_building = conscription_center }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
@@ -2715,7 +3144,7 @@ custom_button = {
 			OR = { technology_group = north_american technology_group = polynesian_tech }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_courthouse_flag }
+		OR = { has_building = courthouse has_building = town_hall }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
 	tooltip = building_menu_namerican_courthouse_tt
@@ -2728,9 +3157,27 @@ custom_button = {
 			OR = { technology_group = north_american technology_group = polynesian_tech }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_temple_flag }
+		OR = { has_building = temple has_building = cathedral }
 	}
-	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_shipyard_opened_flag }
+			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
+			clr_province_flag = building_menu_regimental_camp_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		else = { set_province_flag = building_menu_temple_opened_flag }
+	}
 	tooltip = building_menu_namerican_temple_tt
 }
 custom_button = {
@@ -2754,7 +3201,7 @@ custom_button = {
 			OR = { technology_group = north_american technology_group = polynesian_tech }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_market_place_flag }
+		OR = { has_building = marketplace has_building = trade_depot has_building = stock_exchange }
 	}
 	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
 	tooltip = building_menu_namerican_market_place_tt
@@ -2770,6 +3217,14 @@ custom_button = {
 		OR = { has_building = dock has_building = drydock has_building = shipyard has_building = grand_shipyard }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
 			clr_province_flag = building_menu_regimental_camp_opened_flag
@@ -3016,7 +3471,7 @@ custom_button = {
 			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_workshop_flag }
+		OR = { has_building = workshop has_building = counting_house }
 	}
 	effect = { FROM = { set_country_flag = building_menu_workshop_opened_flag } }
 	tooltip = building_menu_samerican_workshop_tt
@@ -3058,6 +3513,14 @@ custom_button = {
 		OR = { has_building = training_fields has_building = barracks has_building = regimental_camp has_building = conscription_center }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_shipyard_opened_flag }
 			clr_province_flag = building_menu_shipyard_opened_flag
@@ -3104,7 +3567,7 @@ custom_button = {
 			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_courthouse_flag }
+		OR = { has_building = courthouse has_building = town_hall }
 	}
 	effect = { FROM = { set_country_flag = building_menu_courthouse_opened_flag } }
 	tooltip = building_menu_samerican_courthouse_tt
@@ -3117,9 +3580,27 @@ custom_button = {
 			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_temple_flag }
+		OR = { has_building = temple has_building = cathedral }
 	}
-	effect = { FROM = { set_country_flag = building_menu_temple_opened_flag } }
+	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_shipyard_opened_flag }
+			clr_province_flag = building_menu_shipyard_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
+			clr_province_flag = building_menu_regimental_camp_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		else = { set_province_flag = building_menu_temple_opened_flag }
+	}
 	tooltip = building_menu_samerican_temple_tt
 }
 custom_button = {
@@ -3143,7 +3624,7 @@ custom_button = {
 			OR = { technology_group = mesoamerican technology_group = south_american technology_group = andean technology_group = high_american }
 			has_country_flag = building_menu_opened_flag
 		}
-		FROM = { has_country_flag = building_menu_market_place_flag }
+		OR = { has_building = marketplace has_building = trade_depot has_building = stock_exchange }
 	}
 	effect = { FROM = { set_country_flag = building_menu_market_place_opened_flag } }
 	tooltip = building_menu_samerican_market_place_tt
@@ -3159,6 +3640,14 @@ custom_button = {
 		OR = { has_building = dock has_building = drydock has_building = shipyard has_building = grand_shipyard }
 	}
 	effect = {
+		if = {
+			limit = { has_province_flag = building_menu_temple_opened_flag }
+			clr_province_flag = building_menu_temple_opened_flag
+		}
+		if = {
+			limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+			clr_province_flag = building_menu_temple_button_confirm_flag
+		}
 		if = {
 			limit = { has_province_flag = building_menu_regimental_camp_opened_flag }
 			clr_province_flag = building_menu_regimental_camp_opened_flag

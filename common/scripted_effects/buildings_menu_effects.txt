@@ -9,6 +9,14 @@ building_menu_selected_build_clear = {
 		limit = { has_province_flag = building_menu_shipyard_opened_flag }
 		clr_province_flag = building_menu_shipyard_opened_flag
 	}
+	if = {
+		limit = { has_province_flag = building_menu_temple_opened_flag }
+		clr_province_flag = building_menu_temple_opened_flag
+	}
+	if = {
+		limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+		clr_province_flag = building_menu_temple_button_confirm_flag
+	}
 }
 ######################
 ### REGIMENTAL CAMP ##
@@ -329,4 +337,98 @@ building_menu_shipyard_modifiers_add = {
 		limit = { has_building = grand_shipyard is_variable_equal = { which = sl4 value = 2 } }
 		add_province_modifier = { name = building_menu_shipyard_modifiers_sailor_modifier4_5 duration = -1 hidden = yes }
 	}
+}
+######################
+####### TEMPLE #######
+building_menu_temple_modifiers_remove = {
+	if = {
+		limit = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier1_1 }
+		remove_province_modifier = building_menu_temple_modifiers_missionary_modifier1_1
+	}
+	if = {
+		limit = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier1_2 }
+		remove_province_modifier = building_menu_temple_modifiers_missionary_modifier1_2
+	}
+	if = {
+		limit = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier1_3 }
+		remove_province_modifier = building_menu_temple_modifiers_missionary_modifier1_3
+	}
+	if = {
+		limit = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier2_1 }
+		remove_province_modifier = building_menu_temple_modifiers_missionary_modifier2_1
+	}
+	if = {
+		limit = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier2_2 }
+		remove_province_modifier = building_menu_temple_modifiers_missionary_modifier2_2
+	}
+	if = {
+		limit = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier2_3 }
+		remove_province_modifier = building_menu_temple_modifiers_missionary_modifier2_3
+	}
+}
+building_menu_temple_modifiers_selection_flag = {
+	if = {
+		limit = { has_province_flag = building_menu_temple_button_confirm_flag }
+		clr_province_flag = building_menu_temple_button_confirm_flag
+	}
+	if = {
+		limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_1_flag }
+		clr_province_flag = building_menu_temple_modifiers_missionary_modifier1_1_flag
+	}
+	if = {
+		limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_1_flag }
+		clr_province_flag = building_menu_temple_modifiers_missionary_modifier2_1_flag
+	}
+	if = {
+		limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_2_flag }
+		clr_province_flag = building_menu_temple_modifiers_missionary_modifier1_2_flag
+	}
+	if = {
+		limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_2_flag }
+		clr_province_flag = building_menu_temple_modifiers_missionary_modifier2_2_flag
+	}
+	if = {
+		limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier1_3_flag }
+		clr_province_flag = building_menu_temple_modifiers_missionary_modifier1_3_flag
+	}
+	if = {
+		limit = { has_province_flag = building_menu_temple_modifiers_missionary_modifier2_3_flag }
+		clr_province_flag = building_menu_temple_modifiers_missionary_modifier2_3_flag
+	}
+}
+calculate_tax_dev_into_money = {
+    region = {
+        if = {
+            limit = {
+                has_tax_building_trigger = yes
+            }
+            area = {
+                owner = {
+                    change_variable = {
+                        which = TaxDevIntoTreasury
+                        value = 1
+                    }
+                }
+            }
+        }
+    }
+    while = {
+        limit = {
+            owner = {
+                check_variable = {
+                    which = TaxDevIntoTreasury
+                    value = 1
+                }
+            }
+        }
+        owner = {
+            subtract_variable = {
+                which = TaxDevIntoTreasury
+                value = 1
+            }
+            owner = {
+                add_treasury = 3
+            }
+        }
+    }
 }

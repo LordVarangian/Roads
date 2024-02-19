@@ -1,0 +1,7 @@
+every_province = {
+	owned_by = ROOT
+	OR = { has_building = temple has_building = cathedral }
+	export_to_variable = { which = temp value = base_tax }
+	change_variable = { which = temp value = base_tax }
+}
+ROOT = { set_variable = { which = temp value = temp } }

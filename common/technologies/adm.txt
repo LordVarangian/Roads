@@ -27,6 +27,9 @@ technology = { #Tribal Government
 	native_ceremonial_fire_pit = yes
 
 	#effect = { } # When a country researches the technology
+
+	temple = yes
+	cathedral = yes
 }
 
 technology = { #Advanced Tribes
@@ -75,9 +78,6 @@ technology = { #Temples
 	expects_institution = {
 		feudalism = 0.5
 	}
-
-	# Temple
-	temple = yes
 	
 }
 
@@ -289,9 +289,6 @@ technology = { #Cathedral
 		printing_press = 0.5
 		global_trade = 0.5
 	}
-	
-	#Cathedral
-	cathedral = yes
 }
 
 technology = { #Absolute Rulership
