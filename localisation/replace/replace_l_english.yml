@@ -117,3 +117,17 @@
  ABOVE_MAX_DEVELOPMENT_TOOLTIP: "§RCannot develop above the Max Development limit.§!"
 
  upgrade_terrain_text: "Terrain Upgrades"
+ 
+ upgrade_1_text: "Specialize"
+ upgrade_2_text: "Urbanize"
+ 
+ TERRAIN_UPGRADE_1_TT: "Specialize Province"
+ TERRAIN_UPGRADE_2_TT: "Urbanize Province"
+ 
+ MAKE_PROVINCE_INTO_CITY: "This will change the terrain to §YCity§!."
+ MAKE_PROVINCE_TERRAIN_UPGRADED: "This will change the terrain to §Y[Root.upgrade_terrain_text]§!."
+ 
+ upgrade_irrigated_lands_tt: "Irrigated Lands"
+ upgrade_terraces_tt: "Terraces"
+ upgrade_rich_soil_farms_tt: "Rich-Soil Farmlands"
+ upgrade_deforested_woods_tt: "Deforested Woods"

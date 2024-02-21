@@ -5434,7 +5434,7 @@ guiTypes = {
 			instantTextBoxType =
 			{
 				name ="upgrade_1_text"
-				position = { x= 100 y = -40 }
+				position = { x= 85 y = -40 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -5460,7 +5460,7 @@ guiTypes = {
 			instantTextBoxType =
 			{
 				name ="upgrade_2_text"
-				position = { x= 100 y = 40 }
+				position = { x= 85 y = 40 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}

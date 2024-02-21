@@ -122,3 +122,45 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = upgrade_terrain_text
+	random = no
+	text = {
+		localisation_key = upgrade_irrigated_lands_tt
+		trigger = { 
+			OR = {
+				has_province_modifier = steppe_modifier
+				has_province_modifier = grasslands_modifier
+				has_province_modifier = savannah_modifier
+				has_province_modifier = desert_modifier
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_terraces_tt
+		trigger = { 
+			OR = {
+				has_province_modifier = hills_modifier
+				has_province_modifier = mountain_modifier
+				has_province_modifier = highlands_modifier
+			}
+		}
+	}
+	text = {
+		localisation_key = upgrade_rich_soil_farms_tt
+		trigger = { 
+			has_province_modifier = farmlands_modifier
+		}
+	}
+	text = {
+		localisation_key = upgrade_deforested_woods_tt
+		trigger = { 
+			OR = {
+				has_province_modifier = forest_modifier
+				has_province_modifier = woods_modifier
+				has_province_modifier = marsh_modifier
+			}
+		}
+	}
+}

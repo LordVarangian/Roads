@@ -778,9 +778,17 @@ custom_icon = {
 custom_icon = {
 	name = province_upgraded_terrain
 	potential = {
-		has_province_flag = performed_province_terrain_action
+		OR = {
+			has_province_flag = province_made_city
+			has_province_flag = performed_province_terrain_action
+		}
 	}
 	tooltip = TERRAIN_MODIFIERS_TT
+	frame = { number = 1 trigger = { has_province_modifier = deforested_forest_modifier } }
+	frame = { number = 2 trigger = { has_province_modifier = terraces_modifier } }
+	frame = { number = 3 trigger = { has_province_modifier = rich_soil_farms_modifier } }
+	frame = { number = 4 trigger = { has_province_modifier = irrigated_lands_modifier } }
+	frame = { number = 5 trigger = { has_province_modifier = city_modifier } }
 }
 
 custom_button = {
@@ -872,71 +880,75 @@ custom_button = {
 			add_years_of_income = -5
 		}
 		set_province_flag = performed_province_terrain_action
-		if = {
-			limit = {
-				OR = {
-					has_province_modifier = forest_modifier
-					has_province_modifier = woods_modifier
-					has_province_modifier = marsh_modifier
+		custom_tooltip = MAKE_PROVINCE_TERRAIN_UPGRADED
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_province_modifier = forest_modifier
+						has_province_modifier = woods_modifier
+						has_province_modifier = marsh_modifier
+					}
+				}
+				remove_province_modifier = forest_modifier
+				remove_province_modifier = woods_modifier
+				remove_province_modifier = marsh_modifier
+				add_province_modifier = {
+					name = deforested_forest_modifier
+					duration = -1
+					hidden = yes
 				}
 			}
-			remove_province_modifier = forest_modifier
-			remove_province_modifier = woods_modifier
-			remove_province_modifier = marsh_modifier
-			add_province_modifier = {
-				name = deforested_forest_modifier
-				duration = -1
-				hidden = yes
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					has_province_modifier = steppe_modifier
-					has_province_modifier = grasslands_modifier
-					has_province_modifier = savannah_modifier
-					has_province_modifier = desert_modifier
+			else_if = {
+				limit = {
+					OR = {
+						has_province_modifier = steppe_modifier
+						has_province_modifier = grasslands_modifier
+						has_province_modifier = savannah_modifier
+						has_province_modifier = desert_modifier
+					}
+				}
+				remove_province_modifier = steppe_modifier
+				remove_province_modifier = grasslands_modifier
+				remove_province_modifier = savannah_modifier
+				remove_province_modifier = desert_modifier
+				add_province_modifier = {
+					name = irrigated_lands_modifier
+					duration = -1
+					hidden = yes
 				}
 			}
-			remove_province_modifier = steppe_modifier
-			remove_province_modifier = grasslands_modifier
-			remove_province_modifier = savannah_modifier
-			remove_province_modifier = desert_modifier
-			add_province_modifier = {
-				name = irrigated_lands_modifier
-				duration = -1
-				hidden = yes
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					has_province_modifier = hills_modifier
-					has_province_modifier = mountain_modifier
-					has_province_modifier = highlands_modifier
+			else_if = {
+				limit = {
+					OR = {
+						has_province_modifier = hills_modifier
+						has_province_modifier = mountain_modifier
+						has_province_modifier = highlands_modifier
+					}
+				}
+				remove_province_modifier = hills_modifier
+				remove_province_modifier = mountain_modifier
+				remove_province_modifier = highlands_modifier
+				add_province_modifier = {
+					name = terraces_modifier
+					duration = -1
+					hidden = yes
 				}
 			}
-			remove_province_modifier = hills_modifier
-			remove_province_modifier = mountain_modifier
-			remove_province_modifier = highlands_modifier
-			add_province_modifier = {
-				name = terraces_modifier
-				duration = -1
-				hidden = yes
-			}
-		}
-		else_if = {
-			limit = {
-				has_province_modifier = farmlands_modifier
-			}
-			remove_province_modifier = farmlands_modifier
-			add_province_modifier = {
-				name = rich_soil_farms_modifier
-				duration = -1
-				hidden = yes
+			else_if = {
+				limit = {
+					has_province_modifier = farmlands_modifier
+				}
+				remove_province_modifier = farmlands_modifier
+				add_province_modifier = {
+					name = rich_soil_farms_modifier
+					duration = -1
+					hidden = yes
+				}
 			}
 		}
 	}
+	tooltip = TERRAIN_UPGRADE_1_TT
 }
 
 custom_button = {
@@ -967,7 +979,9 @@ custom_button = {
 			}
 		}
 		set_province_flag = province_made_city
+		custom_tooltip = MAKE_PROVINCE_INTO_CITY
 	}
+	tooltip = TERRAIN_UPGRADE_2_TT
 }
 
 custom_text_box = {

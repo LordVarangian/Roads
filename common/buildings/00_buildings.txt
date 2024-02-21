@@ -907,7 +907,7 @@ temple = {
 	time = 12
 	modifier = {
 		local_tax_modifier = 0.1
-		local_governing_cost = 10
+		local_governing_cost = 0.1
 	}
 	build_trigger = {
 		NOT = {
@@ -1013,7 +1013,7 @@ cathedral = {
 	time = 12
 	modifier = {
 		local_tax_modifier = 0.6
-		local_governing_cost = 10
+		local_governing_cost = 0.25
 	}
 	build_trigger = {
 		has_building = temple
