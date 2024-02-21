@@ -838,6 +838,13 @@ english_monarchy = {
 			english_parliament = yes
 		}
 	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
 }
 
 british_monarchy = {
@@ -879,6 +886,13 @@ british_monarchy = {
 		custom_attributes = {
 			english_parliament = yes
 		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
 	}
 	ai = {
 		factor = 100
@@ -1623,6 +1637,12 @@ portuguese_monarchy_reform = {
 		naval_forcelimit_modifier = 0.2
 		global_tax_modifier = 0.1
 		sailors_recovery_speed = 0.2
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		can_use_trade_post = yes
 	}
 	ai = {
 		factor = 1
