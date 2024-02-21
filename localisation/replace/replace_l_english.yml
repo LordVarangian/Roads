@@ -129,3 +129,6 @@
  building_dirt_road: "Dirt Roads"
  building_road: "Roads"
  building_upgraded_road: "Upgraded Roads"
+ 
+ CHANGE_REGIONAL_CAPITAL_TT: "Change Regional Capital"
+ regional_capital_modifier: "Regional Capital"
