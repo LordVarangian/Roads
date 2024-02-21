@@ -1,19 +1,8 @@
 ﻿l_english:
- building_marketplace_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Trade Power: §G+25.0%§!\n\n"
-
- building_trade_depot_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Trade Power: §G+25.0%§!\n\n"
- 
- building_stock_exchange_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Trade Power: §G+25.0%§!\n\n"
- 
- building_university_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Institution Spread: §G+35.0%§!\n\n"
 
  building_temple_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\nCan be built §Y1§! per Area.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Tax Modifier: §G+20.0%§!\n\nFrom province '§YBuilding Menu§!' allows to gain additional bonuses for §YLocal Missionary Strength§!, §YLocal Unrest§! and §YLocal Religious Unity Contribution§!.\n\n"
  
  building_cathedral_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\nCan be built §Y1§! per Area.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Tax Modifier: §G+20.0%§!\n\nFrom province '§YBuilding Menu§!' allows to gain additional bonuses for §YLocal Missionary Strength§!, §YLocal Unrest§! and §YLocal Religious Unity Contribution§!.\n\n§RCan build on provinces with §YChurch§!.§!"
- 
- building_workshop_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Production Efficiency: §G+15.0%§!\n\n"
- 
- building_counting_house_desc: "This building needs a §YRoad Connection§! to the Regional Capital to get benefits from §YBuilding Output§!.\n\nAt max §YBuilding Output§!, this building will grant\n   Local Production Efficiency: §G+15.0%§!\n\n"
  
  building_output: "Building Output Growth"
 
@@ -36,6 +25,11 @@
  highlands_modifier: "Highlands"
  savannah_modifier: "Savannah"
  steppe_modifier: "Steppes"
+ terraces_modifier: "Terraces"
+ rich_soil_farms_modifier: "Rich-Soil Farmlands"
+ irrigated_lands_modifier: "Irrigated Lands"
+ city_modifier: "City"
+ deforested_forest_modifier: "Deforested Woods"
 
  TERRAIN_MODIFIERS_TT: "[Root.has_province_modifier_type_loc]"
 
@@ -69,15 +63,15 @@
 
  steppe_tt: "Terrain: §YStepes§!\nSupply Limit: §G+6.00§!\nLocal Development Cost: §R+20.0%§!\nMax Development: §G25§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
 
- city_tt: "Terrain: §YCity§!\nSupply Limit: §G+10.00§!\nLocal Development Cost: §G-20.0%§!\nPossible Numbers of Buildings: §G+2§!\nMax Development: §G90§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+ city_tt: "Terrain: §YCity§!\nSupply Limit: §G+10.00§!\nLocal Development Cost: §G-20.0%§!\nPossible Numbers of Buildings: §G+2§!\nMax Development: §G90§!\n--------------\nThis is an urban region. Much of our population lives here, making it so we can develop it with ease."
 
- rich_soil_farms_tt: "Terrain: §YRich Soil Farmlands§!\nSupply Limit: §G+10.00§!\nLocal Goods Produced Modifier: §G+25.0%§!\nLocal Development Cost: §G-10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G90§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+ rich_soil_farms_tt: "Terrain: §YRich Soil Farmlands§!\nSupply Limit: §G+10.00§!\nLocal Goods Produced Modifier: §G+25.0%§!\nLocal Development Cost: §G-10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G90§!\n--------------\nThese farmlands have been expanded to provide as much production as possible."
 
- irrigated_lands_tt: "Terrain: §YIrrigated Lands§!\nLocal Goods Produced Modifier: §G+10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G50§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+ irrigated_lands_tt: "Terrain: §YIrrigated Lands§!\nLocal Goods Produced Modifier: §G+10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G50§!\n--------------\nThe lands have been irrigated in order to allow for more efficient farming."
 
- terraces_tt: "Terrain: §YTerraces§!\nLocal Goods Produced Modifier: §G+5.0%§!\nLocal Development Cost: §R-10.0%§!\nMax Development: §G50§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+ terraces_tt: "Terrain: §YTerraces§!\nLocal Goods Produced Modifier: §G+5.0%§!\nLocal Development Cost: §R-10.0%§!\nMax Development: §G50§!\n--------------\nThese mountains have been turned into areas of which anyone may extract resources from them."
 
- terraces_tt: "Terrain: §YTerraces§!\nLocal Goods Produced Modifier: §G+25.0%§!\nLocal Development Cost: §G-10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G90§!\n--------------\nSteppes terrain represents large and continuous open areas covered in grass that are suitable for grazing yet unsuitable for agriculture. "
+ terraces_tt: "Terrain: §YTerraces§!\nLocal Goods Produced Modifier: §G+25.0%§!\nLocal Development Cost: §G-10.0%§!\nPossible Numbers of Buildings: §G+1§!\nMax Development: §G90§!\n--------------\nTerraces allow a much easier harvesting of crops."
 
  navy_forcelimit_trade_outposts: "Trade Outposts"
 
@@ -131,3 +125,7 @@
  upgrade_terraces_tt: "Terraces"
  upgrade_rich_soil_farms_tt: "Rich-Soil Farmlands"
  upgrade_deforested_woods_tt: "Deforested Woods"
+ 
+ building_dirt_road: "Dirt Roads"
+ building_road: "Roads"
+ building_upgraded_road: "Upgraded Roads"

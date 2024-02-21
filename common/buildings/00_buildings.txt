@@ -219,7 +219,6 @@ courthouse = {
 		local_state_maintenance_modifier = -0.25
 		local_autonomy = -0.1
 		local_governing_cost = -0.25
-		allowed_num_of_buildings = 1
 	}
 	on_built = {
 		add_development_from_building = {
@@ -549,6 +548,7 @@ training_fields = {
 		local_regiment_cost = -0.1
 		land_forcelimit = 0.1
 		local_manpower_modifier = 0.1
+		local_governing_cost = 0.05
 	}
 	on_built = {
 		if = {
@@ -586,6 +586,7 @@ barracks = {
 	modifier = {
 		regiment_recruit_speed = -0.2
 		local_regiment_cost = -0.2
+		local_governing_cost = 0.1
 	}
 	build_trigger = {
 		has_building = training_fields
@@ -626,6 +627,7 @@ regimental_camp = {
 	modifier = {
 		regiment_recruit_speed = -0.3
 		local_regiment_cost = -0.3
+		local_governing_cost = 0.15
 	}
 	build_trigger = {
 		has_building = barracks
@@ -666,6 +668,7 @@ conscription_center = {
 	modifier = {
 		regiment_recruit_speed = -0.4
 		local_regiment_cost = -0.4
+		local_governing_cost = 0.2
 	}
 	build_trigger = {
 		has_building = regimental_camp
@@ -721,6 +724,7 @@ dock = {
 		local_sailors_modifier = 0.1
 		local_has_man_of_war = yes
 		local_has_galleass = yes
+		local_governing_cost = 0.05
 	}
 	on_built = {
 		if = {
@@ -790,6 +794,7 @@ drydock = {
 		local_ship_cost = -0.2
 		local_has_man_of_war = yes
 		local_has_galleass = yes
+		local_governing_cost = 0.1
 	}
 	on_built = {
 		if = {
@@ -825,6 +830,7 @@ shipyard = {
 		local_ship_cost = -0.3
 		local_has_man_of_war = yes
 		local_has_galleass = yes
+		local_governing_cost = 0.15
 	}
 	on_built = {
 		hidden_effect = {
@@ -872,6 +878,7 @@ grand_shipyard = {
 		local_ship_cost = -0.4
 		local_has_man_of_war = yes
 		local_has_galleass = yes
+		local_governing_cost = 0.2
 	}
 
 	on_built = {
@@ -1013,7 +1020,7 @@ cathedral = {
 	time = 12
 	modifier = {
 		local_tax_modifier = 0.6
-		local_governing_cost = 0.25
+		local_governing_cost = 0.2
 	}
 	build_trigger = {
 		has_building = temple
@@ -1234,7 +1241,8 @@ counting_house = {
 
 	make_obsolete = workshop
 	modifier = {
-		local_production_efficiency = 1
+		local_production_efficiency = 0.6
+		local_governing_cost = 0.2
 	}
 
 	on_built = {
@@ -1276,7 +1284,6 @@ town_hall = {
 		local_state_maintenance_modifier = -0.5
 		local_autonomy = -0.2
 		local_governing_cost = -0.5
-		allowed_num_of_buildings = 1
 	}
 
 	on_built = {
@@ -2111,13 +2118,13 @@ state_house = {
 # Roads
 ################################################
 dirt_road = {
-	cost = 25
-	time = 4
+	cost = 75
+	time = 6
 
 	modifier = {
-		local_friendly_movement_speed = 0.05
-		local_hostile_movement_speed = 0.05
-		local_governing_cost = 0.05
+		local_friendly_movement_speed = 0.2
+		local_hostile_movement_speed = 0.2
+		local_governing_cost = 1
 	}
 	on_built = {
 
@@ -2138,15 +2145,15 @@ dirt_road = {
 }
 
 road = {
-	cost = 50
-	time = 6
+	cost = 125
+	time = 10
 
 	make_obsolete = dirt_road
 
 	modifier = {
-		local_friendly_movement_speed = 0.1
-		local_hostile_movement_speed = 0.1
-		local_governing_cost = 0.1
+		local_friendly_movement_speed = 0.35
+		local_hostile_movement_speed = 0.35
+		state_maintenance_modifier = 1.5
 	}
 	on_built = {
 		
@@ -2167,15 +2174,15 @@ road = {
 }
 
 upgraded_road = {
-	cost = 50
-	time = 6
+	cost = 250
+	time = 16
 
 	make_obsolete = road
 
 	modifier = {
-		local_friendly_movement_speed = 0.15
-		local_hostile_movement_speed = 0.15
-		local_governing_cost = 0.15
+		local_friendly_movement_speed = 0.5
+		local_hostile_movement_speed = 0.5
+		state_maintenance_modifier = 2
 	}
 	on_built = {
 		

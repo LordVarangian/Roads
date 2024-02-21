@@ -1264,7 +1264,7 @@ guiTypes = {
 			borderSize = {x = 0 y = 0}	
 			maxWidth = 200
 			maxHeight = 18
-			text = "ROADS"	
+			text = "Roads"	
 		}
 
 		iconType ={
