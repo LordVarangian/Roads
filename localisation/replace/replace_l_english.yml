@@ -103,8 +103,8 @@
 
  destroy_slot: "§RDestroy the current building in this slot§!"
 
- display_owner_name: "Owned by §Y[province_owner_of_this.GetName]"
- display_owner_name_tt: "Owned by §Y[province_owner_of_this.GetName]"
+ display_owner_name: "Owned by §Y[province_owner_of_this.GetName]§!"
+ display_owner_name_tt: "Owned by §Y[province_owner_of_this.GetName]§!"
 
  display_province_name: "Trade Outpost of [Root.GetName]"
 
@@ -132,3 +132,6 @@
  
  CHANGE_REGIONAL_CAPITAL_TT: "Change Regional Capital"
  regional_capital_modifier: "Regional Capital"
+ 
+ open_trading_city_buttontt: "Trading Outpost"
+ test_tooltip: "§Y[province_owner_of_this.GetName]§!"

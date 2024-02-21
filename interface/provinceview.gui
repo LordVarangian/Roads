@@ -1882,7 +1882,7 @@ guiTypes = {
 			guiButtonType = {
 				name ="tradepost_button"
 				spriteType = "GFX_trade_post_button"
-				position = { x = 356 y = 508 }
+				position = { x = 9999999 y = 508 }
 				hint_tag = "hint_tradepost"
 			}
 
@@ -1890,7 +1890,7 @@ guiTypes = {
 			{
 				name ="tradepost_allready_present"
 				spriteType = "GFX_terms_accepted_icon"
-				position = { x= 363 y = 517 }
+				position = { x= 9999999 y = 517 }
 				scale = 0.7
 			}
 

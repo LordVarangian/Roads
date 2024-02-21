@@ -9,8 +9,8 @@ custom_button = {
 	potential = {
 		owned_by = FROM
 		NOT = {
-			region = {
-				is_capital = FROM
+			region_for_scope_province = {
+				is_capital_of = FROM
 			}
 		}
 	}
@@ -47,12 +47,6 @@ custom_button = {
 	potential = {
 		FROM = { has_government_attribute = can_use_trade_post }
 	}
-   frame = { 
-       number = 1
-       trigger = { 
-			always = yes
-		}
-   }
 	trigger = {
 		if = {
 			limit = {
