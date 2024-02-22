@@ -396,6 +396,31 @@ building_menu_temple_modifiers_selection_flag = {
 		clr_province_flag = building_menu_temple_modifiers_missionary_modifier2_3_flag
 	}
 }
+building_menu_temple_offering_calc = { 
+	hidden_effect = {
+		save_event_target_as = province
+		owner = {
+			save_event_target_as = country
+			set_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 0 }
+			event_target:province = {
+				region = {
+					limit = {
+						owned_by = event_target:country
+						area_for_scope_province = {
+							owned_by = event_target:country
+							OR = { has_building = temple has_building = cathedral }
+						}
+					}
+					export_to_variable = { which = building_menu_temple_yearly_tax_dev_prov value = base_tax }
+					event_target:country = {
+						change_variable = { which = building_menu_temple_yearly_tax_dev_prov which = PREV }
+					}
+				}
+			}
+			multiply_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 4 }
+		}
+	}
+}
 calculate_tax_dev_into_money = {
     region = {
         if = {

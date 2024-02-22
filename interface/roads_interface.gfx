@@ -150,7 +150,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_building_menu_temple_button_4"
 		texturefile = "gfx/interface/buildings_menu/temple/building_menu_temple_button_4.dds"
-		noOfFrames = 2
+		noOfFrames = 57
 		transparencecheck = yes
 	}
 	frameAnimatedSpriteType = {

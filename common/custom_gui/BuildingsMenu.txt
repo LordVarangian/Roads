@@ -433,10 +433,6 @@ custom_icon = {
 	name = building_menu_temple_button_3_glow
 	potential = { owned_by = FROM FROM = { has_country_flag = building_menu_opened_flag } has_province_flag = building_menu_temple_opened_flag OR = { has_building = temple has_building = cathedral } OR = { has_province_modifier = building_menu_temple_modifiers_missionary_modifier1_3 has_province_modifier = building_menu_temple_modifiers_missionary_modifier2_3 } NOT = { has_province_flag = building_menu_temple_button_confirm_flag } }
 }
-custom_icon = {
-	name = building_menu_temple_button_4_religion_icon
-	potential = { always = no owned_by = FROM FROM = { has_country_flag = building_menu_opened_flag } has_province_flag = building_menu_temple_opened_flag OR = { has_building = temple has_building = cathedral } }
-}
 custom_button = {
 	name = building_menu_temple_button_1
 	potential = {
@@ -539,35 +535,78 @@ custom_button = {
 		OR = { has_building = temple has_building = cathedral }
 	}
 	effect = {
+		building_menu_temple_offering_calc = yes
 		hidden_effect = {
-			save_event_target_as = province
-            owner = {
-				save_event_target_as = country
-				set_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 0 }
-				event_target:province = {
-					region = {
-						limit = {
-							owned_by = event_target:country
-							area_for_scope_province = {
-								owned_by = event_target:country
-								OR = { has_building = temple has_building = cathedral }
-							}
-						}
-						export_to_variable = { which = building_menu_temple_yearly_tax_dev_prov value = base_tax }
-						event_target:country = {
-							change_variable = { which = building_menu_temple_yearly_tax_dev_prov which = PREV }
-						}
-					}
-				}
-				multiply_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 3 }
-			}
+			owner = { country_event = { id = mod_roads.2 } }
 		}
-		owner = { country_event = { id = mod_roads.2 } }
 	}
-	#frame = {
-	#	number = 2 trigger = { }
-	#}
+	frame = { number = 2 trigger = { FROM = { religion = catholic OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 3 trigger = { FROM = { religion = catholic } } }
+	frame = { number = 4 trigger = { FROM = { religion = protestant OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 5 trigger = { FROM = { religion = protestant } } }
+	frame = { number = 6 trigger = { FROM = { religion = reformed OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 7 trigger = { FROM = { religion = reformed } } }
+	frame = { number = 8 trigger = { FROM = { religion = orthodox OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 9 trigger = { FROM = { religion = orthodox } } }
+	frame = { number = 10 trigger = { FROM = { religion = sunni OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 11 trigger = { FROM = { religion = sunni } } }
+	frame = { number = 12 trigger = { FROM = { religion = shiite OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 13 trigger = { FROM = { religion = shiite } } }
+	frame = { number = 14 trigger = { FROM = { religion = hinduism OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 15 trigger = { FROM = { religion = hinduism } } }
+	frame = { number = 16 trigger = { FROM = { religion = confucianism OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 17 trigger = { FROM = { religion = confucianism } } }
+	frame = { number = 18 trigger = { FROM = { religion = shinto OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 19 trigger = { FROM = { religion = shinto } } }
+	frame = { number = 20 trigger = { FROM = { religion = animism OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 21 trigger = { FROM = { religion = animism } } }
+	frame = { number = 22 trigger = { FROM = { religion = shamanism OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 23 trigger = { FROM = { religion = shamanism } } }
+	frame = { number = 24 trigger = { FROM = { religion = totemism OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 25 trigger = { FROM = { religion = totemism } } }
+	frame = { number = 26 trigger = { FROM = { religion = coptic OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 27 trigger = { FROM = { religion = coptic } } }
+	frame = { number = 28 trigger = { FROM = { religion = sikhism OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 29 trigger = { FROM = { religion = sikhism } } }
+	frame = { number = 30 trigger = { FROM = { religion = ibadi OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 31 trigger = { FROM = { religion = ibadi } } }
+	frame = { number = 32 trigger = { FROM = { religion = nahuatl OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 33 trigger = { FROM = { religion = nahuatl } } }
+	frame = { number = 34 trigger = { FROM = { religion = inti OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 35 trigger = { FROM = { religion = inti } } }
+	frame = { number = 36 trigger = { FROM = { religion = mesoamerican_religion OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 37 trigger = { FROM = { religion = mesoamerican_religion } } }
+	frame = { number = 38 trigger = { FROM = { religion = jewish OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 39 trigger = { FROM = { religion = jewish } } }
+	frame = { number = 40 trigger = { FROM = { religion = norse_pagan_reformed OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 41 trigger = { FROM = { religion = norse_pagan_reformed } } }
+	frame = { number = 42 trigger = { FROM = { religion = hussite OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 43 trigger = { FROM = { religion = hussite } } }
+	frame = { number = 44 trigger = { FROM = { religion = mahayana OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 45 trigger = { FROM = { religion = mahayana } } }
+	frame = { number = 46 trigger = { FROM = { religion = buddhism OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 47 trigger = { FROM = { religion = buddhism } } }
+	frame = { number = 48 trigger = { FROM = { religion = vajrayana OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 49 trigger = { FROM = { religion = vajrayana } } }
+	frame = { number = 50 trigger = { FROM = { religion = zoroastrian OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 51 trigger = { FROM = { religion = zoroastrian } } }
+	frame = { number = 52 trigger = { FROM = { religion = tengri_pagan_reformed OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 53 trigger = { FROM = { religion = tengri_pagan_reformed } } }
+	frame = { number = 54 trigger = { FROM = { religion = anglican OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 55 trigger = { FROM = { religion = anglican } } }
+	frame = { number = 56 trigger = { FROM = { religion = dreamtime OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }
+	frame = { number = 57 trigger = { FROM = { religion = dreamtime } } }
 	tooltip = building_menu_temple_button_4_tt
+}
+custom_text_box = {
+	name = building_menu_temple_button_4_text
+	potential = {
+		owned_by = FROM
+		FROM = { has_country_flag = building_menu_opened_flag }
+		has_province_flag = building_menu_temple_opened_flag
+		OR = { has_building = temple has_building = cathedral }
+	}
+	tooltip = building_menu_temple_button_4_text_tt
 }
 custom_button = {
 	name = building_menu_temple_button_cancel
@@ -933,6 +972,7 @@ custom_button = {
 			clr_province_flag = building_menu_temple_opened_flag
 		}
 		else = { set_province_flag = building_menu_temple_opened_flag }
+		building_menu_temple_offering_calc = yes
 	}
 	tooltip = building_menu_african_temple_tt
 }
@@ -1360,6 +1400,7 @@ custom_button = {
 			clr_province_flag = building_menu_temple_opened_flag
 		}
 		else = { set_province_flag = building_menu_temple_opened_flag }
+		building_menu_temple_offering_calc = yes
 	}
 	tooltip = building_menu_chinese_temple_tt
 }
@@ -1687,6 +1728,7 @@ custom_button = {
 			clr_province_flag = building_menu_temple_opened_flag
 		}
 		else = { set_province_flag = building_menu_temple_opened_flag }
+		building_menu_temple_offering_calc = yes
 	}
 	tooltip = building_menu_eastern_temple_tt
 }
@@ -2020,6 +2062,7 @@ custom_button = {
 			clr_province_flag = building_menu_temple_opened_flag
 		}
 		else = { set_province_flag = building_menu_temple_opened_flag }
+		building_menu_temple_offering_calc = yes
 	}
 	tooltip = building_menu_indian_temple_tt
 }
@@ -2390,6 +2433,7 @@ custom_button = {
 			clr_province_flag = building_menu_temple_opened_flag
 		}
 		else = { set_province_flag = building_menu_temple_opened_flag }
+		building_menu_temple_offering_calc = yes
 	}
 	tooltip = building_menu_latin_temple_tt
 }
@@ -2733,6 +2777,7 @@ custom_button = {
 			clr_province_flag = building_menu_temple_opened_flag
 		}
 		else = { set_province_flag = building_menu_temple_opened_flag }
+		building_menu_temple_offering_calc = yes
 	}
 	tooltip = building_menu_muslim_temple_tt
 }
@@ -3182,6 +3227,7 @@ custom_button = {
 			clr_province_flag = building_menu_temple_opened_flag
 		}
 		else = { set_province_flag = building_menu_temple_opened_flag }
+		building_menu_temple_offering_calc = yes
 	}
 	tooltip = building_menu_namerican_temple_tt
 }
@@ -3605,6 +3651,7 @@ custom_button = {
 			clr_province_flag = building_menu_temple_opened_flag
 		}
 		else = { set_province_flag = building_menu_temple_opened_flag }
+		building_menu_temple_offering_calc = yes
 	}
 	tooltip = building_menu_samerican_temple_tt
 }

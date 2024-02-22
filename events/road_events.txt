@@ -16,10 +16,11 @@ country_event = {
     picture = mod_roads.2_p
 
     is_triggered_only = yes
-
-    option = {
+    hidden = yes
+    immediate = {
         name = mod_roads.2_o1
         hidden_effect = {
+	    set_country_flag = building_menu_temple_donation_cooldown_flag
             set_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 0 }
             event_target:province = {
                 region = {
@@ -36,8 +37,11 @@ country_event = {
                     }
                 }
             }
-            multiply_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 3 }
+            multiply_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 4 }
 			scaled_effect_full = { effect = add_treasury which = building_menu_temple_yearly_tax_dev_prov }
         }
+    }
+    option = {
+        mod_roads.2.a
     }
 }

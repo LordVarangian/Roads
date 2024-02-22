@@ -4714,12 +4714,15 @@ guiTypes = {
 				position = { x= 178 y = -23 }
 				Orientation = "LOWER_LEFT"
 			}
-			iconType =
-			{
-				name ="building_menu_temple_button_4_religion_icon"
+			instantTextBoxType = {
+				name = "building_menu_temple_button_4_text"
 				scripted = yes
-				spriteType = "GFX_country_icon_religion"
-				position = { x= 401 y = -5 }
+				position = { x= 35 y = 0 }
+				font = "vic_18"
+				text = "building_menu_temple_button_4_text"
+				format = center
+				maxWidth = 130
+				maxHeight = 66
 				Orientation = "LOWER_LEFT"
 			}
 			guiButtonType =
