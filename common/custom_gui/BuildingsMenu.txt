@@ -535,9 +535,14 @@ custom_button = {
 		OR = { has_building = temple has_building = cathedral }
 	}
 	effect = {
-		building_menu_temple_offering_calc = yes
-		hidden_effect = {
-			owner = { country_event = { id = mod_roads.2 } }
+		if = { 
+			limit = {
+				FROM = { OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } }
+			}
+			building_menu_temple_offering_calc = yes
+			hidden_effect = {
+				owner = { country_event = { id = mod_roads.2 } }
+			}
 		}
 	}
 	frame = { number = 2 trigger = { FROM = { religion = catholic OR = { NOT = { has_country_flag = building_menu_temple_donation_cooldown_flag } had_country_flag = { flag = building_menu_temple_donation_cooldown_flag days = 1095 } } } } }

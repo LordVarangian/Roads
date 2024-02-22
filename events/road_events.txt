@@ -19,27 +19,10 @@ country_event = {
     hidden = yes
     immediate = {
         name = mod_roads.2_o1
-        hidden_effect = {
-	    set_country_flag = building_menu_temple_donation_cooldown_flag
-            set_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 0 }
-            event_target:province = {
-                region = {
-                    limit = {
-                        owned_by = event_target:country
-                        area_for_scope_province = {
-                            owned_by = event_target:country
-                            OR = { has_building = temple has_building = cathedral }
-                        }
-                    }
-                    export_to_variable = { which = building_menu_temple_yearly_tax_dev_prov value = base_tax }
-                    ROOT = {
-                        change_variable = { which = building_menu_temple_yearly_tax_dev_prov which = PREV }
-                    }
-                }
-            }
-            multiply_variable = { which = building_menu_temple_yearly_tax_dev_prov value = 4 }
-			scaled_effect_full = { effect = add_treasury which = building_menu_temple_yearly_tax_dev_prov }
-        }
+	hidden_effect = {
+		set_country_flag = building_menu_temple_donation_cooldown_flag
+		scaled_effect_full = { effect = add_treasury which = building_menu_temple_yearly_tax_dev_prov }
+	}
     }
     option = {
         mod_roads.2.a
